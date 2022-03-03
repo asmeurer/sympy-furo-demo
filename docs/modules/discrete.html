@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Numerical Evaluation" href="evalf.html" /><link rel="prev" title="Core" href="core.html" />
 
-    <link rel="shortcut icon" href="../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.02.23"/>
         <title>Discrete - SymPy 1.11.dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=3c656993158f05539f962c5cea52a5e6c184bb8c" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     
     
@@ -29,18 +29,21 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
+  --color-api-keyword: #000000bd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #CCCCCC;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
   
@@ -57,20 +60,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
   }
@@ -87,20 +95,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
     }
@@ -114,17 +127,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
     </svg>
   </symbol>
   <symbol id="svg-menu" viewBox="0 0 24 24">
     <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -133,14 +142,14 @@
   </symbol>
   <symbol id="svg-arrow-right" viewBox="0 0 24 24">
     <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
   </symbol>
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -155,7 +164,7 @@
   </symbol>
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
@@ -163,7 +172,7 @@
   </symbol>
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
@@ -632,6 +641,7 @@
 
 </div>
 </div>
+
       </div>
       
     </div>
@@ -639,8 +649,13 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -655,7 +670,7 @@
         </div>
         <article role="main">
           <div class="section" id="discrete">
-<h1>Discrete<a class="headerlink" href="#discrete" title="Permalink to this headline">¶</a></h1>
+<h1>Discrete<a class="headerlink" href="#discrete" title="Permalink to this headline">#</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">discrete</span></code> module in SymPy implements methods to compute discrete
 transforms and convolutions of finite sequences.</p>
 <span class="target" id="module-sympy.discrete"></span><p>This module contains functions which operate on discrete sequences.</p>
@@ -670,14 +685,14 @@ transforms and convolutions of finite sequences.</p>
 of the discrete convolutions, the <code class="docutils literal notranslate"><span class="pre">convolutions</span></code> module makes use of the
 <code class="docutils literal notranslate"><span class="pre">transforms</span></code> module for efficient computation (notable for long input sequences).</p>
 <div class="section" id="module-sympy.discrete.transforms">
-<span id="transforms"></span><h2>Transforms<a class="headerlink" href="#module-sympy.discrete.transforms" title="Permalink to this headline">¶</a></h2>
+<span id="transforms"></span><h2>Transforms<a class="headerlink" href="#module-sympy.discrete.transforms" title="Permalink to this headline">#</a></h2>
 <p>This section lists the methods which implement the basic transforms
 for discrete sequences.</p>
 <div class="section" id="fast-fourier-transform">
-<h3>Fast Fourier Transform<a class="headerlink" href="#fast-fourier-transform" title="Permalink to this headline">¶</a></h3>
+<h3>Fast Fourier Transform<a class="headerlink" href="#fast-fourier-transform" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.fft">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">fft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L70-L116"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.fft" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">fft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L70-L116"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.fft" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Discrete Fourier Transform (<strong>DFT</strong>) in the complex domain.</p>
 <p>The sequence is automatically padded to the right with zeros, as the
 <em>radix-2 FFT</em> requires the number of sample points to be a power of 2.</p>
@@ -729,7 +744,7 @@ as the complexity of expressions increases with the size of the sequence.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.ifft">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">ifft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L119-L120"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.ifft" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">ifft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L119-L120"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.ifft" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Discrete Fourier Transform (<strong>DFT</strong>) in the complex domain.</p>
 <p>The sequence is automatically padded to the right with zeros, as the
 <em>radix-2 FFT</em> requires the number of sample points to be a power of 2.</p>
@@ -781,10 +796,10 @@ as the complexity of expressions increases with the size of the sequence.</p>
 </dd></dl>
 </div>
 <div class="section" id="number-theoretic-transform">
-<h3>Number Theoretic Transform<a class="headerlink" href="#number-theoretic-transform" title="Permalink to this headline">¶</a></h3>
+<h3>Number Theoretic Transform<a class="headerlink" href="#number-theoretic-transform" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.ntt">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">ntt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L189-L229"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.ntt" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">ntt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L189-L229"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.ntt" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Number Theoretic Transform (<strong>NTT</strong>), which specializes the
 Discrete Fourier Transform (<strong>DFT</strong>) over quotient ring <span class="math notranslate nohighlight">\(Z/pZ\)</span> for prime
 <span class="math notranslate nohighlight">\(p\)</span> instead of complex numbers <span class="math notranslate nohighlight">\(C\)</span>.</p>
@@ -830,7 +845,7 @@ Discrete Fourier Transform (<strong>DFT</strong>) over quotient ring <span class
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.intt">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">intt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L232-L233"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.intt" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">intt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L232-L233"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.intt" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Number Theoretic Transform (<strong>NTT</strong>), which specializes the
 Discrete Fourier Transform (<strong>DFT</strong>) over quotient ring <span class="math notranslate nohighlight">\(Z/pZ\)</span> for prime
 <span class="math notranslate nohighlight">\(p\)</span> instead of complex numbers <span class="math notranslate nohighlight">\(C\)</span>.</p>
@@ -876,10 +891,10 @@ Discrete Fourier Transform (<strong>DFT</strong>) over quotient ring <span class
 </dd></dl>
 </div>
 <div class="section" id="fast-walsh-hadamard-transform">
-<h3>Fast Walsh Hadamard Transform<a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h3>
+<h3>Fast Walsh Hadamard Transform<a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.fwht">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">fwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L275-L311"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.fwht" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">fwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L275-L311"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.fwht" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Walsh Hadamard Transform (<strong>WHT</strong>), and uses Hadamard
 ordering for the sequence.</p>
 <p>The sequence is automatically padded to the right with zeros, as the
@@ -918,7 +933,7 @@ ordering for the sequence.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.ifwht">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">ifwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L314-L315"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.ifwht" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">ifwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L314-L315"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.ifwht" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Walsh Hadamard Transform (<strong>WHT</strong>), and uses Hadamard
 ordering for the sequence.</p>
 <p>The sequence is automatically padded to the right with zeros, as the
@@ -957,10 +972,10 @@ ordering for the sequence.</p>
 </dd></dl>
 </div>
 <div class="section" id="mobius-transform">
-<h3>Möbius Transform<a class="headerlink" href="#mobius-transform" title="Permalink to this headline">¶</a></h3>
+<h3>Möbius Transform<a class="headerlink" href="#mobius-transform" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.mobius_transform">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">mobius_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L364-L420"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.mobius_transform" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">mobius_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L364-L420"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.mobius_transform" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Mobius Transform for subset lattice with indices of
 sequence as bitmasks.</p>
 <p>The indices of each argument, considered as bit strings, correspond
@@ -1024,7 +1039,7 @@ or supersets of the given set.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.transforms.inverse_mobius_transform">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">inverse_mobius_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/transforms.py#L422-L423"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.inverse_mobius_transform" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.transforms.</span></span><span class="sig-name descname"><span class="pre">inverse_mobius_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/transforms.py#L422-L423"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.transforms.inverse_mobius_transform" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Mobius Transform for subset lattice with indices of
 sequence as bitmasks.</p>
 <p>The indices of each argument, considered as bit strings, correspond
@@ -1089,17 +1104,17 @@ or supersets of the given set.</p>
 </div>
 </div>
 <div class="section" id="module-sympy.discrete.convolutions">
-<span id="convolutions"></span><h2>Convolutions<a class="headerlink" href="#module-sympy.discrete.convolutions" title="Permalink to this headline">¶</a></h2>
+<span id="convolutions"></span><h2>Convolutions<a class="headerlink" href="#module-sympy.discrete.convolutions" title="Permalink to this headline">#</a></h2>
 <p>This section lists the methods which implement the basic convolutions
 for discrete sequences.</p>
 <div class="section" id="convolution">
-<h3>Convolution<a class="headerlink" href="#convolution" title="Permalink to this headline">¶</a></h3>
+<h3>Convolution<a class="headerlink" href="#convolution" title="Permalink to this headline">#</a></h3>
 <p>This is a general method for calculating the convolution of discrete
 sequences, which internally calls one of the methods <code class="docutils literal notranslate"><span class="pre">convolution_fft</span></code>,
 <code class="docutils literal notranslate"><span class="pre">convolution_ntt</span></code>, <code class="docutils literal notranslate"><span class="pre">convolution_fwht</span></code>, or <code class="docutils literal notranslate"><span class="pre">convolution_subset</span></code>.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.convolutions.convolution">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dyadic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/convolutions.py#L15-L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dyadic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/convolutions.py#L15-L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs convolution by determining the type of desired
 convolution using hints.</p>
 <p>Exactly one of <code class="docutils literal notranslate"><span class="pre">dps</span></code>, <code class="docutils literal notranslate"><span class="pre">prime</span></code>, <code class="docutils literal notranslate"><span class="pre">dyadic</span></code>, <code class="docutils literal notranslate"><span class="pre">subset</span></code> arguments
@@ -1169,10 +1184,10 @@ convolution, which is performed using <strong>FWHT</strong>.</p>
 </dd></dl>
 </div>
 <div class="section" id="convolution-using-fast-fourier-transform">
-<h3>Convolution using Fast Fourier Transform<a class="headerlink" href="#convolution-using-fast-fourier-transform" title="Permalink to this headline">¶</a></h3>
+<h3>Convolution using Fast Fourier Transform<a class="headerlink" href="#convolution-using-fast-fourier-transform" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.convolutions.convolution_fft">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_fft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/convolutions.py#L103-L150"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_fft" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_fft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/convolutions.py#L103-L150"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_fft" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs linear convolution using Fast Fourier Transform.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1211,10 +1226,10 @@ convolution, which is performed using <strong>FWHT</strong>.</p>
 </dd></dl>
 </div>
 <div class="section" id="convolution-using-number-theoretic-transform">
-<h3>Convolution using Number Theoretic Transform<a class="headerlink" href="#convolution-using-number-theoretic-transform" title="Permalink to this headline">¶</a></h3>
+<h3>Convolution using Number Theoretic Transform<a class="headerlink" href="#convolution-using-number-theoretic-transform" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.convolutions.convolution_ntt">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_ntt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/convolutions.py#L159-L205"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_ntt" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_ntt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/convolutions.py#L159-L205"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_ntt" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs linear convolution using Number Theoretic Transform.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1251,10 +1266,10 @@ convolution, which is performed using <strong>FWHT</strong>.</p>
 </dd></dl>
 </div>
 <div class="section" id="convolution-using-fast-walsh-hadamard-transform">
-<h3>Convolution using Fast Walsh Hadamard Transform<a class="headerlink" href="#convolution-using-fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h3>
+<h3>Convolution using Fast Walsh Hadamard Transform<a class="headerlink" href="#convolution-using-fast-walsh-hadamard-transform" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.convolutions.convolution_fwht">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_fwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/convolutions.py#L214-L271"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_fwht" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_fwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/convolutions.py#L214-L271"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_fwht" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs dyadic (<em>bitwise-XOR</em>) convolution using Fast Walsh Hadamard
 Transform.</p>
 <p>The convolution is automatically padded to the right with zeros, as the
@@ -1299,10 +1314,10 @@ Transform.</p>
 </dd></dl>
 </div>
 <div class="section" id="subset-convolution">
-<h3>Subset Convolution<a class="headerlink" href="#subset-convolution" title="Permalink to this headline">¶</a></h3>
+<h3>Subset Convolution<a class="headerlink" href="#subset-convolution" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.convolutions.convolution_subset">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/convolutions.py#L280-L348"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_subset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">convolution_subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/convolutions.py#L280-L348"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.convolution_subset" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs Subset Convolution of given sequences.</p>
 <p>The indices of each argument, considered as bit strings, correspond to
 subsets of a finite set.</p>
@@ -1344,10 +1359,10 @@ sequence to be a power of 2.</p>
 </dd></dl>
 </div>
 <div class="section" id="covering-product">
-<h3>Covering Product<a class="headerlink" href="#covering-product" title="Permalink to this headline">¶</a></h3>
+<h3>Covering Product<a class="headerlink" href="#covering-product" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.convolutions.covering_product">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">covering_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/convolutions.py#L357-L418"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.covering_product" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">covering_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/convolutions.py#L357-L418"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.covering_product" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the covering product of given sequences.</p>
 <p>The indices of each argument, considered as bit strings, correspond to
 subsets of a finite set.</p>
@@ -1391,10 +1406,10 @@ sequence to be a power of 2.</p>
 </dd></dl>
 </div>
 <div class="section" id="intersecting-product">
-<h3>Intersecting Product<a class="headerlink" href="#intersecting-product" title="Permalink to this headline">¶</a></h3>
+<h3>Intersecting Product<a class="headerlink" href="#intersecting-product" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.discrete.convolutions.intersecting_product">
-<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">intersecting_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/discrete/convolutions.py#L427-L488"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.intersecting_product" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.discrete.convolutions.</span></span><span class="sig-name descname"><span class="pre">intersecting_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/discrete/convolutions.py#L427-L488"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.discrete.convolutions.intersecting_product" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the intersecting product of given sequences.</p>
 <p>The indices of each argument, considered as bit strings, correspond to
 subsets of a finite set.</p>
@@ -1466,18 +1481,27 @@ sequence to be a power of 2.</p>
               </div>
             </a>
         </div>
-
-        <div class="related-information">
-              Copyright &#169; 2022 SymPy Development Team |
-            Last updated on Feb 24, 2022. |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/modules/discrete.rst.txt"
-               rel="nofollow">
-              Show Source
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022 SymPy Development Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Mar 03, 2022</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/sympy/sympy" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
             </a>
+              
+            </div>
+          </div>
         </div>
         
       </footer>
@@ -1527,7 +1551,7 @@ sequence to be a power of 2.</p>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>

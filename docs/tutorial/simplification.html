@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Calculus" href="calculus.html" /><link rel="prev" title="Printing" href="printing.html" />
 
-    <link rel="shortcut icon" href="../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.02.23"/>
         <title>Simplification - SymPy 1.11.dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=3c656993158f05539f962c5cea52a5e6c184bb8c" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     
     
@@ -29,18 +29,21 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
+  --color-api-keyword: #000000bd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #CCCCCC;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
   
@@ -57,20 +60,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
   }
@@ -87,20 +95,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
     }
@@ -114,17 +127,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
     </svg>
   </symbol>
   <symbol id="svg-menu" viewBox="0 0 24 24">
     <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -133,14 +142,14 @@
   </symbol>
   <symbol id="svg-arrow-right" viewBox="0 0 24 24">
     <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
   </symbol>
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -155,7 +164,7 @@
   </symbol>
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
@@ -163,7 +172,7 @@
   </symbol>
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
@@ -632,6 +641,7 @@
 
 </div>
 </div>
+
       </div>
       
     </div>
@@ -639,8 +649,13 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -655,7 +670,7 @@
         </div>
         <article role="main">
           <div class="section" id="simplification">
-<span id="tutorial-simplify"></span><h1>Simplification<a class="headerlink" href="#simplification" title="Permalink to this headline">¶</a></h1>
+<span id="tutorial-simplify"></span><h1>Simplification<a class="headerlink" href="#simplification" title="Permalink to this headline">#</a></h1>
 <p>To make this document easier to read, we are going to enable pretty printing.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'x y z'</span><span class="p">)</span>
@@ -663,7 +678,7 @@
 </pre></div>
 </div>
 <div class="section" id="simplify">
-<h2><code class="docutils literal notranslate"><span class="pre">simplify</span></code><a class="headerlink" href="#simplify" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">simplify</span></code><a class="headerlink" href="#simplify" title="Permalink to this headline">#</a></h2>
 <p>Now let’s jump in and do some interesting mathematics.  One of the most useful
 features of a symbolic manipulation system is the ability to simplify
 mathematical expressions.  SymPy has dozens of functions to perform various
@@ -711,9 +726,9 @@ result.  It is also useful when you have no idea what form an expression will
 take, and you need a catchall function to simplify it.</p>
 </div>
 <div class="section" id="polynomial-rational-function-simplification">
-<h2>Polynomial/Rational Function Simplification<a class="headerlink" href="#polynomial-rational-function-simplification" title="Permalink to this headline">¶</a></h2>
+<h2>Polynomial/Rational Function Simplification<a class="headerlink" href="#polynomial-rational-function-simplification" title="Permalink to this headline">#</a></h2>
 <div class="section" id="expand">
-<h3>expand<a class="headerlink" href="#expand" title="Permalink to this headline">¶</a></h3>
+<h3>expand<a class="headerlink" href="#expand" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">expand()</span></code> is one of the most common simplification functions in SymPy.
 Although it has a lot of scopes, for now, we will consider its function in
 expanding polynomial expressions. For example:</p>
@@ -737,7 +752,7 @@ it due to cancellation.</p>
 </div>
 </div>
 <div class="section" id="factor">
-<h3>factor<a class="headerlink" href="#factor" title="Permalink to this headline">¶</a></h3>
+<h3>factor<a class="headerlink" href="#factor" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">factor()</span></code> takes a polynomial and factors it into irreducible factors over
 the rational numbers.  For example:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
@@ -772,7 +787,7 @@ is no longer a polynomial over the rationals).</p>
 </div>
 </div>
 <div class="section" id="collect">
-<h3>collect<a class="headerlink" href="#collect" title="Permalink to this headline">¶</a></h3>
+<h3>collect<a class="headerlink" href="#collect" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">collect()</span></code> collects common powers of a term in an expression.  For example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">z</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span>
@@ -792,7 +807,7 @@ method.  <code class="docutils literal notranslate"><span class="pre">expr.coeff
 </div>
 </div>
 <div class="section" id="cancel">
-<h3>cancel<a class="headerlink" href="#cancel" title="Permalink to this headline">¶</a></h3>
+<h3>cancel<a class="headerlink" href="#cancel" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">cancel()</span></code> will take any rational function and put it into the standard
 canonical form, <span class="math notranslate nohighlight">\(\frac{p}{q}\)</span>, where <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are expanded polynomials with
 no common factors, and the leading coefficients of <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> do not have
@@ -845,7 +860,7 @@ the denominator of an expression, it can also be used to do the same thing:</p>
 canceled form, <code class="docutils literal notranslate"><span class="pre">cancel()</span></code> is more efficient than <code class="docutils literal notranslate"><span class="pre">factor()</span></code>.</p>
 </div>
 <div class="section" id="apart">
-<h3>apart<a class="headerlink" href="#apart" title="Permalink to this headline">¶</a></h3>
+<h3>apart<a class="headerlink" href="#apart" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">apart()</span></code> performs a <a class="reference external" href="https://en.wikipedia.org/wiki/Partial_fraction_decomposition">partial fraction decomposition</a> on a rational
 function.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">21</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">12</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
@@ -865,7 +880,7 @@ function.</p>
 </div>
 </div>
 <div class="section" id="trigonometric-simplification">
-<h2>Trigonometric Simplification<a class="headerlink" href="#trigonometric-simplification" title="Permalink to this headline">¶</a></h2>
+<h2>Trigonometric Simplification<a class="headerlink" href="#trigonometric-simplification" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>SymPy follows Python’s naming conventions for inverse trigonometric
@@ -883,7 +898,7 @@ name.  For example, the inverse cosine, or arc cosine, is called <code class="do
 </div>
 </div>
 <div class="section" id="trigsimp">
-<h3>trigsimp<a class="headerlink" href="#trigsimp" title="Permalink to this headline">¶</a></h3>
+<h3>trigsimp<a class="headerlink" href="#trigsimp" title="Permalink to this headline">#</a></h3>
 <p>To simplify expressions using trigonometric identities, use <code class="docutils literal notranslate"><span class="pre">trigsimp()</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">trigsimp</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="go">1</span>
@@ -907,7 +922,7 @@ name.  For example, the inverse cosine, or arc cosine, is called <code class="do
 the input expression, and then uses a heuristic to return the “best” one.</p>
 </div>
 <div class="section" id="expand-trig">
-<h3>expand_trig<a class="headerlink" href="#expand-trig" title="Permalink to this headline">¶</a></h3>
+<h3>expand_trig<a class="headerlink" href="#expand-trig" title="Permalink to this headline">#</a></h3>
 <p>To expand trigonometric functions, that is, apply the sum or double angle
 identities, use <code class="docutils literal notranslate"><span class="pre">expand_trig()</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expand_trig</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">))</span>
@@ -929,7 +944,7 @@ reverse using <code class="docutils literal notranslate"><span class="pre">trigs
 </div>
 </div>
 <div class="section" id="powers">
-<h2>Powers<a class="headerlink" href="#powers" title="Permalink to this headline">¶</a></h2>
+<h2>Powers<a class="headerlink" href="#powers" title="Permalink to this headline">#</a></h2>
 <p>Before we introduce the power simplification functions, a mathematical
 discussion on the identities held by powers is in order.  There are three
 kinds of identities satisfied by exponents</p>
@@ -1025,7 +1040,7 @@ are exactly the same object.</p>
 </div>
 </div>
 <div class="section" id="powsimp">
-<h3>powsimp<a class="headerlink" href="#powsimp" title="Permalink to this headline">¶</a></h3>
+<h3>powsimp<a class="headerlink" href="#powsimp" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">powsimp()</span></code> applies identities 1 and 2 from above, from left to right.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">powsimp</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
 <span class="go">  a + b</span>
@@ -1070,7 +1085,7 @@ they would be automatically split apart again.</p>
 </div>
 </div>
 <div class="section" id="expand-power-exp-expand-power-base">
-<h3>expand_power_exp / expand_power_base<a class="headerlink" href="#expand-power-exp-expand-power-base" title="Permalink to this headline">¶</a></h3>
+<h3>expand_power_exp / expand_power_base<a class="headerlink" href="#expand-power-exp-expand-power-base" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">expand_power_exp()</span></code> and <code class="docutils literal notranslate"><span class="pre">expand_power_base()</span></code> apply identities 1 and 2
 from right to left, respectively.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expand_power_exp</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">))</span>
@@ -1108,7 +1123,7 @@ number, and hence cannot be undone with <code class="docutils literal notranslat
 </div>
 </div>
 <div class="section" id="powdenest">
-<h3>powdenest<a class="headerlink" href="#powdenest" title="Permalink to this headline">¶</a></h3>
+<h3>powdenest<a class="headerlink" href="#powdenest" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">powdenest()</span></code> applies identity 3, from left to right.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">powdenest</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
 <span class="go"> a⋅b</span>
@@ -1132,7 +1147,7 @@ assumptions.</p>
 </div>
 </div>
 <div class="section" id="exponentials-and-logarithms">
-<h2>Exponentials and logarithms<a class="headerlink" href="#exponentials-and-logarithms" title="Permalink to this headline">¶</a></h2>
+<h2>Exponentials and logarithms<a class="headerlink" href="#exponentials-and-logarithms" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In SymPy, as in Python and most programming languages, <code class="docutils literal notranslate"><span class="pre">log</span></code> is the
@@ -1168,7 +1183,7 @@ verified that it does not hold in general for arbitrary complex <span class="mat
 example, <span class="math notranslate nohighlight">\(\log{\left(e^{x + 2\pi i}\right)} = \log{\left(e^x\right)} = x
 \neq x + 2\pi i\)</span>).</p>
 <div class="section" id="expand-log">
-<h3>expand_log<a class="headerlink" href="#expand-log" title="Permalink to this headline">¶</a></h3>
+<h3>expand_log<a class="headerlink" href="#expand-log" title="Permalink to this headline">#</a></h3>
 <p>To apply identities 1 and 2 from left to right, use <code class="docutils literal notranslate"><span class="pre">expand_log()</span></code>.  As
 always, the identities will not be applied unless they are valid.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expand_log</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">))</span>
@@ -1194,7 +1209,7 @@ option that can be used to ignore assumptions.</p>
 </div>
 </div>
 <div class="section" id="logcombine">
-<h3>logcombine<a class="headerlink" href="#logcombine" title="Permalink to this headline">¶</a></h3>
+<h3>logcombine<a class="headerlink" href="#logcombine" title="Permalink to this headline">#</a></h3>
 <p>To apply identities 1 and 2 from right to left, use <code class="docutils literal notranslate"><span class="pre">logcombine()</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">logcombine</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
 <span class="go">log(x⋅y)</span>
@@ -1215,7 +1230,7 @@ assumptions.</p>
 </div>
 </div>
 <div class="section" id="special-functions">
-<h2>Special Functions<a class="headerlink" href="#special-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Special Functions<a class="headerlink" href="#special-functions" title="Permalink to this headline">#</a></h2>
 <p>SymPy implements dozens of special functions, ranging from functions in
 combinatorics to mathematical physics.</p>
 <p>An extensive list of the special functions included with SymPy and their
@@ -1265,7 +1280,7 @@ referred to as the <a class="reference external" href="https://en.wikipedia.org/
 </pre></div>
 </div>
 <div class="section" id="rewrite">
-<h3>rewrite<a class="headerlink" href="#rewrite" title="Permalink to this headline">¶</a></h3>
+<h3>rewrite<a class="headerlink" href="#rewrite" title="Permalink to this headline">#</a></h3>
 <p>A common way to deal with special functions is to rewrite them in terms of one
 another.  This works for any function in SymPy, not just special functions.
 To rewrite an expression in terms of a function, use
@@ -1283,7 +1298,7 @@ To rewrite an expression in terms of a function, use
 <a class="reference internal" href="manipulation.html#tutorial-manipulation"><span class="std std-ref">Advanced Expression Manipulation</span></a> section.</p>
 </div>
 <div class="section" id="expand-func">
-<h3>expand_func<a class="headerlink" href="#expand-func" title="Permalink to this headline">¶</a></h3>
+<h3>expand_func<a class="headerlink" href="#expand-func" title="Permalink to this headline">#</a></h3>
 <p>To expand special functions in terms of some identities, use
 <code class="docutils literal notranslate"><span class="pre">expand_func()</span></code>.  For example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expand_func</span><span class="p">(</span><span class="n">gamma</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span>
@@ -1292,7 +1307,7 @@ To rewrite an expression in terms of a function, use
 </div>
 </div>
 <div class="section" id="hyperexpand">
-<h3>hyperexpand<a class="headerlink" href="#hyperexpand" title="Permalink to this headline">¶</a></h3>
+<h3>hyperexpand<a class="headerlink" href="#hyperexpand" title="Permalink to this headline">#</a></h3>
 <p>To rewrite <code class="docutils literal notranslate"><span class="pre">hyper</span></code> in terms of more standard functions, use
 <code class="docutils literal notranslate"><span class="pre">hyperexpand()</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hyperexpand</span><span class="p">(</span><span class="n">hyper</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">z</span><span class="p">))</span>
@@ -1318,7 +1333,7 @@ information).</p>
 </div>
 </div>
 <div class="section" id="combsimp">
-<h3>combsimp<a class="headerlink" href="#combsimp" title="Permalink to this headline">¶</a></h3>
+<h3>combsimp<a class="headerlink" href="#combsimp" title="Permalink to this headline">#</a></h3>
 <p>To simplify combinatorial expressions, use <code class="docutils literal notranslate"><span class="pre">combsimp()</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'n k'</span><span class="p">,</span> <span class="n">integer</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">combsimp</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">3</span><span class="p">))</span>
@@ -1331,7 +1346,7 @@ information).</p>
 </div>
 </div>
 <div class="section" id="gammasimp">
-<h3>gammasimp<a class="headerlink" href="#gammasimp" title="Permalink to this headline">¶</a></h3>
+<h3>gammasimp<a class="headerlink" href="#gammasimp" title="Permalink to this headline">#</a></h3>
 <p>To simplify expressions with gamma functions or combinatorial functions with
 non-integer argument, use <code class="docutils literal notranslate"><span class="pre">gammasimp()</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gammasimp</span><span class="p">(</span><span class="n">gamma</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">gamma</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">))</span>
@@ -1343,7 +1358,7 @@ non-integer argument, use <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="section" id="example-continued-fractions">
-<h2>Example: Continued Fractions<a class="headerlink" href="#example-continued-fractions" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Continued Fractions<a class="headerlink" href="#example-continued-fractions" title="Permalink to this headline">#</a></h2>
 <p>Let’s use SymPy to explore continued fractions.  A <a class="reference external" href="https://en.wikipedia.org/wiki/Continued_fraction">continued fraction</a> is an expression of the
 form</p>
 <div class="math-wrapper"><div class="math notranslate nohighlight">
@@ -1533,18 +1548,27 @@ at each stage (hint: think of what happens to <span class="math notranslate nohi
               </div>
             </a>
         </div>
-
-        <div class="related-information">
-              Copyright &#169; 2022 SymPy Development Team |
-            Last updated on Feb 24, 2022. |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/tutorial/simplification.rst.txt"
-               rel="nofollow">
-              Show Source
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022 SymPy Development Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Mar 03, 2022</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/sympy/sympy" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
             </a>
+              
+            </div>
+          </div>
         </div>
         
       </footer>
@@ -1611,7 +1635,7 @@ at each stage (hint: think of what happens to <span class="math notranslate nohi
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>

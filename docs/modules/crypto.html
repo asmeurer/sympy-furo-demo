@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Differential Geometry" href="diffgeom.html" /><link rel="prev" title="Category Theory" href="categories.html" />
 
-    <link rel="shortcut icon" href="../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.02.23"/>
         <title>Cryptography - SymPy 1.11.dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=3c656993158f05539f962c5cea52a5e6c184bb8c" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     
     
@@ -29,18 +29,21 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
+  --color-api-keyword: #000000bd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #CCCCCC;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
   
@@ -57,20 +60,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
   }
@@ -87,20 +95,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
     }
@@ -114,17 +127,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
     </svg>
   </symbol>
   <symbol id="svg-menu" viewBox="0 0 24 24">
     <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -133,14 +142,14 @@
   </symbol>
   <symbol id="svg-arrow-right" viewBox="0 0 24 24">
     <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
   </symbol>
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -155,7 +164,7 @@
   </symbol>
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
@@ -163,7 +172,7 @@
   </symbol>
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
@@ -632,6 +641,7 @@
 
 </div>
 </div>
+
       </div>
       
     </div>
@@ -639,8 +649,13 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -655,7 +670,7 @@
         </div>
         <article role="main">
           <div class="section" id="cryptography">
-<h1>Cryptography<a class="headerlink" href="#cryptography" title="Permalink to this headline">¶</a></h1>
+<h1>Cryptography<a class="headerlink" href="#cryptography" title="Permalink to this headline">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This module is intended for educational purposes only. Do not use the
@@ -691,7 +706,7 @@ message, whereas a <em>polyalphabetic cipher</em> uses a number of
 substitutions at different times in the message.</p>
 <span class="target" id="module-sympy.crypto.crypto"></span><dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.AZ">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">AZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L48-L77"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.AZ" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">AZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L48-L77"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.AZ" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the letters of <code class="docutils literal notranslate"><span class="pre">s</span></code> in uppercase. In case more than
 one string is passed, each of them will be processed and a list
 of upper case strings will be returned.</p>
@@ -710,7 +725,7 @@ of upper case strings will be returned.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.padded_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">padded_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L84-L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.padded_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">padded_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L84-L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.padded_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return a string of the distinct characters of <code class="docutils literal notranslate"><span class="pre">symbols</span></code> with
 those of <code class="docutils literal notranslate"><span class="pre">key</span></code> appearing first. A ValueError is raised if
 a) there are duplicate characters in <code class="docutils literal notranslate"><span class="pre">symbols</span></code> or
@@ -728,7 +743,7 @@ b) there are characters in <code class="docutils literal notranslate"><span clas
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.check_and_join">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">check_and_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phrase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L117-L158"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.check_and_join" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">check_and_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phrase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L117-L158"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.check_and_join" title="Permalink to this definition">#</a></dt>
 <dd><p>Joins characters of <code class="docutils literal notranslate"><span class="pre">phrase</span></code> and if <code class="docutils literal notranslate"><span class="pre">symbols</span></code> is given, raises
 an error if any character in <code class="docutils literal notranslate"><span class="pre">phrase</span></code> is not in <code class="docutils literal notranslate"><span class="pre">symbols</span></code>.</p>
 <dl class="field-list">
@@ -761,7 +776,7 @@ an error if any character in <code class="docutils literal notranslate"><span cl
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.cycle_list">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">cycle_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L176-L190"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.cycle_list" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">cycle_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L176-L190"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.cycle_list" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the elements of the list <code class="docutils literal notranslate"><span class="pre">range(n)</span></code> shifted to the
 left by <code class="docutils literal notranslate"><span class="pre">k</span></code> (so the list starts with <code class="docutils literal notranslate"><span class="pre">k</span></code> (mod <code class="docutils literal notranslate"><span class="pre">n</span></code>)).</p>
 <p class="rubric">Examples</p>
@@ -773,7 +788,7 @@ left by <code class="docutils literal notranslate"><span class="pre">k</span></c
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_shift">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L196-L270"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_shift" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L196-L270"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_shift" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs shift cipher encryption on plaintext msg, and returns the
 ciphertext.</p>
 <dl class="field-list">
@@ -849,7 +864,7 @@ with a right shift of 1.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_shift">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L273-L297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_shift" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L273-L297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_shift" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the text by shifting the characters of <code class="docutils literal notranslate"><span class="pre">msg</span></code> to the
 left by the amount given by <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -872,7 +887,7 @@ left by the amount given by <code class="docutils literal notranslate"><span cla
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_rot13">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_rot13</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L299-L325"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_rot13" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_rot13</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L299-L325"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_rot13" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the ROT13 encryption on a given plaintext <code class="docutils literal notranslate"><span class="pre">msg</span></code>.</p>
 <p class="rubric">Explanation</p>
 <p>ROT13 is a substitution cipher which substitutes each letter
@@ -893,7 +908,7 @@ key of 13 (midway point of the alphabet).</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_rot13">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_rot13</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L327-L355"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_rot13" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_rot13</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L327-L355"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_rot13" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the ROT13 decryption on a given plaintext <code class="docutils literal notranslate"><span class="pre">msg</span></code>.</p>
 <p class="rubric">Explanation</p>
 <p><code class="docutils literal notranslate"><span class="pre">decipher_rot13</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">encipher_rot13</span></code> as both
@@ -917,7 +932,7 @@ consistency.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_affine">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_affine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L360-L436"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_affine" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_affine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L360-L436"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_affine" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the affine cipher encryption on plaintext <code class="docutils literal notranslate"><span class="pre">msg</span></code>, and
 returns the ciphertext.</p>
 <dl class="field-list">
@@ -985,7 +1000,7 @@ order to recover the key.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_affine">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_affine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L439-L464"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_affine" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_affine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L439-L464"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_affine" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the deciphered text that was made from the mapping,
 <span class="math notranslate nohighlight">\(x \rightarrow ax+b\)</span> (mod <span class="math notranslate nohighlight">\(N\)</span>), where <code class="docutils literal notranslate"><span class="pre">N</span></code> is the
 number of characters in the alphabet. Deciphering is done by
@@ -1008,7 +1023,7 @@ where <span class="math notranslate nohighlight">\(c = a^{-1}\)</span> (mod <spa
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_atbash">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_atbash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L467-L487"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_atbash" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_atbash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L467-L487"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_atbash" title="Permalink to this definition">#</a></dt>
 <dd><p>Enciphers a given <code class="docutils literal notranslate"><span class="pre">msg</span></code> into its Atbash ciphertext and returns it.</p>
 <p class="rubric">Explanation</p>
 <p>Atbash is a substitution cipher originally used to encrypt the Hebrew
@@ -1023,7 +1038,7 @@ and <code class="docutils literal notranslate"><span class="pre">b</span> <span 
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_atbash">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_atbash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L490-L526"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_atbash" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_atbash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L490-L526"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_atbash" title="Permalink to this definition">#</a></dt>
 <dd><p>Deciphers a given <code class="docutils literal notranslate"><span class="pre">msg</span></code> using Atbash cipher and returns it.</p>
 <p class="rubric">Explanation</p>
 <p><code class="docutils literal notranslate"><span class="pre">decipher_atbash</span></code> is functionally equivalent to <code class="docutils literal notranslate"><span class="pre">encipher_atbash</span></code>.
@@ -1055,7 +1070,7 @@ consistency.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_substitution">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_substitution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L531-L587"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_substitution" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_substitution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L531-L587"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_substitution" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the ciphertext obtained by replacing each character that
 appears in <code class="docutils literal notranslate"><span class="pre">old</span></code> with the corresponding character in <code class="docutils literal notranslate"><span class="pre">new</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">old</span></code> is a mapping, then new is ignored and the replacements
@@ -1108,7 +1123,7 @@ are replaced with ciphertext according to a regular system.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_vigenere">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_vigenere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L594-L759"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_vigenere" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_vigenere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L594-L759"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_vigenere" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Vigenere cipher encryption on plaintext <code class="docutils literal notranslate"><span class="pre">msg</span></code>, and
 returns the ciphertext.</p>
 <p class="rubric">Examples</p>
@@ -1263,7 +1278,7 @@ key to  decipher the next <code class="docutils literal notranslate"><span class
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_vigenere">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_vigenere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L762-L783"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_vigenere" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_vigenere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L762-L783"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_vigenere" title="Permalink to this definition">#</a></dt>
 <dd><p>Decode using the Vigenere cipher.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.crypto.crypto</span> <span class="kn">import</span> <span class="n">decipher_vigenere</span>
@@ -1276,7 +1291,7 @@ key to  decipher the next <code class="docutils literal notranslate"><span class
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_hill">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_hill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Q'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L789-L881"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_hill" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_hill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Q'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L789-L881"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_hill" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the Hill cipher encryption of <code class="docutils literal notranslate"><span class="pre">msg</span></code>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1356,7 +1371,7 @@ pp.306-312.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_hill">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_hill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L884-L950"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_hill" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_hill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L884-L950"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_hill" title="Permalink to this definition">#</a></dt>
 <dd><p>Deciphering is the same as enciphering but using the inverse of the
 key matrix.</p>
 <p class="rubric">Examples</p>
@@ -1406,7 +1421,7 @@ either case, the wrong plaintext would be recovered:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_bifid">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_bifid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L956-L1015"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_bifid" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_bifid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L956-L1015"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_bifid" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Bifid cipher encryption on plaintext <code class="docutils literal notranslate"><span class="pre">msg</span></code>, and
 returns the ciphertext.</p>
 <p>This is the version of the Bifid cipher that uses an <span class="math notranslate nohighlight">\(n \times n\)</span>
@@ -1449,7 +1464,7 @@ characters in <code class="docutils literal notranslate"><span class="pre">symbo
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_bifid">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_bifid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1018-L1115"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_bifid" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_bifid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1018-L1115"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_bifid" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Bifid cipher decryption on ciphertext <code class="docutils literal notranslate"><span class="pre">msg</span></code>, and
 returns the plaintext.</p>
 <p>This is the version of the Bifid cipher that uses the <span class="math notranslate nohighlight">\(n \times n\)</span>
@@ -1527,7 +1542,7 @@ original text will not be perfectly obtained:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.bifid5_square">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">bifid5_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1313-L1337"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.bifid5_square" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">bifid5_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1313-L1337"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.bifid5_square" title="Permalink to this definition">#</a></dt>
 <dd><p>5x5 Polybius square.</p>
 <p>Produce the Polybius square for the <span class="math notranslate nohighlight">\(5 \times 5\)</span> Bifid cipher.</p>
 <p class="rubric">Examples</p>
@@ -1544,7 +1559,7 @@ original text will not be perfectly obtained:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_bifid5">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_bifid5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1159-L1263"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_bifid5" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_bifid5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1159-L1263"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_bifid5" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Bifid cipher encryption on plaintext <code class="docutils literal notranslate"><span class="pre">msg</span></code>, and
 returns the ciphertext.</p>
 <dl class="field-list">
@@ -1646,7 +1661,7 @@ was used in the field by the German Army during World War I.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_bifid5">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_bifid5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1266-L1310"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_bifid5" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_bifid5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1266-L1310"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_bifid5" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the Bifid cipher decryption of <code class="docutils literal notranslate"><span class="pre">msg</span></code>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1687,7 +1702,7 @@ length 25 is used.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_bifid6">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_bifid6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1340-L1374"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_bifid6" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_bifid6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1340-L1374"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_bifid6" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Bifid cipher encryption on plaintext <code class="docutils literal notranslate"><span class="pre">msg</span></code>, and
 returns the ciphertext.</p>
 <p>This is the version of the Bifid cipher that uses the <span class="math notranslate nohighlight">\(6 \times 6\)</span>
@@ -1719,7 +1734,7 @@ filled with letters A through Z and digits 0 through 9.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_bifid6">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_bifid6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1377-L1417"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_bifid6" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_bifid6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1377-L1417"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_bifid6" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs the Bifid cipher decryption on ciphertext <code class="docutils literal notranslate"><span class="pre">msg</span></code>, and
 returns the plaintext.</p>
 <p>This is the version of the Bifid cipher that uses the <span class="math notranslate nohighlight">\(6 \times 6\)</span>
@@ -1757,7 +1772,7 @@ All letters are converted to uppercase.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.bifid6_square">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">bifid6_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1420-L1447"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.bifid6_square" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">bifid6_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1420-L1447"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.bifid6_square" title="Permalink to this definition">#</a></dt>
 <dd><p>6x6 Polybius square.</p>
 <p>Produces the Polybius square for the <span class="math notranslate nohighlight">\(6 \times 6\)</span> Bifid cipher.
 Assumes alphabet of symbols is “A”, …, “Z”, “0”, …, “9”.</p>
@@ -1777,7 +1792,7 @@ Assumes alphabet of symbols is “A”, …, “Z”, “0”, …, “9”.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.rsa_public_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">rsa_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1581-L1750"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.rsa_public_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">rsa_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1581-L1750"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.rsa_public_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the RSA <em>public key</em> pair, <span class="math notranslate nohighlight">\((n, e)\)</span></p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1936,7 +1951,7 @@ of each prime-factoring algorithms to verify the claim.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.rsa_private_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">rsa_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1753-L1872"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.rsa_private_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">rsa_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1753-L1872"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.rsa_private_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the RSA <em>private key</em> pair, <span class="math notranslate nohighlight">\((n, d)\)</span></p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2057,7 +2072,7 @@ not relatively prime to the totient of the modulus.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_rsa">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1895-L1961"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_rsa" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1895-L1961"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_rsa" title="Permalink to this definition">#</a></dt>
 <dd><p>Encrypt the plaintext with RSA.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2121,7 +2136,7 @@ mapping.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_rsa">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L1964-L2060"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_rsa" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L1964-L2060"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_rsa" title="Permalink to this definition">#</a></dt>
 <dd><p>Decrypt the ciphertext with RSA.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2211,7 +2226,7 @@ theoritical speed advantage.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.kid_rsa_public_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">kid_rsa_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2066-L2102"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.kid_rsa_public_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">kid_rsa_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2066-L2102"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.kid_rsa_public_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Kid RSA is a version of RSA useful to teach grade school children
 since it does not involve exponentiation.</p>
 <p class="rubric">Explanation</p>
@@ -2238,7 +2253,7 @@ plaintext is <span class="math notranslate nohighlight">\(p = c d \pmod n\)</spa
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.kid_rsa_private_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">kid_rsa_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2105-L2124"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.kid_rsa_private_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">kid_rsa_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2105-L2124"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.kid_rsa_private_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Compute <span class="math notranslate nohighlight">\(M = a b - 1\)</span>, <span class="math notranslate nohighlight">\(e = A M + a\)</span>, <span class="math notranslate nohighlight">\(d = B M + b\)</span>,
 <span class="math notranslate nohighlight">\(n = (e d - 1) / M\)</span>. The <em>private key</em> is <span class="math notranslate nohighlight">\(d\)</span>, which Bob
 keeps secret.</p>
@@ -2252,7 +2267,7 @@ keeps secret.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_kid_rsa">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_kid_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2127-L2144"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_kid_rsa" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_kid_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2127-L2144"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_kid_rsa" title="Permalink to this definition">#</a></dt>
 <dd><p>Here <code class="docutils literal notranslate"><span class="pre">msg</span></code> is the plaintext and <code class="docutils literal notranslate"><span class="pre">key</span></code> is the public key.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.crypto.crypto</span> <span class="kn">import</span> <span class="p">(</span>
@@ -2267,7 +2282,7 @@ keeps secret.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_kid_rsa">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_kid_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2147-L2168"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_kid_rsa" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_kid_rsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2147-L2168"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_kid_rsa" title="Permalink to this definition">#</a></dt>
 <dd><p>Here <code class="docutils literal notranslate"><span class="pre">msg</span></code> is the plaintext and <code class="docutils literal notranslate"><span class="pre">key</span></code> is the private key.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.crypto.crypto</span> <span class="kn">import</span> <span class="p">(</span>
@@ -2286,7 +2301,7 @@ keeps secret.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encode_morse">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encode_morse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2203-L2247"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encode_morse" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encode_morse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2203-L2247"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encode_morse" title="Permalink to this definition">#</a></dt>
 <dd><p>Encodes a plaintext into popular Morse Code with letters
 separated by <code class="docutils literal notranslate"><span class="pre">sep</span></code> and words by a double <code class="docutils literal notranslate"><span class="pre">sep</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -2305,7 +2320,7 @@ separated by <code class="docutils literal notranslate"><span class="pre">sep</s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decode_morse">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decode_morse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2250-L2281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decode_morse" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decode_morse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2250-L2281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decode_morse" title="Permalink to this definition">#</a></dt>
 <dd><p>Decodes a Morse Code with letters separated by <code class="docutils literal notranslate"><span class="pre">sep</span></code>
 (default is ‘|’) and words by <span class="math notranslate nohighlight">\(word_sep\)</span> (default is ‘||)
 into plaintext.</p>
@@ -2325,7 +2340,7 @@ into plaintext.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.lfsr_sequence">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">lfsr_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2287-L2387"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.lfsr_sequence" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">lfsr_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2287-L2387"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.lfsr_sequence" title="Permalink to this definition">#</a></dt>
 <dd><p>This function creates an LFSR sequence.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2403,7 +2418,7 @@ Laguna Hills, Ca, 1967</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.lfsr_autocorrelation">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">lfsr_autocorrelation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2390-L2437"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.lfsr_autocorrelation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">lfsr_autocorrelation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2390-L2437"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.lfsr_autocorrelation" title="Permalink to this definition">#</a></dt>
 <dd><p>This function computes the LFSR autocorrelation function.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2445,7 +2460,7 @@ L must have length larger than P.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.lfsr_connection_polynomial">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">lfsr_connection_polynomial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2440-L2534"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.lfsr_connection_polynomial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">lfsr_connection_polynomial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2440-L2534"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.lfsr_connection_polynomial" title="Permalink to this definition">#</a></dt>
 <dd><p>This function computes the LFSR connection polynomial.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2502,7 +2517,7 @@ Jan 1969.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.elgamal_public_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">elgamal_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2595-L2622"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.elgamal_public_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">elgamal_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2595-L2622"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.elgamal_public_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return three number tuple as public key.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2528,7 +2543,7 @@ Jan 1969.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.elgamal_private_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">elgamal_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">digit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2540-L2592"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.elgamal_private_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">elgamal_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">digit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2540-L2592"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.elgamal_private_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return three number tuple as private key.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2569,7 +2584,7 @@ the output of this routine. See sympy.core.random._randrange.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_elgamal">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_elgamal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2625-L2682"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_elgamal" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_elgamal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2625-L2682"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_elgamal" title="Permalink to this definition">#</a></dt>
 <dd><p>Encrypt message with public key.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2614,7 +2629,7 @@ the output of this routine. See sympy.core.random._randrange.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_elgamal">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_elgamal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2685-L2721"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_elgamal" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_elgamal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2685-L2721"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_elgamal" title="Permalink to this definition">#</a></dt>
 <dd><p>Decrypt message with private key.</p>
 <p><span class="math notranslate nohighlight">\(msg = (c_{1}, c_{2})\)</span></p>
 <p><span class="math notranslate nohighlight">\(key = (p, r, d)\)</span></p>
@@ -2641,7 +2656,7 @@ the output of this routine. See sympy.core.random._randrange.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.dh_public_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">dh_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2795-L2827"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.dh_public_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">dh_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2795-L2827"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.dh_public_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return three number tuple as public key.</p>
 <p>This is the tuple that Alice sends to Bob.</p>
 <dl class="field-list">
@@ -2672,7 +2687,7 @@ parameters.s</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.dh_private_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">dh_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">digit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2726-L2792"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.dh_private_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">dh_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">digit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2726-L2792"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.dh_private_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return three integer tuple as private key.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2727,7 +2742,7 @@ the output of this routine. See sympy.core.random._randrange.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.dh_shared_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">dh_shared_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2830-L2871"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.dh_shared_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">dh_shared_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2830-L2871"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.dh_shared_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Return an integer that is the shared key.</p>
 <p>This is what Bob and Alice can both calculate using the public
 keys they received from each other and their private keys.</p>
@@ -2763,7 +2778,7 @@ keys they received from each other and their private keys.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.gm_public_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">gm_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2990-L3025"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.gm_public_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">gm_public_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2990-L3025"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.gm_public_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Compute public keys for <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.
 Note that in Goldwasser-Micali Encryption,
 public keys are randomly selected.</p>
@@ -2786,7 +2801,7 @@ some random integer coprime to <code class="docutils literal notranslate"><span 
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.gm_private_key">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">gm_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L2919-L2987"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.gm_private_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">gm_private_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L2919-L2987"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.gm_private_key" title="Permalink to this definition">#</a></dt>
 <dd><p>Check if <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code> can be used as private keys for
 the Goldwasser-Micali encryption. The method works
 roughly as follows.</p>
@@ -2845,7 +2860,7 @@ entropy of the code.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_gm">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_gm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L3028-L3062"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_gm" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_gm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L3028-L3062"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_gm" title="Permalink to this definition">#</a></dt>
 <dd><p>Encrypt integer ‘i’ using public_key ‘key’
 Note that gm uses random encryption.</p>
 <dl class="field-list">
@@ -2869,7 +2884,7 @@ Note that gm uses random encryption.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_gm">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_gm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L3066-L3093"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_gm" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_gm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L3066-L3093"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_gm" title="Permalink to this definition">#</a></dt>
 <dd><p>Decrypt message ‘message’ using public_key ‘key’.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2892,7 +2907,7 @@ Note that gm uses random encryption.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.encipher_railfence">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_railfence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rails</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L3099-L3129"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_railfence" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">encipher_railfence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rails</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L3099-L3129"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.encipher_railfence" title="Permalink to this definition">#</a></dt>
 <dd><p>Performs Railfence Encryption on plaintext and returns ciphertext</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2919,7 +2934,7 @@ Note that gm uses random encryption.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.crypto.crypto.decipher_railfence">
-<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_railfence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ciphertext</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rails</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/crypto/crypto.py#L3132-L3162"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_railfence" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.crypto.crypto.</span></span><span class="sig-name descname"><span class="pre">decipher_railfence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ciphertext</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rails</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/crypto/crypto.py#L3132-L3162"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.crypto.crypto.decipher_railfence" title="Permalink to this definition">#</a></dt>
 <dd><p>Decrypt the message using the given rails</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2965,18 +2980,27 @@ Note that gm uses random encryption.</p>
               </div>
             </a>
         </div>
-
-        <div class="related-information">
-              Copyright &#169; 2022 SymPy Development Team |
-            Last updated on Feb 24, 2022. |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/modules/crypto.rst.txt"
-               rel="nofollow">
-              Show Source
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022 SymPy Development Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Mar 03, 2022</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/sympy/sympy" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
             </a>
+              
+            </div>
+          </div>
         </div>
         
       </footer>
@@ -2991,7 +3015,7 @@ Note that gm uses random encryption.</p>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>

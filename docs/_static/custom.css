@@ -21,6 +21,9 @@ blockquote {
     margin-left: inherit;
     margin-right: inherit;
     padding: inherit;
+    background-color: inherit;
+    margin-block-start: -0.5rem;
+    margin-block-end: -0.5rem;
 }
 
 /* Make top-level items in the sidebar bold */
@@ -58,6 +61,12 @@ h4, h5, h6 {
     text-transform: inherit;
 }
 
+/* Make "Examples" and "Parameters" headers easier to see */
+p.rubric, dl.c .field-list dt, dl.cpp .field-list dt, dl.js .field-list dt, dl.py .field-list dt {
+    text-transform: none;
+    font-weight: 600;
+    font-size: 120%;
+}
 
 /* Disable underlines on links except on hover, and give visited links a*/
 /* darker green color. */
@@ -72,7 +81,19 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Change the background color of the code blocks (light mode). This should be*/
+/* --color-code-background but setting it in conf.py doesn't work.*/
+.highlight {
+    background-color: hsl(80deg 100% 95%);
+}
+
 /* Remove the underline from module names in code blocks in dark mode */
 body[data-theme="dark"] .highlight .nn {
     text-decoration: none;
+}
+
+/* Disable the fancy scrolling behavior when jumping to headers (this is too
+   slow for long pages) */
+html {
+    scroll-behavior: auto;
 }

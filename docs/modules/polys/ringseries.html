@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Literature" href="literature.html" /><link rel="prev" title="Internals of the Polynomial Manipulation Module" href="internals.html" />
 
-    <link rel="shortcut icon" href="../../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.02.23"/>
         <title>Series Manipulation using Polynomials - SymPy 1.11.dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3c656993158f05539f962c5cea52a5e6c184bb8c" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
     
@@ -29,18 +29,21 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
+  --color-api-keyword: #000000bd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #CCCCCC;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
   
@@ -57,20 +60,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
   }
@@ -87,20 +95,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
     }
@@ -114,17 +127,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
     </svg>
   </symbol>
   <symbol id="svg-menu" viewBox="0 0 24 24">
     <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -133,14 +142,14 @@
   </symbol>
   <symbol id="svg-arrow-right" viewBox="0 0 24 24">
     <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
   </symbol>
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -155,7 +164,7 @@
   </symbol>
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
@@ -163,7 +172,7 @@
   </symbol>
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
@@ -632,6 +641,7 @@
 
 </div>
 </div>
+
       </div>
       
     </div>
@@ -639,8 +649,13 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -655,7 +670,7 @@
         </div>
         <article role="main">
           <div class="section" id="series-manipulation-using-polynomials">
-<span id="polys-ringseries"></span><h1>Series Manipulation using Polynomials<a class="headerlink" href="#series-manipulation-using-polynomials" title="Permalink to this headline">¶</a></h1>
+<span id="polys-ringseries"></span><h1>Series Manipulation using Polynomials<a class="headerlink" href="#series-manipulation-using-polynomials" title="Permalink to this headline">#</a></h1>
 <p>Any finite Taylor series, for all practical purposes is, in fact a polynomial.
 This module makes use of the efficient representation and operations of sparse
 polynomials for very fast multivariate series manipulations. Typical speedups
@@ -731,7 +746,7 @@ would be great if any other elegant solution is found.</p>
 </pre></div>
 </div>
 <div class="section" id="rs-series">
-<h2>rs_series<a class="headerlink" href="#rs-series" title="Permalink to this headline">¶</a></h2>
+<h2>rs_series<a class="headerlink" href="#rs-series" title="Permalink to this headline">#</a></h2>
 <p>Direct use of elementary ring series functions does give more control, but is
 limiting at the same time. Creating an appropriate ring for the desired series
 expansion and knowing which ring series function to call, are things not
@@ -800,7 +815,7 @@ polynomials (see <a class="reference internal" href="internals.html#sympy.polys.
 </div>
 </div>
 <div class="section" id="contribute">
-<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
+<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">#</a></h2>
 <p><span class="math notranslate nohighlight">\(rs\_series\)</span> is not fully implemented yet. As of now, it supports only
 multivariate Taylor expansions of expressions involving <code class="docutils literal notranslate"><span class="pre">sin</span></code>, <code class="docutils literal notranslate"><span class="pre">cos</span></code>,
 <code class="docutils literal notranslate"><span class="pre">exp</span></code> and <code class="docutils literal notranslate"><span class="pre">tan</span></code>. Adding the remaining functions is not at all difficult and
@@ -811,14 +826,14 @@ comments in <code class="docutils literal notranslate"><span class="pre">ring_se
 functions are supported currently. The long term goal is to replace SymPy’s
 current <code class="docutils literal notranslate"><span class="pre">series</span></code> method with <code class="docutils literal notranslate"><span class="pre">rs_series</span></code>.</p>
 <div class="section" id="manipulation-of-power-series">
-<h3>Manipulation of power series<a class="headerlink" href="#manipulation-of-power-series" title="Permalink to this headline">¶</a></h3>
+<h3>Manipulation of power series<a class="headerlink" href="#manipulation-of-power-series" title="Permalink to this headline">#</a></h3>
 <p>Functions in this module carry the prefix <code class="docutils literal notranslate"><span class="pre">rs_</span></code>, standing for “ring series”.
 They manipulate finite power series in the sparse representation provided
 by <code class="docutils literal notranslate"><span class="pre">polys.ring.ring</span></code>.</p>
 <p><strong>Elementary functions</strong></p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_log">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1000-L1055"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_log" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1000-L1055"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_log" title="Permalink to this definition">#</a></dt>
 <dd><p>The Logarithm of <code class="docutils literal notranslate"><span class="pre">p</span></code> modulo <code class="docutils literal notranslate"><span class="pre">O(x**prec)</span></code>.</p>
 <p class="rubric">Notes</p>
 <p>Truncation of <code class="docutils literal notranslate"><span class="pre">integral</span> <span class="pre">dx</span> <span class="pre">p**-1*d</span> <span class="pre">p/dx</span></code> is used.</p>
@@ -836,7 +851,7 @@ by <code class="docutils literal notranslate"><span class="pre">polys.ring.ring<
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_LambertW">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_LambertW</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1057-L1094"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_LambertW" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_LambertW</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1057-L1094"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_LambertW" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the series expansion of the principal branch of the Lambert W
 function.</p>
 <p class="rubric">Examples</p>
@@ -855,7 +870,7 @@ function.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_exp">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1106-L1161"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_exp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1106-L1161"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_exp" title="Permalink to this definition">#</a></dt>
 <dd><p>Exponentiation of a series modulo <code class="docutils literal notranslate"><span class="pre">O(x**prec)</span></code></p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.domains</span> <span class="kn">import</span> <span class="n">QQ</span>
@@ -869,7 +884,7 @@ function.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_atan">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_atan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1179-L1231"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_atan" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_atan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1179-L1231"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_atan" title="Permalink to this definition">#</a></dt>
 <dd><p>The arctangent of a series</p>
 <p>Return the series expansion of the atan of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -888,7 +903,7 @@ function.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_asin">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_asin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1233-L1276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_asin" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_asin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1233-L1276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_asin" title="Permalink to this definition">#</a></dt>
 <dd><p>Arcsine of a series</p>
 <p>Return the series expansion of the asin of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -907,7 +922,7 @@ function.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_tan">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1299-L1357"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_tan" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1299-L1357"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_tan" title="Permalink to this definition">#</a></dt>
 <dd><blockquote>
 <div><p>Tangent of a series.</p>
 <p>Return the series expansion of the tan of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
@@ -928,7 +943,7 @@ function.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series._tan1">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">_tan1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1278-L1297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series._tan1" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">_tan1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1278-L1297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series._tan1" title="Permalink to this definition">#</a></dt>
 <dd><p>Helper function of <a class="reference internal" href="#sympy.polys.ring_series.rs_tan" title="sympy.polys.ring_series.rs_tan"><code class="xref py py-func docutils literal notranslate"><span class="pre">rs_tan()</span></code></a>.</p>
 <p>Return the series expansion of tan of a univariate series using Newton’s
 method. It takes advantage of the fact that series expansion of atan is
@@ -940,7 +955,7 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_cot">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1359-L1393"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cot" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1359-L1393"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cot" title="Permalink to this definition">#</a></dt>
 <dd><p>Cotangent of a series</p>
 <p>Return the series expansion of the cot of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -959,7 +974,7 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_sin">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1395-L1463"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_sin" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1395-L1463"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_sin" title="Permalink to this definition">#</a></dt>
 <dd><p>Sine of a series</p>
 <p>Return the series expansion of the sin of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -980,7 +995,7 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_cos">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1465-L1536"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1465-L1536"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cos" title="Permalink to this definition">#</a></dt>
 <dd><p>Cosine of a series</p>
 <p>Return the series expansion of the cos of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -1001,13 +1016,13 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_cos_sin">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cos_sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1538-L1549"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cos_sin" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cos_sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1538-L1549"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cos_sin" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the tuple <code class="docutils literal notranslate"><span class="pre">(rs_cos(p,</span> <span class="pre">x,</span> <span class="pre">prec)`,</span> <span class="pre">`rs_sin(p,</span> <span class="pre">x,</span> <span class="pre">prec))</span></code>.</p>
 <p>Is faster than calling rs_cos and rs_sin separately</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_atanh">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_atanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1567-L1619"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_atanh" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_atanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1567-L1619"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_atanh" title="Permalink to this definition">#</a></dt>
 <dd><p>Hyperbolic arctangent of a series</p>
 <p>Return the series expansion of the atanh of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -1026,7 +1041,7 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_sinh">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_sinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1621-L1646"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_sinh" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_sinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1621-L1646"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_sinh" title="Permalink to this definition">#</a></dt>
 <dd><p>Hyperbolic sine of a series</p>
 <p>Return the series expansion of the sinh of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -1045,7 +1060,7 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_cosh">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cosh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1648-L1673"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cosh" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_cosh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1648-L1673"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_cosh" title="Permalink to this definition">#</a></dt>
 <dd><p>Hyperbolic cosine of a series</p>
 <p>Return the series expansion of the cosh of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -1064,7 +1079,7 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_tanh">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_tanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1696-L1748"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_tanh" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_tanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1696-L1748"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_tanh" title="Permalink to this definition">#</a></dt>
 <dd><p>Hyperbolic tangent of a series</p>
 <p>Return the series expansion of the tanh of <code class="docutils literal notranslate"><span class="pre">p</span></code>, about 0.</p>
 <p class="rubric">Examples</p>
@@ -1083,7 +1098,7 @@ Or <span class="math notranslate nohighlight">\(y = \arctan(x)\)</span> where <s
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_hadamard_exp">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_hadamard_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1772-L1800"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_hadamard_exp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_hadamard_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1772-L1800"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_hadamard_exp" title="Permalink to this definition">#</a></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">f_i/i!*x**i</span></code> from <code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">f_i*x**i</span></code>,
 where <code class="docutils literal notranslate"><span class="pre">x</span></code> is the first variable.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">invers=True</span></code> return <code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">f_i*i!*x**i</span></code></p>
@@ -1101,7 +1116,7 @@ where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 <p><strong>Operations</strong></p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_mul">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L212-L261"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_mul" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L212-L261"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_mul" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the product of the given two series, modulo <code class="docutils literal notranslate"><span class="pre">O(x**prec)</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span></code> is the series variable or its position in the generators.</p>
 <p class="rubric">Examples</p>
@@ -1118,7 +1133,7 @@ where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_square">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L263-L301"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_square" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L263-L301"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_square" title="Permalink to this definition">#</a></dt>
 <dd><p>Square the series modulo <code class="docutils literal notranslate"><span class="pre">O(x**prec)</span></code></p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.domains</span> <span class="kn">import</span> <span class="n">QQ</span>
@@ -1133,7 +1148,7 @@ where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_pow">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_pow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L303-L355"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_pow" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_pow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L303-L355"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_pow" title="Permalink to this definition">#</a></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">p1**n</span></code> modulo <code class="docutils literal notranslate"><span class="pre">O(x**prec)</span></code></p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.domains</span> <span class="kn">import</span> <span class="n">QQ</span>
@@ -1148,7 +1163,7 @@ where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_series_inversion">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_series_inversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L524-L560"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_series_inversion" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_series_inversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L524-L560"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_series_inversion" title="Permalink to this definition">#</a></dt>
 <dd><p>Multivariate series inversion <code class="docutils literal notranslate"><span class="pre">1/p</span></code> modulo <code class="docutils literal notranslate"><span class="pre">O(x**prec)</span></code>.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.domains</span> <span class="kn">import</span> <span class="n">QQ</span>
@@ -1166,7 +1181,7 @@ where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_series_reversion">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_series_reversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L575-L645"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_series_reversion" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_series_reversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L575-L645"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_series_reversion" title="Permalink to this definition">#</a></dt>
 <dd><p>Reversion of a series.</p>
 <p><code class="docutils literal notranslate"><span class="pre">p</span></code> is a series with <code class="docutils literal notranslate"><span class="pre">O(x**n)</span></code> of the form <span class="math notranslate nohighlight">\(p = ax + f(x)\)</span>
 where <span class="math notranslate nohighlight">\(a\)</span> is a number different from 0.</p>
@@ -1210,7 +1225,7 @@ with the boundary condition: <span class="math notranslate nohighlight">\(r_1 = 
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_nth_root">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_nth_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L924-L998"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_nth_root" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_nth_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L924-L998"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_nth_root" title="Permalink to this definition">#</a></dt>
 <dd><p>Multivariate series expansion of the nth root of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1249,7 +1264,7 @@ roots of symbols.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_trunc">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_trunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L96-L121"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_trunc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_trunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L96-L121"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_trunc" title="Permalink to this definition">#</a></dt>
 <dd><p>Truncate the series in the <code class="docutils literal notranslate"><span class="pre">x</span></code> variable with precision <code class="docutils literal notranslate"><span class="pre">prec</span></code>,
 that is, modulo <code class="docutils literal notranslate"><span class="pre">O(x**prec)</span></code></p>
 <p class="rubric">Examples</p>
@@ -1267,7 +1282,7 @@ that is, modulo <code class="docutils literal notranslate"><span class="pre">O(x
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_subs">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_subs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L357-L423"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_subs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_subs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L357-L423"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_subs" title="Permalink to this definition">#</a></dt>
 <dd><p>Substitution with truncation according to the mapping in <code class="docutils literal notranslate"><span class="pre">rules</span></code>.</p>
 <p>Return a series with precision <code class="docutils literal notranslate"><span class="pre">prec</span></code> in the generator <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 <p>Note that substitutions are not done one after the other</p>
@@ -1307,7 +1322,7 @@ that is, modulo <code class="docutils literal notranslate"><span class="pre">O(x
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_diff">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L736-L766"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_diff" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L736-L766"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_diff" title="Permalink to this definition">#</a></dt>
 <dd><p>Return partial derivative of <code class="docutils literal notranslate"><span class="pre">p</span></code> with respect to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1327,7 +1342,7 @@ that is, modulo <code class="docutils literal notranslate"><span class="pre">O(x
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_integrate">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_integrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L768-L798"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_integrate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_integrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L768-L798"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_integrate" title="Permalink to this definition">#</a></dt>
 <dd><p>Integrate <code class="docutils literal notranslate"><span class="pre">p</span></code> with respect to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1347,7 +1362,7 @@ that is, modulo <code class="docutils literal notranslate"><span class="pre">O(x
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_newton">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_newton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1750-L1770"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_newton" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_newton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1750-L1770"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_newton" title="Permalink to this definition">#</a></dt>
 <dd><p>Compute the truncated Newton sum of the polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code></p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.domains</span> <span class="kn">import</span> <span class="n">QQ</span>
@@ -1362,7 +1377,7 @@ that is, modulo <code class="docutils literal notranslate"><span class="pre">O(x
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_compose_add">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_compose_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L1802-L1850"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_compose_add" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_compose_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L1802-L1850"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_compose_add" title="Permalink to this definition">#</a></dt>
 <dd><p>compute the composed sum <code class="docutils literal notranslate"><span class="pre">prod(p2(x</span> <span class="pre">-</span> <span class="pre">beta)</span> <span class="pre">for</span> <span class="pre">beta</span> <span class="pre">root</span> <span class="pre">of</span> <span class="pre">p1)</span></code></p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.domains</span> <span class="kn">import</span> <span class="n">QQ</span>
@@ -1388,7 +1403,7 @@ National de Recherche en Informatique et en Automatique</p>
 <p><strong>Utility functions</strong></p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_is_puiseux">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_is_puiseux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L123-L146"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_is_puiseux" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_is_puiseux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L123-L146"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_is_puiseux" title="Permalink to this definition">#</a></dt>
 <dd><p>Test if <code class="docutils literal notranslate"><span class="pre">p</span></code> is Puiseux series in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <p>Raise an exception if it has a negative power in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -1404,7 +1419,7 @@ National de Recherche en Informatique et en Automatique</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_puiseux">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_puiseux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L148-L185"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_puiseux" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_puiseux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L148-L185"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_puiseux" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the puiseux series for <span class="math notranslate nohighlight">\(f(p, x, prec)\)</span>.</p>
 <p>To be used when function <code class="docutils literal notranslate"><span class="pre">f</span></code> is implemented only for regular series.</p>
 <p class="rubric">Examples</p>
@@ -1420,13 +1435,13 @@ National de Recherche en Informatique et en Automatique</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_puiseux2">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_puiseux2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L187-L210"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_puiseux2" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_puiseux2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L187-L210"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_puiseux2" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the puiseux series for <span class="math notranslate nohighlight">\(f(p, q, x, prec)\)</span>.</p>
 <p>To be used when function <code class="docutils literal notranslate"><span class="pre">f</span></code> is implemented only for regular series.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_series_from_list">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_series_from_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L647-L734"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_series_from_list" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_series_from_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L647-L734"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_series_from_list" title="Permalink to this definition">#</a></dt>
 <dd><p>Return a series <span class="math notranslate nohighlight">\(sum c[n]*p**n\)</span> modulo <span class="math notranslate nohighlight">\(O(x**prec)\)</span>.</p>
 <p>It reduces the number of multiplications by summing concurrently.</p>
 <p><span class="math notranslate nohighlight">\(ax = [1, p, p**2, .., p**(J - 1)]\)</span>
@@ -1451,7 +1466,7 @@ with <span class="math notranslate nohighlight">\(K &gt;= (n + 1)/J\)</span></p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.rs_fun">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L800-L854"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_fun" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">rs_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L800-L854"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.rs_fun" title="Permalink to this definition">#</a></dt>
 <dd><p>Function of a multivariate series computed by substitution.</p>
 <p>The case with f method name is used to compute <span class="math notranslate nohighlight">\(rs\_tan\)</span> and <span class="math notranslate nohighlight">\(rs\_nth\_root\)</span>
 of a multivariate series:</p>
@@ -1482,13 +1497,13 @@ desired series</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.mul_xin">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">mul_xin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L856-L868"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.mul_xin" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">mul_xin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L856-L868"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.mul_xin" title="Permalink to this definition">#</a></dt>
 <dd><p>Return <span class="math notranslate nohighlight">\(p*x_i**n\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(x\_i\)</span> is the ith variable in <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.polys.ring_series.pow_xin">
-<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">pow_xin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ae8cea9441756b72ee8a93a758dcbde1fc372409/sympy/polys/ring_series.py#L870-L887"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.pow_xin" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.polys.ring_series.</span></span><span class="sig-name descname"><span class="pre">pow_xin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/1fa919da7adffcdd0a081592e87aa74199b1702b/sympy/polys/ring_series.py#L870-L887"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.polys.ring_series.pow_xin" title="Permalink to this definition">#</a></dt>
 <dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.domains</span> <span class="kn">import</span> <span class="n">QQ</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.rings</span> <span class="kn">import</span> <span class="n">ring</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.polys.ring_series</span> <span class="kn">import</span> <span class="n">pow_xin</span>
@@ -1530,18 +1545,27 @@ desired series</p>
               </div>
             </a>
         </div>
-
-        <div class="related-information">
-              Copyright &#169; 2022 SymPy Development Team |
-            Last updated on Feb 24, 2022. |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../../_sources/modules/polys/ringseries.rst.txt"
-               rel="nofollow">
-              Show Source
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022 SymPy Development Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Mar 03, 2022</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/sympy/sympy" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
             </a>
+              
+            </div>
+          </div>
         </div>
         
       </footer>
@@ -1579,7 +1603,7 @@ desired series</p>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>

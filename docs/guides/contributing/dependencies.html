@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Build the Documentation" href="build-docs.html" /><link rel="prev" title="Development Environment Setup" href="dev-setup.html" />
 
-    <link rel="shortcut icon" href="../../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2021.10.09"/>
+    <link rel="shortcut icon" href="../../_static/sympy-notailtext-favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.02.23"/>
         <title>Dependencies - SymPy 1.11.dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3c656993158f05539f962c5cea52a5e6c184bb8c" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
     
@@ -29,18 +29,21 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
+  --color-api-keyword: #000000bd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #CCCCCC;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
   
@@ -57,20 +60,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
   }
@@ -87,20 +95,25 @@
   --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
-  --color-api-keyword: #29A329;
-  --color-foreground-secondary: #53555B;
+  --color-api-keyword: #FFFFFFbd;
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-primary);
+  --api-font-size: var(--font-size--normal);
+  --color-foreground-secondary: #9DA1AC;
   --color-link-underline--hover: #29A329;
-  --color-admonition-title-background--seealso: var(--color-brand-primary);
+  --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
-  --color-admonition-title-background--note: var(--color-brand-primary);
+  --color-admonition-title-background--note: #555555;
   --color-admonition-title--note: black;
   --color-admonition-title-background--warning: var(--color-problematic);
   --color-admonition-title--warning: white;
-  --color-code-background: hsl(80deg 100% 95%);
   --admonition-font-size: var(--font-size--normal);
   --admonition-title-font-size: var(--font-size--normal);
+  --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-api-overall: #FFFFFF90;
+  --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #444444;
   
     }
@@ -114,17 +127,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
     </svg>
   </symbol>
   <symbol id="svg-menu" viewBox="0 0 24 24">
     <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -133,14 +142,14 @@
   </symbol>
   <symbol id="svg-arrow-right" viewBox="0 0 24 24">
     <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
   </symbol>
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -155,7 +164,7 @@
   </symbol>
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
@@ -163,7 +172,7 @@
   </symbol>
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
@@ -632,6 +641,7 @@
 
 </div>
 </div>
+
       </div>
       
     </div>
@@ -639,8 +649,13 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -655,7 +670,7 @@
         </div>
         <article role="main">
           <div class="tex2jax_ignore mathjax_ignore section" id="dependencies">
-<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h1>
 <p>This page lists the hard and optional dependencies of SymPy.</p>
 <p>There are several packages that, when installed, can enable certain additional
 SymPy functionality. Most users and contributors will not need to install any
@@ -673,7 +688,7 @@ found on
 <a class="reference external" href="https://github.com/sympy/sympy/network/dependents?dependent_type=PACKAGE">GitHub</a>
 or <a class="reference external" href="https://libraries.io/pypi/sympy/dependents">libraries.io</a>.</p>
 <div class="section" id="hard-dependencies">
-<h2>Hard Dependencies<a class="headerlink" href="#hard-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2>Hard Dependencies<a class="headerlink" href="#hard-dependencies" title="Permalink to this headline">#</a></h2>
 <p>SymPy only has one hard dependency, which is required for it to work: mpmath.</p>
 <ul id="dependencies-mpmath">
 <li><p><strong>mpmath</strong>: <a class="reference external" href="https://mpmath.org/">mpmath</a> is a pure Python package for
@@ -697,7 +712,7 @@ repository.</p>
 </ul>
 </div>
 <div class="section" id="optional-dependencies">
-<h2>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Permalink to this headline">#</a></h2>
 <p>These dependencies are not required to use SymPy. The vast majority of SymPy
 functions do not require them, however, a few functions such as plotting and
 automatic wrapping of code generated functions require additional dependencies
@@ -709,7 +724,7 @@ request will automatically install these dependencies in the
 “optional-dependencies” build, but you may wish to install them locally if you
 are working on a part of SymPy that uses them.</p>
 <div class="section" id="recommended-optional-dependencies">
-<h3>Recommended Optional Dependencies<a class="headerlink" href="#recommended-optional-dependencies" title="Permalink to this headline">¶</a></h3>
+<h3>Recommended Optional Dependencies<a class="headerlink" href="#recommended-optional-dependencies" title="Permalink to this headline">#</a></h3>
 <p>These dependencies are not required for SymPy to function, but it is
 recommended that all users install them if they can, as they will improve the
 general performance of SymPy.</p>
@@ -733,7 +748,7 @@ install <code class="docutils literal notranslate"><span class="pre">gmpy2</span
 </ul>
 </div>
 <div class="section" id="interactive-use">
-<h3>Interactive Use<a class="headerlink" href="#interactive-use" title="Permalink to this headline">¶</a></h3>
+<h3>Interactive Use<a class="headerlink" href="#interactive-use" title="Permalink to this headline">#</a></h3>
 <p>SymPy is designed to be used both interactively and as a library. When used
 interactively, SymPy is able to interface with IPython and Jupyter notebooks.</p>
 <ul>
@@ -751,7 +766,7 @@ using MathJax in the <a class="reference external" href="https://jupyter.org/">J
 </ul>
 </div>
 <div class="section" id="printing">
-<h3>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h3>
+<h3>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference internal" href="../../modules/printing.html#sympy.printing.preview.preview" title="sympy.printing.preview.preview"><code class="xref py py-func docutils literal notranslate"><span class="pre">preview()</span></code></a> function automatically converts SymPy expressions into
 images rendered with LaTeX. <code class="docutils literal notranslate"><span class="pre">preview()</span></code> can either save the image to a file or
 show it with a viewer.</p>
@@ -761,7 +776,7 @@ show it with a viewer.</p>
 </ul>
 </div>
 <div class="section" id="parsing">
-<h3>Parsing<a class="headerlink" href="#parsing" title="Permalink to this headline">¶</a></h3>
+<h3>Parsing<a class="headerlink" href="#parsing" title="Permalink to this headline">#</a></h3>
 <p>Several functions in the <a class="reference internal" href="../../modules/parsing.html#module-sympy.parsing" title="sympy.parsing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sympy.parsing</span></code></a> submodule require external
 dependencies to function. Note that not all parsers require external modules
 at this time. The Python (<a class="reference internal" href="../../modules/parsing.html#sympy.parsing.sympy_parser.parse_expr" title="sympy.parsing.sympy_parser.parse_expr"><code class="xref py py-func docutils literal notranslate"><span class="pre">parse_expr()</span></code></a>), Mathematca
@@ -783,7 +798,7 @@ with conda and <code class="docutils literal notranslate"><span class="pre">clan
 </ul>
 </div>
 <div class="section" id="logic">
-<h3>Logic<a class="headerlink" href="#logic" title="Permalink to this headline">¶</a></h3>
+<h3>Logic<a class="headerlink" href="#logic" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference internal" href="../../modules/logic.html#sympy.logic.inference.satisfiable" title="sympy.logic.inference.satisfiable"><code class="xref py py-func docutils literal notranslate"><span class="pre">satisfiable()</span></code></a> function includes a pure Python implementation of
 the DPLL satisfiability algorithm. But it can optionally use faster C SAT
 solvers if they are installed. Note that <code class="docutils literal notranslate"><span class="pre">satisfiable()</span></code> is also used by
@@ -799,7 +814,7 @@ only <a class="reference external" href="http://minisat.se/MiniSat.html">Minisat
 </ul>
 </div>
 <div class="section" id="plotting">
-<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h3>
+<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference internal" href="../../modules/plotting.html#module-sympy.plotting.plot" title="sympy.plotting.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sympy.plotting.plot</span></code></a> module makes heavy use of external plotting
 libraries to render plots. The primarily plotting module that is supported is
 Matplotlib.</p>
@@ -814,7 +829,7 @@ and 3D plotting.</p></li>
 </ul>
 </div>
 <div class="section" id="lambdify">
-<span id="dependencies-lambdify"></span><h3>lambdify<a class="headerlink" href="#lambdify" title="Permalink to this headline">¶</a></h3>
+<span id="dependencies-lambdify"></span><h3>lambdify<a class="headerlink" href="#lambdify" title="Permalink to this headline">#</a></h3>
 <p><a class="reference internal" href="../../modules/utilities/lambdify.html#sympy.utilities.lambdify.lambdify" title="sympy.utilities.lambdify.lambdify"><code class="xref py py-func docutils literal notranslate"><span class="pre">lambdify()</span></code></a> is a function that converts SymPy expressions into functions
 that can be evaluated numerically using various libraries as backends.
 <code class="docutils literal notranslate"><span class="pre">lambdify</span></code> is the primary vehicle by which users interface between SymPy and
@@ -852,7 +867,7 @@ function for use with pure mpmath.</p></li>
 </ul>
 </div>
 <div class="section" id="code-generation">
-<h3>Code Generation<a class="headerlink" href="#code-generation" title="Permalink to this headline">¶</a></h3>
+<h3>Code Generation<a class="headerlink" href="#code-generation" title="Permalink to this headline">#</a></h3>
 <p>SymPy can <a class="reference internal" href="../../modules/codegen.html#codegen-prose"><span class="std std-ref">generate code</span></a> for a large number of languages by
 converting SymPy expressions into valid code for those languages. It also has
 functionality for some languages to automatically compile and run the code.</p>
@@ -866,7 +881,7 @@ that automatically take the generated code and compile it to a function that
 can be used within Python. Note that <a class="reference internal" href="../../modules/utilities/lambdify.html#sympy.utilities.lambdify.lambdify" title="sympy.utilities.lambdify.lambdify"><code class="xref py py-func docutils literal notranslate"><span class="pre">lambdify()</span></code></a> is a special case of
 this, but its dependencies are listed <a class="reference internal" href="#dependencies-lambdify"><span class="std std-ref">above</span></a>.</p>
 <div class="section" id="autowrap">
-<h4>Autowrap<a class="headerlink" href="#autowrap" title="Permalink to this headline">¶</a></h4>
+<h4>Autowrap<a class="headerlink" href="#autowrap" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><strong>NumPy</strong>: <a class="reference external" href="https://numpy.org/">NumPy</a> and, optionally, its subpackage
 <a class="reference external" href="https://numpy.org/doc/stable/f2py/">f2py</a>, can be used to generate Python
@@ -886,7 +901,7 @@ including <a class="reference external" href="https://clang.llvm.org/">Clang/LLV
 </ul>
 </div>
 <div class="section" id="code-printers">
-<h4>Code Printers<a class="headerlink" href="#code-printers" title="Permalink to this headline">¶</a></h4>
+<h4>Code Printers<a class="headerlink" href="#code-printers" title="Permalink to this headline">#</a></h4>
 <p>Most code printers generate Python strings, and therefore do not require the
 given library or language compiler as a dependency. However, a few code
 printers generate Python functions instead of strings:</p>
@@ -910,7 +925,7 @@ supported version of TensorFlow.</p></li>
 </ul>
 </div>
 <div class="section" id="testing-only-dependencies">
-<h4>Testing-Only Dependencies<a class="headerlink" href="#testing-only-dependencies" title="Permalink to this headline">¶</a></h4>
+<h4>Testing-Only Dependencies<a class="headerlink" href="#testing-only-dependencies" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><strong>Wurlitzer</strong>: <a class="reference external" href="https://github.com/minrk/wurlitzer">Wurlitzer</a> is a Python
 package that allows capturing output from C extensions. It is used by some
@@ -926,7 +941,7 @@ installed.</p></li>
 </div>
 </div>
 <div class="section" id="statistics">
-<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">¶</a></h3>
+<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference internal" href="../../modules/stats.html#sympy.stats.sample" title="sympy.stats.sample"><code class="xref py py-func docutils literal notranslate"><span class="pre">sympy.stats.sample()</span></code></a> function uses an external library to produce
 samples from the given distribution. At least one of the following libraries
 is required to use the sampling functionality of <code class="docutils literal notranslate"><span class="pre">sympy.stats</span></code>.</p>
@@ -939,7 +954,7 @@ random module</a>.</p></li>
 </ul>
 </div>
 <div class="section" id="optional-symengine-backend">
-<h3>Optional SymEngine Backend<a class="headerlink" href="#optional-symengine-backend" title="Permalink to this headline">¶</a></h3>
+<h3>Optional SymEngine Backend<a class="headerlink" href="#optional-symengine-backend" title="Permalink to this headline">#</a></h3>
 <ul>
 <li><p><strong>python-symengine</strong>: <a class="reference external" href="https://symengine.org/">SymEngine</a> is a fast symbolic
 manipulation library, written in C++. The SymEngine Python bindings may be
@@ -964,7 +979,7 @@ may not work correctly when it is enabled.</p>
 </ul>
 </div>
 <div class="section" id="experimental-rubi-integrator">
-<h3>Experimental Rubi Integrator<a class="headerlink" href="#experimental-rubi-integrator" title="Permalink to this headline">¶</a></h3>
+<h3>Experimental Rubi Integrator<a class="headerlink" href="#experimental-rubi-integrator" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><strong>MatchPy</strong>: <a class="reference external" href="https://matchpy.readthedocs.io/en/latest/">MatchPy</a> is a
 library for doing pattern matching. It is used in the experimental
@@ -973,7 +988,7 @@ SymPy. SymPy and MatchPy are able to interface with each other.</p></li>
 </ul>
 </div>
 <div class="section" id="sage">
-<h3>Sage<a class="headerlink" href="#sage" title="Permalink to this headline">¶</a></h3>
+<h3>Sage<a class="headerlink" href="#sage" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://www.sagemath.org/">Sage</a> is an open source mathematics software that
 incorporates a large number of open source mathematics libraries. SymPy is one
 of the libraries used by Sage.</p>
@@ -984,11 +999,11 @@ itself.</p>
 </div>
 </div>
 <div class="section" id="development-dependencies">
-<h2>Development Dependencies<a class="headerlink" href="#development-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2>Development Dependencies<a class="headerlink" href="#development-dependencies" title="Permalink to this headline">#</a></h2>
 <p>Typical development on SymPy does not require any additional dependencies
 beyond Python and mpmath.</p>
 <div class="section" id="getting-the-source-code">
-<h3>Getting the Source Code<a class="headerlink" href="#getting-the-source-code" title="Permalink to this headline">¶</a></h3>
+<h3>Getting the Source Code<a class="headerlink" href="#getting-the-source-code" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><strong>git</strong>: The <a class="reference external" href="https://github.com/sympy/sympy">SymPy source code</a> uses the
 <a class="reference external" href="https://git-scm.com/">git</a> version control system. See the <a class="reference internal" href="../getting_started/install.html#installation-git"><span class="std std-ref">installation
@@ -998,7 +1013,7 @@ for instructions on how to get the development version of SymPy from git.</p></l
 </ul>
 </div>
 <div class="section" id="running-the-tests">
-<h3>Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h3>
+<h3>Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">#</a></h3>
 <p>The base SymPy tests do not require any additional dependencies, however most
 of the above dependencies may be required for some tests to run. Tests that
 depend on optional dependencies should be skipped when they are not installed,
@@ -1021,7 +1036,7 @@ to run. It is not otherwise required for any SymPy function.</p></li>
 </ul>
 </div>
 <div class="section" id="building-the-documentation">
-<h3>Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this headline">¶</a></h3>
+<h3>Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this headline">#</a></h3>
 <p>Building the documentation requires several additional dependencies. <a class="reference internal" href="build-docs.html"><span class="doc std std-doc">This
 page</span></a> outlines these dependencies and how to install them. It is
 only necessary to install these dependencies if you are contributing
@@ -1031,7 +1046,7 @@ development version of SymPy, development builds of the docs are hosted online
 at <a class="reference external" href="https://docs.sympy.org/dev/index.html">https://docs.sympy.org/dev/index.html</a>.</p>
 </div>
 <div class="section" id="running-the-benchmarks">
-<h3>Running the Benchmarks<a class="headerlink" href="#running-the-benchmarks" title="Permalink to this headline">¶</a></h3>
+<h3>Running the Benchmarks<a class="headerlink" href="#running-the-benchmarks" title="Permalink to this headline">#</a></h3>
 <p>The benchmarks for SymPy are hosted at
 <a class="reference external" href="https://github.com/sympy/sympy_benchmarks">https://github.com/sympy/sympy_benchmarks</a>. The
 <a class="reference external" href="https://github.com/sympy/sympy_benchmarks#readme">README</a> in that repository
@@ -1075,18 +1090,27 @@ install is called <code class="docutils literal notranslate"><span class="pre">a
               </div>
             </a>
         </div>
-
-        <div class="related-information">
-              Copyright &#169; 2022 SymPy Development Team |
-            Last updated on Feb 24, 2022. |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../../_sources/guides/contributing/dependencies.md.txt"
-               rel="nofollow">
-              Show Source
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022 SymPy Development Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Mar 03, 2022</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/sympy/sympy" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
             </a>
+              
+            </div>
+          </div>
         </div>
         
       </footer>
@@ -1147,7 +1171,7 @@ install is called <code class="docutils literal notranslate"><span class="pre">a
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
