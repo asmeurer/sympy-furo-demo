@@ -95,8 +95,12 @@ body:not([data-theme="light"]) .highlight .nn {
     color: #71ADFF;
 }
 /* Improve the color contrast of numbers in dark mode */
-body:not([data-theme="light"]) .highlight .mi {
+body:not([data-theme="light"]) .highlight .mi, body:not([data-theme="light"]) .highlight .mf {
     color: #51b2fd;
+}
+/* Improve the color contrast of builtins in dark mode */
+body[data-theme="dark"] .highlight .nb {
+    color: #2fbccd;
 }
 
 /* Disable the fancy scrolling behavior when jumping to headers (this is too
