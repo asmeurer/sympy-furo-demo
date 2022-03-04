@@ -1,11 +1,11 @@
 /* Reduce the vertical space between lines in code blocks. Required to */
 /* make Unicode pretty printing appear correctly. */
 pre {
-    line-height: 120%;
+    line-height: 120% !important;
 }
 
 article pre {
-    line-height: 120%;
+    line-height: 120% !important;
 }
 
 /* Completely disable blockquotes. The Furo defaults make block quotes very*/
@@ -88,19 +88,25 @@ a:hover {
     background-color: hsl(80deg 100% 95%);
 }
 
-/* Remove the underline from module names in code blocks in dark mode, and improve the color contrast. */
+/* Improve the color contrast of various syntax highlighted elements in dark*/
+/* mode  */
 
-body:not([data-theme="light"]) .highlight .nn {
+/* Module names and function and class definitions */
+body:not([data-theme="light"]) .highlight .nn, body:not([data-theme="light"]) .highlight .nf, body:not([data-theme="light"]) .highlight .nc, body:not([data-theme="light"]) .highlight .fm {
     text-decoration: none;
     color: #71ADFF;
 }
-/* Improve the color contrast of numbers in dark mode */
+/* Numbers */
 body:not([data-theme="light"]) .highlight .mi, body:not([data-theme="light"]) .highlight .mf {
     color: #51b2fd;
 }
-/* Improve the color contrast of builtins in dark mode */
-body[data-theme="dark"] .highlight .nb {
+/* Builtins and self/cls*/
+body[data-theme="dark"] .highlight .nb, body[data-theme="dark"] .highlight .bp {
     color: #2fbccd;
+}
+/* Tracebacks */
+body[data-theme="dark"] .highlight .gt, body[data-theme="dark"] .highlight .gr {
+    color: #ff8888;
 }
 
 /* Disable the fancy scrolling behavior when jumping to headers (this is too
