@@ -26,7 +26,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #000000bd;
@@ -34,6 +33,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
@@ -57,7 +57,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -65,6 +64,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -81,6 +81,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
   }
   @media (prefers-color-scheme: dark) {
@@ -93,7 +94,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -101,6 +101,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -117,6 +118,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
     }
   }
@@ -196,7 +198,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -227,7 +233,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../index.html">
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../../_static/sympylogo.png" alt="Logo"/>
@@ -240,7 +246,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -641,9 +647,7 @@
 </li>
 </ul>
 
-</div>
-</div>
-
+</div></div>
       </div>
       
     </div>
@@ -675,7 +679,7 @@
 <span id="gray-code"></span><span id="combinatorics-graycode"></span><h1>Gray Code<a class="headerlink" href="#module-sympy.combinatorics.graycode" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.GrayCode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.graycode.</span></span><span class="sig-name descname"><span class="pre">GrayCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw_args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L6-L319"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.graycode.</span></span><span class="sig-name descname"><span class="pre">GrayCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw_args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L6-L319"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode" title="Permalink to this definition">#</a></dt>
 <dd><p>A Gray code is essentially a Hamiltonian walk on
 a n-dimensional cube with edge length of one.
 The vertices of the cube are represented by vectors
@@ -726,7 +730,7 @@ Addison Wesley</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.GrayCode.generate_gray">
-<span class="sig-name descname"><span class="pre">generate_gray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">hints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L150-L201"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.generate_gray" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">generate_gray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">hints</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L150-L201"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.generate_gray" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the sequence of bit vectors of a Gray Code.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">GrayCode</span>
@@ -765,7 +769,7 @@ Vol 4, Addison Wesley</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.GrayCode.next">
-<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L102-L118"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.next" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L102-L118"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.next" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the Gray code a distance <code class="docutils literal notranslate"><span class="pre">delta</span></code> (default = 1) from the
 current value in canonical order.</p>
 <p class="rubric">Examples</p>
@@ -824,7 +828,7 @@ of 4 bit Gray codes.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.GrayCode.skip">
-<span class="sig-name descname"><span class="pre">skip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L203-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.skip" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">skip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L203-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.skip" title="Permalink to this definition">#</a></dt>
 <dd><p>Skips the bit generation.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">GrayCode</span>
@@ -850,7 +854,7 @@ of 4 bit Gray codes.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.GrayCode.unrank">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unrank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L288-L319"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.unrank" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unrank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L288-L319"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.GrayCode.unrank" title="Permalink to this definition">#</a></dt>
 <dd><p>Unranks an n-bit sized Gray code of rank k. This method exists
 so that a derivative GrayCode class can define its own code of
 a given rank.</p>
@@ -872,7 +876,7 @@ optimization.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.random_bitstring">
-<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">random_bitstring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L322-L333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.random_bitstring" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">random_bitstring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L322-L333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.random_bitstring" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates a random bitlist of length n.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics.graycode</span> <span class="kn">import</span> <span class="n">random_bitstring</span>
@@ -883,7 +887,7 @@ optimization.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.gray_to_bin">
-<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">gray_to_bin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L336-L357"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.gray_to_bin" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">gray_to_bin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L336-L357"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.gray_to_bin" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert from Gray coding to binary coding.</p>
 <p>We assume big endian encoding.</p>
 <p class="rubric">Examples</p>
@@ -899,7 +903,7 @@ optimization.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.bin_to_gray">
-<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">bin_to_gray</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L360-L381"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.bin_to_gray" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">bin_to_gray</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L360-L381"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.bin_to_gray" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert from binary coding to gray coding.</p>
 <p>We assume big endian encoding.</p>
 <p class="rubric">Examples</p>
@@ -915,7 +919,7 @@ optimization.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.get_subset_from_bitstring">
-<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">get_subset_from_bitstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bitstring</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L384-L405"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.get_subset_from_bitstring" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">get_subset_from_bitstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bitstring</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L384-L405"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.get_subset_from_bitstring" title="Permalink to this definition">#</a></dt>
 <dd><p>Gets the subset defined by the bitstring.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics.graycode</span> <span class="kn">import</span> <span class="n">get_subset_from_bitstring</span>
@@ -932,7 +936,7 @@ optimization.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.graycode.graycode_subsets">
-<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">graycode_subsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/graycode.py#L408-L430"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.graycode_subsets" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">graycode.</span></span><span class="sig-name descname"><span class="pre">graycode_subsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/graycode.py#L408-L430"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.graycode.graycode_subsets" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the subsets as enumerated by a Gray code.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics.graycode</span> <span class="kn">import</span> <span class="n">graycode_subsets</span>
@@ -984,7 +988,7 @@ optimization.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 03, 2022</div>
+              Last updated on Mar 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

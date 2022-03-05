@@ -26,7 +26,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #000000bd;
@@ -34,6 +33,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
@@ -57,7 +57,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -65,6 +64,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -81,6 +81,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
   }
   @media (prefers-color-scheme: dark) {
@@ -93,7 +94,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -101,6 +101,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -117,6 +118,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
     }
   }
@@ -196,7 +198,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -227,7 +233,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../../index.html">
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../../../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../../../../_static/sympylogo.png" alt="Logo"/>
@@ -240,7 +246,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -641,9 +647,7 @@
 </li>
 </ul>
 
-</div>
-</div>
-
+</div></div>
       </div>
       
     </div>
@@ -677,7 +681,7 @@
 <h2>dynamicsymbols<a class="headerlink" href="#dynamicsymbols" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.dynamicsymbols">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.</span></span><span class="sig-name descname"><span class="pre">dynamicsymbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">assumptions</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/vector/functions.py#L581-L636"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.dynamicsymbols" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.</span></span><span class="sig-name descname"><span class="pre">dynamicsymbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">assumptions</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/vector/functions.py#L581-L636"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.dynamicsymbols" title="Permalink to this definition">#</a></dt>
 <dd><p>Uses symbols and Function for functions of time.</p>
 <p>Creates a SymPy UndefinedFunction, which is then initialized as a function
 of a variable, the default being Symbol(‘t’).</p>
@@ -748,7 +752,7 @@ twice of t, etc.</p>
 <h2>dot<a class="headerlink" href="#dot" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.functions.dot">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/vector/functions.py#L28-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.dot" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/vector/functions.py#L28-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.dot" title="Permalink to this definition">#</a></dt>
 <dd><p>Dot product convenience wrapper for Vector.dot(): 
 Dot product of two vectors.</p>
 <blockquote>
@@ -782,7 +786,7 @@ Dot product of two vectors.</p>
 <h2>cross<a class="headerlink" href="#cross" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.functions.cross">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">cross</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/vector/functions.py#L20-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.cross" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">cross</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/vector/functions.py#L20-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.cross" title="Permalink to this definition">#</a></dt>
 <dd><p>Cross product convenience wrapper for Vector.cross(): 
 The cross product operator for two Vectors.</p>
 <blockquote>
@@ -816,7 +820,7 @@ The cross product operator for two Vectors.</p>
 <h2>outer<a class="headerlink" href="#outer" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.functions.outer">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">outer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/vector/functions.py#L219-L223"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.outer" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">outer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/vector/functions.py#L219-L223"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.outer" title="Permalink to this definition">#</a></dt>
 <dd><p>Outer product convenience wrapper for Vector.outer():
 Outer product between two Vectors.</p>
 <blockquote>
@@ -843,7 +847,7 @@ Outer product between two Vectors.</p>
 <h2>express<a class="headerlink" href="#express" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.functions.express">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">express</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/vector/functions.py#L36-L136"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.express" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">express</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/vector/functions.py#L36-L136"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.express" title="Permalink to this definition">#</a></dt>
 <dd><p>Global function for ‘express’ functionality.</p>
 <p>Re-expresses a Vector, scalar(sympyfiable) or Dyadic in given frame.</p>
 <p>Refer to the local methods of Vector and Dyadic for details.
@@ -895,7 +899,7 @@ in expr, in terms of those of frame</p>
 <h2>time_derivative<a class="headerlink" href="#time-derivative" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.functions.time_derivative">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">time_derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/vector/functions.py#L139-L216"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.time_derivative" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.functions.</span></span><span class="sig-name descname"><span class="pre">time_derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/vector/functions.py#L139-L216"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.functions.time_derivative" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the time derivative of a vector/scalar field function
 or dyadic expression in given frame.</p>
 <dl class="field-list">
@@ -978,7 +982,7 @@ or dyadic expression in given frame.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 03, 2022</div>
+              Last updated on Mar 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

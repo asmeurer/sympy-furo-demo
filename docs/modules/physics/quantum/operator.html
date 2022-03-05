@@ -26,7 +26,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #000000bd;
@@ -34,6 +33,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
@@ -57,7 +57,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -65,6 +64,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -81,6 +81,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
   }
   @media (prefers-color-scheme: dark) {
@@ -93,7 +94,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -101,6 +101,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -117,6 +118,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
     }
   }
@@ -196,7 +198,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -227,7 +233,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../index.html">
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../../../_static/sympylogo.png" alt="Logo"/>
@@ -240,7 +246,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -641,9 +647,7 @@
 </li>
 </ul>
 
-</div>
-</div>
-
+</div></div>
       </div>
       
     </div>
@@ -684,7 +688,7 @@ AntiCommutator, represent, apply_operators.</p></li>
 </ul>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.operator.DifferentialOperator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">DifferentialOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/operator.py#L491-L647"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.DifferentialOperator" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">DifferentialOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/operator.py#L491-L647"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.DifferentialOperator" title="Permalink to this definition">#</a></dt>
 <dd><p>An operator for representing the differential operator, i.e. d/dx</p>
 <p>It is initialized by passing two arguments. The first is an arbitrary
 expression that involves a function, such as <code class="docutils literal notranslate"><span class="pre">Derivative(f(x),</span> <span class="pre">x)</span></code>. The
@@ -793,7 +797,7 @@ arbitrary expression is evaluated</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.operator.HermitianOperator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">HermitianOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/operator.py#L190-L226"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.HermitianOperator" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">HermitianOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/operator.py#L190-L226"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.HermitianOperator" title="Permalink to this definition">#</a></dt>
 <dd><p>A Hermitian operator that satisfies H == Dagger(H).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -814,7 +818,7 @@ operator. For time-dependent operators, this will include the time.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.operator.IdentityOperator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">IdentityOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/operator.py#L252-L328"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.IdentityOperator" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">IdentityOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/operator.py#L252-L328"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.IdentityOperator" title="Permalink to this definition">#</a></dt>
 <dd><p>An identity operator I that satisfies op * I == I * op == op for any
 operator op.</p>
 <dl class="field-list">
@@ -835,7 +839,7 @@ of operator. This is used when generating a matrix representation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.operator.Operator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">Operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/operator.py#L37-L187"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.Operator" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">Operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/operator.py#L37-L187"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.Operator" title="Permalink to this definition">#</a></dt>
 <dd><p>Base class for non-commuting quantum operators.</p>
 <p>An operator maps between quantum states <a class="reference internal" href="#r679" id="id1"><span>[R679]</span></a>. In quantum mechanics,
 observables (including, but not limited to, measured physical values) are
@@ -905,7 +909,7 @@ operator. For time-dependent operators, this will include the time.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.operator.OuterProduct">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">OuterProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">old_assumptions</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/operator.py#L331-L488"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.OuterProduct" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">OuterProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">old_assumptions</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/operator.py#L331-L488"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.OuterProduct" title="Permalink to this definition">#</a></dt>
 <dd><p>An unevaluated outer product between a ket and bra.</p>
 <p>This constructs an outer product between any subclass of <code class="docutils literal notranslate"><span class="pre">KetBase</span></code> and
 <code class="docutils literal notranslate"><span class="pre">BraBase</span></code> as <code class="docutils literal notranslate"><span class="pre">|a&gt;&lt;b|</span></code>. An <code class="docutils literal notranslate"><span class="pre">OuterProduct</span></code> inherits from Operator as they act as
@@ -980,7 +984,7 @@ by using parentheses to group the ket and bra:</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.operator.UnitaryOperator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">UnitaryOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/operator.py#L229-L249"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.UnitaryOperator" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.operator.</span></span><span class="sig-name descname"><span class="pre">UnitaryOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/operator.py#L229-L249"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.operator.UnitaryOperator" title="Permalink to this definition">#</a></dt>
 <dd><p>A unitary operator that satisfies U*Dagger(U) == 1.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1036,7 +1040,7 @@ operator. For time-dependent operators, this will include the time.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 03, 2022</div>
+              Last updated on Mar 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

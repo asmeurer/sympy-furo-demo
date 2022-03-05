@@ -26,7 +26,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #000000bd;
@@ -34,6 +33,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
@@ -57,7 +57,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -65,6 +64,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -81,6 +81,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
   }
   @media (prefers-color-scheme: dark) {
@@ -93,7 +94,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -101,6 +101,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -117,6 +118,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
     }
   }
@@ -196,7 +198,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -227,7 +233,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../index.html">
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../../../_static/sympylogo.png" alt="Logo"/>
@@ -240,7 +246,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -641,9 +647,7 @@
 </li>
 </ul>
 
-</div>
-</div>
-
+</div></div>
       </div>
       
     </div>
@@ -689,66 +693,66 @@ issue.</p></li>
 </ul>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">CircuitPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nqubits</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L49-L288"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">CircuitPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nqubits</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L49-L288"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot" title="Permalink to this definition">#</a></dt>
 <dd><p>A class for managing a circuit plot.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot.control_line">
-<span class="sig-name descname"><span class="pre">control_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wire</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wire</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L223-L232"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.control_line" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">control_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wire</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wire</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L223-L232"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.control_line" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw a vertical control line.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot.control_point">
-<span class="sig-name descname"><span class="pre">control_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L234-L247"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.control_point" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">control_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L234-L247"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.control_point" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw a control point.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot.not_point">
-<span class="sig-name descname"><span class="pre">not_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L249-L268"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.not_point" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">not_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L249-L268"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.not_point" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw a NOT gates as the circle with plus in the middle.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot.one_qubit_box">
-<span class="sig-name descname"><span class="pre">one_qubit_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L193-L204"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.one_qubit_box" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">one_qubit_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L193-L204"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.one_qubit_box" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw a box for a single qubit gate.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot.swap_point">
-<span class="sig-name descname"><span class="pre">swap_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L270-L288"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.swap_point" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">swap_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L270-L288"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.swap_point" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw a swap point as a cross.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot.two_qubit_box">
-<span class="sig-name descname"><span class="pre">two_qubit_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L206-L221"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.two_qubit_box" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">two_qubit_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gate_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wire_idx</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L206-L221"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.two_qubit_box" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw a box for a two qubit gate. Doesn’t work yet.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CircuitPlot.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L75-L77"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.update" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L75-L77"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CircuitPlot.update" title="Permalink to this definition">#</a></dt>
 <dd><p>Load the kwargs into the instance dict.</p>
 </dd></dl>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.CreateCGate">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">CreateCGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latexname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L364-L372"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CreateCGate" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">CreateCGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latexname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L364-L372"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.CreateCGate" title="Permalink to this definition">#</a></dt>
 <dd><p>Use a lexical closure to make a controlled gate.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.Mx">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">Mx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L347-L355"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.Mx" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">Mx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L347-L355"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.Mx" title="Permalink to this definition">#</a></dt>
 <dd><p>Mock-up of an x measurement gate.</p>
 <p>This is in circuitplot rather than gate.py because it’s not a real
 gate, it just draws one.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.Mz">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">Mz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L337-L345"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.Mz" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">Mz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L337-L345"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.Mz" title="Permalink to this definition">#</a></dt>
 <dd><p>Mock-up of a z measurement gate.</p>
 <p>This is in circuitplot rather than gate.py because it’s not a real
 gate, it just draws one.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.circuit_plot">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">circuit_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nqubits</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L290-L302"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.circuit_plot" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">circuit_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nqubits</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L290-L302"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.circuit_plot" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw the circuit diagram for the circuit with nqubits.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -766,7 +770,7 @@ as big as the largest <span class="math notranslate nohighlight">\(min_qubits\)<
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.quantum.circuitplot.labeller">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">labeller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'q'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/quantum/circuitplot.py#L318-L335"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.labeller" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.quantum.circuitplot.</span></span><span class="sig-name descname"><span class="pre">labeller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'q'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/quantum/circuitplot.py#L318-L335"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.quantum.circuitplot.labeller" title="Permalink to this definition">#</a></dt>
 <dd><p>Autogenerate labels for wires of quantum circuits.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -823,7 +827,7 @@ as big as the largest <span class="math notranslate nohighlight">\(min_qubits\)<
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 03, 2022</div>
+              Last updated on Mar 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

@@ -26,7 +26,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #000000bd;
@@ -34,6 +33,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
@@ -57,7 +57,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -65,6 +64,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -81,6 +81,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
   }
   @media (prefers-color-scheme: dark) {
@@ -93,7 +94,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -101,6 +101,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -117,6 +118,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
     }
   }
@@ -196,7 +198,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -227,7 +233,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../index.html">
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../../_static/sympylogo.png" alt="Logo"/>
@@ -240,7 +246,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -641,9 +647,7 @@
 </li>
 </ul>
 
-</div>
-</div>
-
+</div></div>
       </div>
       
     </div>
@@ -723,7 +727,7 @@ Comput. Phys. Commun., Volume 25, pp. 81-85 (1982)</p>
 <p>Copyright (C) 2008 Jens Rasch &lt;<a class="reference external" href="mailto:jyr2000%40gmail.com">jyr2000<span>@</span>gmail<span>.</span>com</a>&gt;</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.clebsch_gordan">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">clebsch_gordan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L245-L297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.clebsch_gordan" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">clebsch_gordan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L245-L297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.clebsch_gordan" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates the Clebsch-Gordan coefficient.
 <span class="math notranslate nohighlight">\(\left\langle j_1 m_1 \; j_2 m_2 | j_3 m_3 \right\rangle\)</span>.</p>
 <p>The reference for this function is <a class="reference internal" href="#edmonds74" id="id2"><span>[Edmonds74]</span></a>.</p>
@@ -765,7 +769,7 @@ higher symmetry relations than the Clebsch-Gordan coefficient.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.dot_rot_grad_Ynm">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">dot_rot_grad_Ynm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L765-L810"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.dot_rot_grad_Ynm" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">dot_rot_grad_Ynm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L765-L810"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.dot_rot_grad_Ynm" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns dot product of rotational gradients of spherical harmonics.</p>
 <p class="rubric">Explanation</p>
 <p>This function returns the right hand side of the following expression:</p>
@@ -787,7 +791,7 @@ theta, phi …. angle arguments in spherical harmonics</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.gaunt">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">gaunt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L598-L753"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.gaunt" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">gaunt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L598-L753"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.gaunt" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the Gaunt coefficient.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -875,7 +879,7 @@ useful for a computer algebra system <a class="reference internal" href="#rasch0
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.racah">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">racah</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L358-L436"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.racah" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">racah</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L358-L436"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.racah" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the Racah symbol <span class="math notranslate nohighlight">\(W(a,b,c,d;e,f)\)</span>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -920,7 +924,7 @@ algebra system <a class="reference internal" href="#rasch03" id="id7"><span>[Ras
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.wigner_3j">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_3j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L102-L242"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_3j" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_3j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L102-L242"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_3j" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the Wigner 3j symbol <span class="math notranslate nohighlight">\(\operatorname{Wigner3j}(j_1,j_2,j_3,m_1,m_2,m_3)\)</span>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -993,7 +997,7 @@ algebra system <a class="reference internal" href="#rasch03" id="id10"><span>[Ra
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.wigner_6j">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_6j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L439-L533"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_6j" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_6j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L439-L533"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_6j" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the Wigner 6j symbol <span class="math notranslate nohighlight">\(\operatorname{Wigner6j}(j_1,j_2,j_3,j_4,j_5,j_6)\)</span>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1073,7 +1077,7 @@ algebra system <a class="reference internal" href="#rasch03" id="id13"><span>[Ra
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.wigner_9j">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_9j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L536-L595"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_9j" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_9j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L536-L595"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_9j" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the Wigner 9j symbol
 <span class="math notranslate nohighlight">\(\operatorname{Wigner9j}(j_1,j_2,j_3,j_4,j_5,j_6,j_7,j_8,j_9)\)</span>.</p>
 <dl class="field-list">
@@ -1124,7 +1128,7 @@ algebra system <a class="reference internal" href="#rasch03" id="id15"><span>[Ra
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.wigner_d">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">J</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L950-L1005"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_d" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">J</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L950-L1005"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_d" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the Wigner D matrix for angular momentum J.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -1171,7 +1175,7 @@ figure axes. See <a class="reference internal" href="#edmonds74" id="id17"><span
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.wigner.wigner_d_small">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_d_small</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">J</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/wigner.py#L813-L947"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_d_small" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.wigner.</span></span><span class="sig-name descname"><span class="pre">wigner_d_small</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">J</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/wigner.py#L813-L947"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.wigner.wigner_d_small" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the small Wigner d matrix for angular momentum J.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -1322,7 +1326,7 @@ figure axes. See <a class="reference internal" href="#edmonds74" id="id17"><span
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 03, 2022</div>
+              Last updated on Mar 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

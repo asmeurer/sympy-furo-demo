@@ -26,7 +26,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #000000bd;
@@ -34,6 +33,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
@@ -57,7 +57,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -65,6 +64,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -81,6 +81,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
   }
   @media (prefers-color-scheme: dark) {
@@ -93,7 +94,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -101,6 +101,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -117,6 +118,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
     }
   }
@@ -196,7 +198,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -227,7 +233,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../index.html">
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../../_static/sympylogo.png" alt="Logo"/>
@@ -240,7 +246,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -641,9 +647,7 @@
 </li>
 </ul>
 
-</div>
-</div>
-
+</div></div>
       </div>
       
     </div>
@@ -675,7 +679,7 @@
 <span id="test-utilities"></span><span id="combinatorics-testutil"></span><h1>Test Utilities<a class="headerlink" href="#module-sympy.combinatorics.testutil" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.testutil._cmp_perm_lists">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_cmp_perm_lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/testutil.py#L7-L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._cmp_perm_lists" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_cmp_perm_lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/testutil.py#L7-L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._cmp_perm_lists" title="Permalink to this definition">#</a></dt>
 <dd><p>Compare two lists of permutations as sets.</p>
 <p class="rubric">Explanation</p>
 <p>This is used for testing purposes. Since the array form of a
@@ -696,11 +700,11 @@ and cannot be put into a set.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.testutil._naive_list_centralizer">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_naive_list_centralizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">af</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/testutil.py#L36-L81"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._naive_list_centralizer" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_naive_list_centralizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">af</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/testutil.py#L36-L81"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._naive_list_centralizer" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.testutil._verify_bsgs">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_verify_bsgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gens</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/testutil.py#L84-L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._verify_bsgs" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_verify_bsgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gens</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/testutil.py#L84-L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._verify_bsgs" title="Permalink to this definition">#</a></dt>
 <dd><p>Verify the correctness of a base and strong generating set.</p>
 <p class="rubric">Explanation</p>
 <p>This is a naive implementation using the definition of a base and a strong
@@ -723,7 +727,7 @@ serve for more robust testing.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.testutil._verify_centralizer">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_verify_centralizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/testutil.py#L125-L158"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._verify_centralizer" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_verify_centralizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/testutil.py#L125-L158"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._verify_centralizer" title="Permalink to this definition">#</a></dt>
 <dd><p>Verify the centralizer of a group/set/element inside another group.</p>
 <p>This is used for testing <code class="docutils literal notranslate"><span class="pre">.centralizer()</span></code> from
 <code class="docutils literal notranslate"><span class="pre">sympy.combinatorics.perm_groups</span></code></p>
@@ -747,7 +751,7 @@ serve for more robust testing.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.testutil._verify_normal_closure">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_verify_normal_closure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/combinatorics/testutil.py#L161-L199"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._verify_normal_closure" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.testutil.</span></span><span class="sig-name descname"><span class="pre">_verify_normal_closure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/combinatorics/testutil.py#L161-L199"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.testutil._verify_normal_closure" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 </div>
 
@@ -786,7 +790,7 @@ serve for more robust testing.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 03, 2022</div>
+              Last updated on Mar 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

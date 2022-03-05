@@ -26,7 +26,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #000000bd;
@@ -34,6 +33,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
@@ -57,7 +57,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -65,6 +64,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -81,6 +81,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
   }
   @media (prefers-color-scheme: dark) {
@@ -93,7 +94,6 @@
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: #DDDDDD;
   --color-sidebar-link-text--top-level: #FFFFFF;
-  --color-sidebar-search-icon: #DDDDDD;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-api-keyword: #FFFFFFbd;
@@ -101,6 +101,7 @@
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
+  --color-link-hover: var(--color-link);
   --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
@@ -117,6 +118,7 @@
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
   --color-highlight-on-target: #3F3F3F;
+  --color-problematic: #B30000;
   
     }
   }
@@ -196,7 +198,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -227,7 +233,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../index.html">
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="../../../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../../../_static/sympylogo.png" alt="Logo"/>
@@ -240,7 +246,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -641,9 +647,7 @@
 </li>
 </ul>
 
-</div>
-</div>
-
+</div></div>
       </div>
       
     </div>
@@ -694,7 +698,7 @@
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.BeamParameter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">BeamParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L479-L674"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.BeamParameter" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">BeamParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L479-L674"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.BeamParameter" title="Permalink to this definition">#</a></dt>
 <dd><p>Representation for a gaussian ray in the Ray Transfer Matrix formalism.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -845,7 +849,7 @@ that are too great it is not a valid approximation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.CurvedMirror">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">CurvedMirror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L323-L350"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.CurvedMirror" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">CurvedMirror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L323-L350"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.CurvedMirror" title="Permalink to this definition">#</a></dt>
 <dd><p>Ray Transfer Matrix for reflection from curved surface.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -869,7 +873,7 @@ that are too great it is not a valid approximation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.CurvedRefraction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">CurvedRefraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L266-L298"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.CurvedRefraction" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">CurvedRefraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L266-L298"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.CurvedRefraction" title="Permalink to this definition">#</a></dt>
 <dd><p>Ray Transfer Matrix for refraction on curved interface.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -904,7 +908,7 @@ that are too great it is not a valid approximation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.FlatMirror">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">FlatMirror</span></span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L301-L320"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.FlatMirror" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">FlatMirror</span></span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L301-L320"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.FlatMirror" title="Permalink to this definition">#</a></dt>
 <dd><p>Ray Transfer Matrix for reflection.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.physics.optics</span> <span class="kn">import</span> <span class="n">FlatMirror</span>
@@ -921,7 +925,7 @@ that are too great it is not a valid approximation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.FlatRefraction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">FlatRefraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L233-L263"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.FlatRefraction" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">FlatRefraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L233-L263"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.FlatRefraction" title="Permalink to this definition">#</a></dt>
 <dd><p>Ray Transfer Matrix for refraction.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -952,7 +956,7 @@ that are too great it is not a valid approximation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.FreeSpace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">FreeSpace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L204-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.FreeSpace" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">FreeSpace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L204-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.FreeSpace" title="Permalink to this definition">#</a></dt>
 <dd><p>Ray Transfer Matrix for free space.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -976,7 +980,7 @@ that are too great it is not a valid approximation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.GeometricRay">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">GeometricRay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L388-L472"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.GeometricRay" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">GeometricRay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L388-L472"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.GeometricRay" title="Permalink to this definition">#</a></dt>
 <dd><p>Representation for a geometric ray in the Ray Transfer Matrix formalism.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1044,7 +1048,7 @@ that are too great it is not a valid approximation.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.RayTransferMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">RayTransferMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L59-L201"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.RayTransferMatrix" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">RayTransferMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L59-L201"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.RayTransferMatrix" title="Permalink to this definition">#</a></dt>
 <dd><p>Base class for a Ray Transfer Matrix.</p>
 <p>It should be used if there isn’t already a more specific subclass mentioned
 in See Also.</p>
@@ -1151,7 +1155,7 @@ in See Also.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.ThinLens">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">ThinLens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L353-L381"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.ThinLens" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">ThinLens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L353-L381"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.ThinLens" title="Permalink to this definition">#</a></dt>
 <dd><p>Ray Transfer Matrix for a thin lens.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1178,7 +1182,7 @@ in See Also.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.conjugate_gauss_beams">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">conjugate_gauss_beams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waist_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waist_out</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L836-L897"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.conjugate_gauss_beams" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">conjugate_gauss_beams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waist_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waist_out</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L836-L897"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.conjugate_gauss_beams" title="Permalink to this definition">#</a></dt>
 <dd><p>Find the optical setup conjugating the object/image waists.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1233,7 +1237,7 @@ in See Also.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.gaussian_conj">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">gaussian_conj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_r_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L788-L833"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.gaussian_conj" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">gaussian_conj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_r_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L788-L833"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.gaussian_conj" title="Permalink to this definition">#</a></dt>
 <dd><p>Conjugation relation for gaussian beams.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1287,7 +1291,7 @@ in See Also.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.geometric_conj_ab">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">geometric_conj_ab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L724-L752"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.geometric_conj_ab" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">geometric_conj_ab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L724-L752"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.geometric_conj_ab" title="Permalink to this definition">#</a></dt>
 <dd><p>Conjugation relation for geometrical beams under paraxial conditions.</p>
 <p class="rubric">Explanation</p>
 <p>Takes the distances to the optical element and returns the needed
@@ -1307,7 +1311,7 @@ focal distance.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.geometric_conj_af">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">geometric_conj_af</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L755-L783"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.geometric_conj_af" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">geometric_conj_af</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L755-L783"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.geometric_conj_af" title="Permalink to this definition">#</a></dt>
 <dd><p>Conjugation relation for geometrical beams under paraxial conditions.</p>
 <p class="rubric">Explanation</p>
 <p>Takes the object distance (for geometric_conj_af) or the image distance
@@ -1330,7 +1334,7 @@ Then it returns the other distance needed for conjugation.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.geometric_conj_bf">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">geometric_conj_bf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L755-L783"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.geometric_conj_bf" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">geometric_conj_bf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L755-L783"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.geometric_conj_bf" title="Permalink to this definition">#</a></dt>
 <dd><p>Conjugation relation for geometrical beams under paraxial conditions.</p>
 <p class="rubric">Explanation</p>
 <p>Takes the object distance (for geometric_conj_af) or the image distance
@@ -1353,7 +1357,7 @@ Then it returns the other distance needed for conjugation.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.rayleigh2waist">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">rayleigh2waist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L703-L721"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.rayleigh2waist" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">rayleigh2waist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L703-L721"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.rayleigh2waist" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the waist from the rayleigh range of a gaussian beam.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.physics.optics</span> <span class="kn">import</span> <span class="n">rayleigh2waist</span>
@@ -1370,7 +1374,7 @@ Then it returns the other distance needed for conjugation.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.optics.gaussopt.waist2rayleigh">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">waist2rayleigh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/6cb7db6af4b28ff4ea1c1937af3d07d7416552f6/sympy/physics/optics/gaussopt.py#L681-L700"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.waist2rayleigh" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.optics.gaussopt.</span></span><span class="sig-name descname"><span class="pre">waist2rayleigh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/physics/optics/gaussopt.py#L681-L700"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.optics.gaussopt.waist2rayleigh" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate the rayleigh range from the waist of a gaussian beam.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.physics.optics</span> <span class="kn">import</span> <span class="n">waist2rayleigh</span>
@@ -1422,7 +1426,7 @@ Then it returns the other distance needed for conjugation.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 03, 2022</div>
+              Last updated on Mar 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">
