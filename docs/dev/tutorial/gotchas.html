@@ -953,11 +953,6 @@ object.</p>
 <span class="go">&lt;... 'int'&gt;</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On running the example above in SymPy Live, (1+1) is wrapped
-by Integer, so it does not show the correct output.</p>
-</div>
 <p>This is usually not a big deal. Python ints work much the same as SymPy
 Integers, but there is one important exception:  division.  In SymPy, the
 division of two Integers gives a Rational:</p>
@@ -975,11 +970,6 @@ on whether or not you have run <code class="docutils literal notranslate"><span 
 <span class="go">0.5</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On running the example above in SymPy Live, (1/2) is wrapped
-by Integer, so it does not show the correct output.</p>
-</div>
 <p>To avoid this, we can construct the rational object explicitly</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="go">1/2</span>
@@ -990,11 +980,6 @@ by Integer, so it does not show the correct output.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> 
 <span class="go">x + 0.5</span>
 </pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On running the example above in SymPy Live, (1/2) is wrapped
-by Integer, so it does not show the correct output.</p>
 </div>
 <p>This happens because Python first evaluates <code class="docutils literal notranslate"><span class="pre">1/2</span></code> into <code class="docutils literal notranslate"><span class="pre">0.5</span></code>, and then
 that is cast into a SymPy type when it is added to <code class="docutils literal notranslate"><span class="pre">x</span></code>.  Again, we can get
