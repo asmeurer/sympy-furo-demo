@@ -198,11 +198,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -647,7 +643,62 @@
 </li>
 </ul>
 
-</div></div>
+</div><!-- Versions Menu. In order to work, there should be a file called versions.json one level up from the documentation listing the "dev" and "latest" version numbers, like
+{
+    "latest": "1.10",
+    "dev": "1.11.dev"
+}
+-->
+<div class="sidebar-tree sidebar-versions">
+  <h5 class="versions-header">Documentation Version</h4>
+</div>
+
+<!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
+<script src="../../_static/jquery.js"></script>
+<script>
+  var versions_json_loc = "../../../../versions.json";
+
+  function add_version_menu(json_loc) {
+      var menu = document.createElement("ul");
+      var thisversion = "dev"
+      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+          for (var key in versions) {
+              if (key != "latest" && key != "dev") {
+                  console.error("Invalid key in versions.json", key);
+              } else {
+                  var version = document.createElement("li")
+                  version.className = "sidebar-versions-l1 sidebar-versions-" + key + "-l1";
+                  if (key == thisversion){
+                      version.className += " current-version";
+                  }
+                  var a = document.createElement("a");
+                  a.className = "reference internal";
+                  a.innerHTML = "SymPy " + versions[key] + " (" + key + " version)";
+                  a.title = key + " version";
+                  a.href = "https://docs.sympy.org/" + key + "/modules/matrices/immutablematrices.html";
+                  version.appendChild(a);
+                  menu.appendChild(version);
+              }
+          }
+      }).done(function() {
+          console.log("versions.json read successfully");
+      }).fail(function() {
+          var version = document.createElement("li")
+          version.className = "sidebar-versions-l1 sidebar-versions-latest-l1";
+          var d = document.createElement("div");
+          d.className = "versions-not-found"
+          d.innerHTML = "Other Versions Not Found";
+          d.title = "The version selection menu is only available for the documentation published on docs.sympy.org";
+          version.appendChild(d);
+          menu.appendChild(version);
+          console.error("Could not read versions.json");
+      }).always(function() {
+          $(".sidebar-versions").append(menu)
+      });
+  };
+
+  $( document ).ready( add_version_menu(versions_json_loc));
+</script></div>
       </div>
       
     </div>
@@ -709,12 +760,12 @@ the constructor</p>
 <span id="immutablematrix-class-reference"></span><h2>ImmutableMatrix Class Reference<a class="headerlink" href="#module-sympy.matrices.immutable" title="Permalink to this headline">#</a></h2>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sympy.matrices.immutable.ImmutableMatrix">
-<span class="sig-prename descclassname"><span class="pre">sympy.matrices.immutable.</span></span><span class="sig-name descname"><span class="pre">ImmutableMatrix</span></span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/matrices/immutable.py#L80-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.matrices.immutable.ImmutableMatrix" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.matrices.immutable.</span></span><span class="sig-name descname"><span class="pre">ImmutableMatrix</span></span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/matrices/immutable.py#L80-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.matrices.immutable.ImmutableMatrix" title="Permalink to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#sympy.matrices.immutable.ImmutableDenseMatrix" title="sympy.matrices.immutable.ImmutableDenseMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">sympy.matrices.immutable.ImmutableDenseMatrix</span></code></a></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.matrices.immutable.ImmutableDenseMatrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.matrices.immutable.</span></span><span class="sig-name descname"><span class="pre">ImmutableDenseMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/matrices/immutable.py#L80-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.matrices.immutable.ImmutableDenseMatrix" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.matrices.immutable.</span></span><span class="sig-name descname"><span class="pre">ImmutableDenseMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/matrices/immutable.py#L80-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.matrices.immutable.ImmutableDenseMatrix" title="Permalink to this definition">#</a></dt>
 <dd><p>Create an immutable version of a matrix.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">eye</span><span class="p">,</span> <span class="n">ImmutableMatrix</span>
@@ -768,7 +819,7 @@ the constructor</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 05, 2022</div>
+              Last updated on Mar 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

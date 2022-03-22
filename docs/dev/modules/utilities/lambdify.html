@@ -198,11 +198,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -246,9 +242,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-versions">
-<a href="https://docs.sympy.org/dev/modules/utilities/lambdify.html">Development docs</a>
-</div><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -649,7 +643,62 @@
 </li>
 </ul>
 
-</div></div>
+</div><!-- Versions Menu. In order to work, there should be a file called versions.json one level up from the documentation listing the "dev" and "latest" version numbers, like
+{
+    "latest": "1.10",
+    "dev": "1.11.dev"
+}
+-->
+<div class="sidebar-tree sidebar-versions">
+  <h5 class="versions-header">Documentation Version</h4>
+</div>
+
+<!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
+<script src="../../_static/jquery.js"></script>
+<script>
+  var versions_json_loc = "../../../../versions.json";
+
+  function add_version_menu(json_loc) {
+      var menu = document.createElement("ul");
+      var thisversion = "dev"
+      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+          for (var key in versions) {
+              if (key != "latest" && key != "dev") {
+                  console.error("Invalid key in versions.json", key);
+              } else {
+                  var version = document.createElement("li")
+                  version.className = "sidebar-versions-l1 sidebar-versions-" + key + "-l1";
+                  if (key == thisversion){
+                      version.className += " current-version";
+                  }
+                  var a = document.createElement("a");
+                  a.className = "reference internal";
+                  a.innerHTML = "SymPy " + versions[key] + " (" + key + " version)";
+                  a.title = key + " version";
+                  a.href = "https://docs.sympy.org/" + key + "/modules/utilities/lambdify.html";
+                  version.appendChild(a);
+                  menu.appendChild(version);
+              }
+          }
+      }).done(function() {
+          console.log("versions.json read successfully");
+      }).fail(function() {
+          var version = document.createElement("li")
+          version.className = "sidebar-versions-l1 sidebar-versions-latest-l1";
+          var d = document.createElement("div");
+          d.className = "versions-not-found"
+          d.innerHTML = "Other Versions Not Found";
+          d.title = "The version selection menu is only available for the documentation published on docs.sympy.org";
+          version.appendChild(d);
+          menu.appendChild(version);
+          console.error("Could not read versions.json");
+      }).always(function() {
+          $(".sidebar-versions").append(menu)
+      });
+  };
+
+  $( document ).ready( add_version_menu(versions_json_loc));
+</script></div>
       </div>
       
     </div>
@@ -683,7 +732,7 @@
 lambda functions which can be used to calculate numerical values very fast.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.utilities.lambdify.implemented_function">
-<span class="sig-prename descclassname"><span class="pre">sympy.utilities.lambdify.</span></span><span class="sig-name descname"><span class="pre">implemented_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symfunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">implementation</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/utilities/lambdify.py#L1349-L1401"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.lambdify.implemented_function" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.utilities.lambdify.</span></span><span class="sig-name descname"><span class="pre">implemented_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symfunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">implementation</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/utilities/lambdify.py#L1349-L1401"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.lambdify.implemented_function" title="Permalink to this definition">#</a></dt>
 <dd><p>Add numerical <code class="docutils literal notranslate"><span class="pre">implementation</span></code> to function <code class="docutils literal notranslate"><span class="pre">symfunc</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">symfunc</span></code> can be an <code class="docutils literal notranslate"><span class="pre">UndefinedFunction</span></code> instance, or a name string.
 In the latter case we create an <code class="docutils literal notranslate"><span class="pre">UndefinedFunction</span></code> instance with that
@@ -724,7 +773,7 @@ with the same name and the implemented function attached.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.utilities.lambdify.lambdastr">
-<span class="sig-prename descclassname"><span class="pre">sympy.utilities.lambdify.</span></span><span class="sig-name descname"><span class="pre">lambdastr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dummify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/utilities/lambdify.py#L971-L1086"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.lambdify.lambdastr" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.utilities.lambdify.</span></span><span class="sig-name descname"><span class="pre">lambdastr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dummify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/utilities/lambdify.py#L971-L1086"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.lambdify.lambdastr" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns a string that can be evaluated to a lambda function.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span>
@@ -745,7 +794,7 @@ arguments so that nested arguments can be handled:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.utilities.lambdify.lambdify">
-<span class="sig-prename descclassname"><span class="pre">sympy.utilities.lambdify.</span></span><span class="sig-name descname"><span class="pre">lambdify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="pre">sympy.core.expr.Expr</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="pre">sympy.core.expr.Expr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_imps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dummify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/utilities/lambdify.py#L181-L923"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.lambdify.lambdify" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.utilities.lambdify.</span></span><span class="sig-name descname"><span class="pre">lambdify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="pre">sympy.core.expr.Expr</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="pre">sympy.core.expr.Expr</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_imps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dummify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/utilities/lambdify.py#L181-L923"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.lambdify.lambdify" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert a SymPy expression into a function that allows for fast
 numeric evaluation.</p>
 <div class="admonition warning">
@@ -1333,7 +1382,7 @@ and SciPy namespaces.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 05, 2022</div>
+              Last updated on Mar 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

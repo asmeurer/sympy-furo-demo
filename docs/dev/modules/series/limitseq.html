@@ -198,11 +198,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -647,7 +643,62 @@
 </li>
 </ul>
 
-</div></div>
+</div><!-- Versions Menu. In order to work, there should be a file called versions.json one level up from the documentation listing the "dev" and "latest" version numbers, like
+{
+    "latest": "1.10",
+    "dev": "1.11.dev"
+}
+-->
+<div class="sidebar-tree sidebar-versions">
+  <h5 class="versions-header">Documentation Version</h4>
+</div>
+
+<!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
+<script src="../../_static/jquery.js"></script>
+<script>
+  var versions_json_loc = "../../../../versions.json";
+
+  function add_version_menu(json_loc) {
+      var menu = document.createElement("ul");
+      var thisversion = "dev"
+      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+          for (var key in versions) {
+              if (key != "latest" && key != "dev") {
+                  console.error("Invalid key in versions.json", key);
+              } else {
+                  var version = document.createElement("li")
+                  version.className = "sidebar-versions-l1 sidebar-versions-" + key + "-l1";
+                  if (key == thisversion){
+                      version.className += " current-version";
+                  }
+                  var a = document.createElement("a");
+                  a.className = "reference internal";
+                  a.innerHTML = "SymPy " + versions[key] + " (" + key + " version)";
+                  a.title = key + " version";
+                  a.href = "https://docs.sympy.org/" + key + "/modules/series/limitseq.html";
+                  version.appendChild(a);
+                  menu.appendChild(version);
+              }
+          }
+      }).done(function() {
+          console.log("versions.json read successfully");
+      }).fail(function() {
+          var version = document.createElement("li")
+          version.className = "sidebar-versions-l1 sidebar-versions-latest-l1";
+          var d = document.createElement("div");
+          d.className = "versions-not-found"
+          d.innerHTML = "Other Versions Not Found";
+          d.title = "The version selection menu is only available for the documentation published on docs.sympy.org";
+          version.appendChild(d);
+          menu.appendChild(version);
+          console.error("Could not read versions.json");
+      }).always(function() {
+          $(".sidebar-versions").append(menu)
+      });
+  };
+
+  $( document ).ready( add_version_menu(versions_json_loc));
+</script></div>
       </div>
       
     </div>
@@ -680,7 +731,7 @@
 <p>Provides methods to compute limit of terms having sequences at infinity.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.series.limitseq.difference_delta">
-<span class="sig-prename descclassname"><span class="pre">sympy.series.limitseq.</span></span><span class="sig-name descname"><span class="pre">difference_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/limitseq.py#L19-L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.limitseq.difference_delta" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.series.limitseq.</span></span><span class="sig-name descname"><span class="pre">difference_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/limitseq.py#L19-L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.limitseq.difference_delta" title="Permalink to this definition">#</a></dt>
 <dd><p>Difference Operator.</p>
 <p class="rubric">Explanation</p>
 <p>Discrete analog of differential operator. Given a sequence x[n],
@@ -703,7 +754,7 @@ returns the sequence x[n + step] - x[n].</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.series.limitseq.dominant">
-<span class="sig-prename descclassname"><span class="pre">sympy.series.limitseq.</span></span><span class="sig-name descname"><span class="pre">dominant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/limitseq.py#L67-L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.limitseq.dominant" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.series.limitseq.</span></span><span class="sig-name descname"><span class="pre">dominant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/limitseq.py#L67-L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.limitseq.dominant" title="Permalink to this definition">#</a></dt>
 <dd><p>Finds the dominant term in a sum, that is a term that dominates
 every other term.</p>
 <p class="rubric">Explanation</p>
@@ -728,7 +779,7 @@ Otherwise, a and b are comparable.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.series.limitseq.limit_seq">
-<span class="sig-prename descclassname"><span class="pre">sympy.series.limitseq.</span></span><span class="sig-name descname"><span class="pre">limit_seq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/limitseq.py#L161-L257"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.limitseq.limit_seq" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.series.limitseq.</span></span><span class="sig-name descname"><span class="pre">limit_seq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/limitseq.py#L161-L257"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.limitseq.limit_seq" title="Permalink to this definition">#</a></dt>
 <dd><p>Finds the limit of a sequence as index <code class="docutils literal notranslate"><span class="pre">n</span></code> tends to infinity.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -814,7 +865,7 @@ not supported.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 05, 2022</div>
+              Last updated on Mar 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

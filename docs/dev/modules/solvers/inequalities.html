@@ -198,11 +198,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -647,7 +643,62 @@
 </li>
 </ul>
 
-</div></div>
+</div><!-- Versions Menu. In order to work, there should be a file called versions.json one level up from the documentation listing the "dev" and "latest" version numbers, like
+{
+    "latest": "1.10",
+    "dev": "1.11.dev"
+}
+-->
+<div class="sidebar-tree sidebar-versions">
+  <h5 class="versions-header">Documentation Version</h4>
+</div>
+
+<!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
+<script src="../../_static/jquery.js"></script>
+<script>
+  var versions_json_loc = "../../../../versions.json";
+
+  function add_version_menu(json_loc) {
+      var menu = document.createElement("ul");
+      var thisversion = "dev"
+      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+          for (var key in versions) {
+              if (key != "latest" && key != "dev") {
+                  console.error("Invalid key in versions.json", key);
+              } else {
+                  var version = document.createElement("li")
+                  version.className = "sidebar-versions-l1 sidebar-versions-" + key + "-l1";
+                  if (key == thisversion){
+                      version.className += " current-version";
+                  }
+                  var a = document.createElement("a");
+                  a.className = "reference internal";
+                  a.innerHTML = "SymPy " + versions[key] + " (" + key + " version)";
+                  a.title = key + " version";
+                  a.href = "https://docs.sympy.org/" + key + "/modules/solvers/inequalities.html";
+                  version.appendChild(a);
+                  menu.appendChild(version);
+              }
+          }
+      }).done(function() {
+          console.log("versions.json read successfully");
+      }).fail(function() {
+          var version = document.createElement("li")
+          version.className = "sidebar-versions-l1 sidebar-versions-latest-l1";
+          var d = document.createElement("div");
+          d.className = "versions-not-found"
+          d.innerHTML = "Other Versions Not Found";
+          d.title = "The version selection menu is only available for the documentation published on docs.sympy.org";
+          version.appendChild(d);
+          menu.appendChild(version);
+          console.error("Could not read versions.json");
+      }).always(function() {
+          $(".sidebar-versions").append(menu)
+      });
+  };
+
+  $( document ).ready( add_version_menu(versions_json_loc));
+</script></div>
       </div>
       
     </div>
@@ -679,7 +730,7 @@
 <span id="inequality-solvers"></span><span id="inequality-docs"></span><h1>Inequality Solvers<a class="headerlink" href="#module-sympy.solvers.inequalities" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.solve_rational_inequalities">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_rational_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eqs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L128-L191"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_rational_inequalities" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_rational_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eqs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L128-L191"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_rational_inequalities" title="Permalink to this definition">#</a></dt>
 <dd><p>Solve a system of rational inequalities with rational coefficients.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">x</span>
@@ -705,7 +756,7 @@
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.solve_poly_inequality">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_poly_inequality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L20-L108"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_poly_inequality" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_poly_inequality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L20-L108"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_poly_inequality" title="Permalink to this definition">#</a></dt>
 <dd><p>Solve a polynomial inequality with rational coefficients.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">solve_poly_inequality</span><span class="p">,</span> <span class="n">Poly</span>
@@ -731,7 +782,7 @@
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.solve_poly_inequalities">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_poly_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">polys</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L111-L125"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_poly_inequalities" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_poly_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">polys</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L111-L125"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_poly_inequalities" title="Permalink to this definition">#</a></dt>
 <dd><p>Solve polynomial inequalities with rational coefficients.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Poly</span>
@@ -746,7 +797,7 @@
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.reduce_rational_inequalities">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_rational_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exprs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relational</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L194-L281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_rational_inequalities" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_rational_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exprs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relational</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L194-L281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_rational_inequalities" title="Permalink to this definition">#</a></dt>
 <dd><p>Reduce a system of rational inequalities with rational coefficients.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span>
@@ -779,7 +830,7 @@ finiteness conditions:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.reduce_abs_inequality">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_abs_inequality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L284-L362"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_abs_inequality" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_abs_inequality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L284-L362"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_abs_inequality" title="Permalink to this definition">#</a></dt>
 <dd><p>Reduce an inequality with nested absolute values.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">reduce_abs_inequality</span><span class="p">,</span> <span class="n">Abs</span><span class="p">,</span> <span class="n">Symbol</span>
@@ -801,7 +852,7 @@ finiteness conditions:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.reduce_abs_inequalities">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_abs_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exprs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L365-L387"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_abs_inequalities" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_abs_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exprs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L365-L387"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_abs_inequalities" title="Permalink to this definition">#</a></dt>
 <dd><p>Reduce a system of inequalities with nested absolute values.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">reduce_abs_inequalities</span><span class="p">,</span> <span class="n">Abs</span><span class="p">,</span> <span class="n">Symbol</span>
@@ -824,7 +875,7 @@ finiteness conditions:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.reduce_inequalities">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inequalities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L942-L999"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_inequalities" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">reduce_inequalities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inequalities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L942-L999"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.reduce_inequalities" title="Permalink to this definition">#</a></dt>
 <dd><p>Reduce a system of inequalities with rational coefficients.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
@@ -842,7 +893,7 @@ finiteness conditions:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.inequalities.solve_univariate_inequality">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_univariate_inequality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relational</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Reals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/solvers/inequalities.py#L390-L682"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_univariate_inequality" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.inequalities.</span></span><span class="sig-name descname"><span class="pre">solve_univariate_inequality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relational</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Reals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/inequalities.py#L390-L682"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.inequalities.solve_univariate_inequality" title="Permalink to this definition">#</a></dt>
 <dd><p>Solves a real univariate inequality.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -947,7 +998,7 @@ are restricted in its periodic interval.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 05, 2022</div>
+              Last updated on Mar 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

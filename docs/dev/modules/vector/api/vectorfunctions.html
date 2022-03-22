@@ -198,11 +198,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -246,9 +242,7 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
-<div id="searchbox"></div><div class="sidebar-versions">
-<a href="https://docs.sympy.org/dev/modules/vector/api/vectorfunctions.html">Development docs</a>
-</div><div class="sidebar-tree">
+<div id="searchbox"></div><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorial/index.html">SymPy Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorial/preliminaries.html">Preliminaries</a></li>
@@ -649,7 +643,62 @@
 </li>
 </ul>
 
-</div></div>
+</div><!-- Versions Menu. In order to work, there should be a file called versions.json one level up from the documentation listing the "dev" and "latest" version numbers, like
+{
+    "latest": "1.10",
+    "dev": "1.11.dev"
+}
+-->
+<div class="sidebar-tree sidebar-versions">
+  <h5 class="versions-header">Documentation Version</h4>
+</div>
+
+<!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
+<script src="../../../_static/jquery.js"></script>
+<script>
+  var versions_json_loc = "../../../../../versions.json";
+
+  function add_version_menu(json_loc) {
+      var menu = document.createElement("ul");
+      var thisversion = "dev"
+      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+          for (var key in versions) {
+              if (key != "latest" && key != "dev") {
+                  console.error("Invalid key in versions.json", key);
+              } else {
+                  var version = document.createElement("li")
+                  version.className = "sidebar-versions-l1 sidebar-versions-" + key + "-l1";
+                  if (key == thisversion){
+                      version.className += " current-version";
+                  }
+                  var a = document.createElement("a");
+                  a.className = "reference internal";
+                  a.innerHTML = "SymPy " + versions[key] + " (" + key + " version)";
+                  a.title = key + " version";
+                  a.href = "https://docs.sympy.org/" + key + "/modules/vector/api/vectorfunctions.html";
+                  version.appendChild(a);
+                  menu.appendChild(version);
+              }
+          }
+      }).done(function() {
+          console.log("versions.json read successfully");
+      }).fail(function() {
+          var version = document.createElement("li")
+          version.className = "sidebar-versions-l1 sidebar-versions-latest-l1";
+          var d = document.createElement("div");
+          d.className = "versions-not-found"
+          d.innerHTML = "Other Versions Not Found";
+          d.title = "The version selection menu is only available for the documentation published on docs.sympy.org";
+          version.appendChild(d);
+          menu.appendChild(version);
+          console.error("Could not read versions.json");
+      }).always(function() {
+          $(".sidebar-versions").append(menu)
+      });
+  };
+
+  $( document ).ready( add_version_menu(versions_json_loc));
+</script></div>
       </div>
       
     </div>
@@ -683,7 +732,7 @@
 <h2>matrix_to_vector<a class="headerlink" href="#matrix-to-vector" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.matrix_to_vector">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">matrix_to_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/functions.py#L397-L433"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.matrix_to_vector" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">matrix_to_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/functions.py#L397-L433"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.matrix_to_vector" title="Permalink to this definition">#</a></dt>
 <dd><p>Converts a vector in matrix form to a Vector instance.</p>
 <p>It is assumed that the elements of the Matrix represent the
 measure numbers of the components of the vector along basis
@@ -718,7 +767,7 @@ vectors of ‘system’.</p>
 <h2>express<a class="headerlink" href="#express" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.express">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">express</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/functions.py#L14-L128"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.express" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">express</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/functions.py#L14-L128"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.express" title="Permalink to this definition">#</a></dt>
 <dd><p>Global function for ‘express’ functionality.</p>
 <p>Re-expresses a Vector, Dyadic or scalar(sympyfiable) in the given
 coordinate system.</p>
@@ -770,7 +819,7 @@ in expr, in terms of those of parameter system</p>
 <h2>curl<a class="headerlink" href="#curl" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.curl">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">curl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/operators.py#L103-L175"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.curl" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">curl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/operators.py#L103-L175"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.curl" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the curl of a vector field computed wrt the base scalars
 of the given coordinate system.</p>
 <dl class="field-list">
@@ -804,7 +853,7 @@ Derivative instances</p>
 <h2>divergence<a class="headerlink" href="#divergence" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.divergence">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">divergence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/operators.py#L178-L242"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.divergence" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">divergence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/operators.py#L178-L242"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.divergence" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the divergence of a vector field computed wrt the base
 scalars of the given coordinate system.</p>
 <dl class="field-list">
@@ -840,7 +889,7 @@ Derivative instances</p>
 <h2>gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.gradient">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scalar_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/operators.py#L245-L296"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.gradient" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scalar_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/operators.py#L245-L296"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.gradient" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the vector gradient of a scalar field computed wrt the
 base scalars of the given coordinate system.</p>
 <dl class="field-list">
@@ -874,7 +923,7 @@ Derivative instances</p>
 <h2>is_conservative<a class="headerlink" href="#is-conservative" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.is_conservative">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">is_conservative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/functions.py#L211-L241"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.is_conservative" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">is_conservative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/functions.py#L211-L241"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.is_conservative" title="Permalink to this definition">#</a></dt>
 <dd><p>Checks if a field is conservative.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -900,7 +949,7 @@ Derivative instances</p>
 <h2>is_solenoidal<a class="headerlink" href="#is-solenoidal" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.is_solenoidal">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">is_solenoidal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/functions.py#L244-L274"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.is_solenoidal" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">is_solenoidal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/functions.py#L244-L274"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.is_solenoidal" title="Permalink to this definition">#</a></dt>
 <dd><p>Checks if a field is solenoidal.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -926,7 +975,7 @@ Derivative instances</p>
 <h2>scalar_potential<a class="headerlink" href="#scalar-potential" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.scalar_potential">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">scalar_potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/functions.py#L277-L325"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.scalar_potential" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">scalar_potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/functions.py#L277-L325"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.scalar_potential" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the scalar potential function of a field in a given
 coordinate system (without the added integration constant).</p>
 <dl class="field-list">
@@ -960,7 +1009,7 @@ calculated</p>
 <h2>scalar_potential_difference<a class="headerlink" href="#scalar-potential-difference" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.scalar_potential_difference">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">scalar_potential_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/functions.py#L328-L394"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.scalar_potential_difference" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.</span></span><span class="sig-name descname"><span class="pre">scalar_potential_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/functions.py#L328-L394"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.scalar_potential_difference" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the scalar potential difference between two points in a
 certain coordinate system, wrt a given field.</p>
 <p>If a scalar field is provided, its values at the two points are
@@ -1008,7 +1057,7 @@ origin of the coordinate system provided.</p>
 <h2>vector_integrate<a class="headerlink" href="#vector-integrate" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.vector.integrals.vector_integrate">
-<span class="sig-prename descclassname"><span class="pre">sympy.vector.integrals.</span></span><span class="sig-name descname"><span class="pre">vector_integrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">region</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/vector/integrals.py#L147-L209"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.integrals.vector_integrate" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.vector.integrals.</span></span><span class="sig-name descname"><span class="pre">vector_integrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">region</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/vector/integrals.py#L147-L209"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.vector.integrals.vector_integrate" title="Permalink to this definition">#</a></dt>
 <dd><p>Compute the integral of a vector/scalar field
 over a a region or a set of parameters.</p>
 <p class="rubric">Examples</p>
@@ -1091,7 +1140,7 @@ representation becoming large.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 05, 2022</div>
+              Last updated on Mar 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

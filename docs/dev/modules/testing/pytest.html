@@ -198,11 +198,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -647,7 +643,62 @@
 </li>
 </ul>
 
-</div></div>
+</div><!-- Versions Menu. In order to work, there should be a file called versions.json one level up from the documentation listing the "dev" and "latest" version numbers, like
+{
+    "latest": "1.10",
+    "dev": "1.11.dev"
+}
+-->
+<div class="sidebar-tree sidebar-versions">
+  <h5 class="versions-header">Documentation Version</h4>
+</div>
+
+<!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
+<script src="../../_static/jquery.js"></script>
+<script>
+  var versions_json_loc = "../../../../versions.json";
+
+  function add_version_menu(json_loc) {
+      var menu = document.createElement("ul");
+      var thisversion = "dev"
+      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+          for (var key in versions) {
+              if (key != "latest" && key != "dev") {
+                  console.error("Invalid key in versions.json", key);
+              } else {
+                  var version = document.createElement("li")
+                  version.className = "sidebar-versions-l1 sidebar-versions-" + key + "-l1";
+                  if (key == thisversion){
+                      version.className += " current-version";
+                  }
+                  var a = document.createElement("a");
+                  a.className = "reference internal";
+                  a.innerHTML = "SymPy " + versions[key] + " (" + key + " version)";
+                  a.title = key + " version";
+                  a.href = "https://docs.sympy.org/" + key + "/modules/testing/pytest.html";
+                  version.appendChild(a);
+                  menu.appendChild(version);
+              }
+          }
+      }).done(function() {
+          console.log("versions.json read successfully");
+      }).fail(function() {
+          var version = document.createElement("li")
+          version.className = "sidebar-versions-l1 sidebar-versions-latest-l1";
+          var d = document.createElement("div");
+          d.className = "versions-not-found"
+          d.innerHTML = "Other Versions Not Found";
+          d.title = "The version selection menu is only available for the documentation published on docs.sympy.org";
+          version.appendChild(d);
+          menu.appendChild(version);
+          console.error("Could not read versions.json");
+      }).always(function() {
+          $(".sidebar-versions").append(menu)
+      });
+  };
+
+  $( document ).ready( add_version_menu(versions_json_loc));
+</script></div>
       </div>
       
     </div>
@@ -680,17 +731,17 @@
 <p>py.test hacks to support XFAIL/XPASS</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.testing.pytest.SKIP">
-<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">SKIP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/testing/pytest.py#L173-L182"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.SKIP" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">SKIP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/testing/pytest.py#L173-L182"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.SKIP" title="Permalink to this definition">#</a></dt>
 <dd><p>Similar to <code class="docutils literal notranslate"><span class="pre">skip()</span></code>, but this is a decorator.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.testing.pytest.nocache_fail">
-<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">nocache_fail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/testing/pytest.py#L194-L196"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.nocache_fail" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">nocache_fail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/testing/pytest.py#L194-L196"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.nocache_fail" title="Permalink to this definition">#</a></dt>
 <dd><p>Dummy decorator for marking tests that fail when cache is disabled</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.testing.pytest.raises">
-<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">raises</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expectedException</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/testing/pytest.py#L58-L129"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.raises" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">raises</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expectedException</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/testing/pytest.py#L58-L129"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.raises" title="Permalink to this definition">#</a></dt>
 <dd><p>Tests that <code class="docutils literal notranslate"><span class="pre">code</span></code> raises the exception <code class="docutils literal notranslate"><span class="pre">expectedException</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">code</span></code> may be a callable, such as a lambda expression or function
 name.</p>
@@ -741,7 +792,7 @@ for each:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.testing.pytest.warns">
-<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">warns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warningcls</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_stacklevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/testing/pytest.py#L198-L289"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.warns" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">warns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warningcls</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_stacklevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/testing/pytest.py#L198-L289"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.warns" title="Permalink to this definition">#</a></dt>
 <dd><p>Like raises but tests that warnings are emitted.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.testing.pytest</span> <span class="kn">import</span> <span class="n">warns</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
@@ -769,7 +820,7 @@ that the <code class="docutils literal notranslate"><span class="pre">active_dep
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.testing.pytest.warns_deprecated_sympy">
-<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">warns_deprecated_sympy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/testing/pytest.py#L312-L366"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.warns_deprecated_sympy" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.testing.pytest.</span></span><span class="sig-name descname"><span class="pre">warns_deprecated_sympy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/testing/pytest.py#L312-L366"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.testing.pytest.warns_deprecated_sympy" title="Permalink to this definition">#</a></dt>
 <dd><p>Shorthand for <code class="docutils literal notranslate"><span class="pre">warns(SymPyDeprecationWarning)</span></code></p>
 <p>This is the recommended way to test that <code class="docutils literal notranslate"><span class="pre">SymPyDeprecationWarning</span></code> is
 emitted for deprecated features in SymPy. To test for other warnings use
@@ -853,7 +904,7 @@ use <code class="docutils literal notranslate"><span class="pre">warns(SymPyDepr
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 05, 2022</div>
+              Last updated on Mar 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

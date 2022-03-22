@@ -198,11 +198,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     These are the docs for the development version of SymPy. You may want to view this page in the docs for the latest version.  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -647,7 +643,62 @@
 </li>
 </ul>
 
-</div></div>
+</div><!-- Versions Menu. In order to work, there should be a file called versions.json one level up from the documentation listing the "dev" and "latest" version numbers, like
+{
+    "latest": "1.10",
+    "dev": "1.11.dev"
+}
+-->
+<div class="sidebar-tree sidebar-versions">
+  <h5 class="versions-header">Documentation Version</h4>
+</div>
+
+<!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
+<script src="../../_static/jquery.js"></script>
+<script>
+  var versions_json_loc = "../../../../versions.json";
+
+  function add_version_menu(json_loc) {
+      var menu = document.createElement("ul");
+      var thisversion = "dev"
+      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+          for (var key in versions) {
+              if (key != "latest" && key != "dev") {
+                  console.error("Invalid key in versions.json", key);
+              } else {
+                  var version = document.createElement("li")
+                  version.className = "sidebar-versions-l1 sidebar-versions-" + key + "-l1";
+                  if (key == thisversion){
+                      version.className += " current-version";
+                  }
+                  var a = document.createElement("a");
+                  a.className = "reference internal";
+                  a.innerHTML = "SymPy " + versions[key] + " (" + key + " version)";
+                  a.title = key + " version";
+                  a.href = "https://docs.sympy.org/" + key + "/modules/series/fourier.html";
+                  version.appendChild(a);
+                  menu.appendChild(version);
+              }
+          }
+      }).done(function() {
+          console.log("versions.json read successfully");
+      }).fail(function() {
+          var version = document.createElement("li")
+          version.className = "sidebar-versions-l1 sidebar-versions-latest-l1";
+          var d = document.createElement("div");
+          d.className = "versions-not-found"
+          d.innerHTML = "Other Versions Not Found";
+          d.title = "The version selection menu is only available for the documentation published on docs.sympy.org";
+          version.appendChild(d);
+          menu.appendChild(version);
+          console.error("Could not read versions.json");
+      }).always(function() {
+          $(".sidebar-versions").append(menu)
+      });
+  };
+
+  $( document ).ready( add_version_menu(versions_json_loc));
+</script></div>
       </div>
       
     </div>
@@ -680,7 +731,7 @@
 <p>Provides methods to compute Fourier series.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.series.fourier.FourierSeries">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.series.fourier.</span></span><span class="sig-name descname"><span class="pre">FourierSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L124-L469"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.series.fourier.</span></span><span class="sig-name descname"><span class="pre">FourierSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L124-L469"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries" title="Permalink to this definition">#</a></dt>
 <dd><p>Represents Fourier sine/cosine series.</p>
 <p class="rubric">Explanation</p>
 <p>This class only represents a fourier series.
@@ -693,7 +744,7 @@ docstring.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.series.fourier.FourierSeries.scale">
-<span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L371-L402"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.scale" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L371-L402"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.scale" title="Permalink to this definition">#</a></dt>
 <dd><p>Scale the function by a term independent of x.</p>
 <p class="rubric">Explanation</p>
 <p>f(x) -&gt; s * f(x)</p>
@@ -710,7 +761,7 @@ computed.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.series.fourier.FourierSeries.scalex">
-<span class="sig-name descname"><span class="pre">scalex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L404-L434"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.scalex" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">scalex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L404-L434"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.scalex" title="Permalink to this definition">#</a></dt>
 <dd><p>Scale x by a term independent of x.</p>
 <p class="rubric">Explanation</p>
 <p>f(x) -&gt; f(s*x)</p>
@@ -727,7 +778,7 @@ computed.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.series.fourier.FourierSeries.shift">
-<span class="sig-name descname"><span class="pre">shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L308-L337"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.shift" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L308-L337"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.shift" title="Permalink to this definition">#</a></dt>
 <dd><p>Shift the function by a term independent of x.</p>
 <p class="rubric">Explanation</p>
 <p>f(x) -&gt; f(x) + s</p>
@@ -744,7 +795,7 @@ computed.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.series.fourier.FourierSeries.shiftx">
-<span class="sig-name descname"><span class="pre">shiftx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L339-L369"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.shiftx" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">shiftx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L339-L369"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.shiftx" title="Permalink to this definition">#</a></dt>
 <dd><p>Shift x by a term independent of x.</p>
 <p class="rubric">Explanation</p>
 <p>f(x) -&gt; f(x + s)</p>
@@ -761,7 +812,7 @@ computed.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.series.fourier.FourierSeries.sigma_approximation">
-<span class="sig-name descname"><span class="pre">sigma_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L238-L306"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.sigma_approximation" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sigma_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L238-L306"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.sigma_approximation" title="Permalink to this definition">#</a></dt>
 <dd><p>Return <span class="math notranslate nohighlight">\(\sigma\)</span>-approximation of Fourier series with respect
 to order n.</p>
 <dl class="field-list">
@@ -823,7 +874,7 @@ first n nonzero ones.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.series.fourier.FourierSeries.truncate">
-<span class="sig-name descname"><span class="pre">truncate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L194-L236"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.truncate" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">truncate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L194-L236"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.FourierSeries.truncate" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the first n nonzero terms of the series.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">n</span></code> is None return an iterator.</p>
 <dl class="field-list">
@@ -856,7 +907,7 @@ first n nonzero ones.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.series.fourier.fourier_series">
-<span class="sig-prename descclassname"><span class="pre">sympy.series.fourier.</span></span><span class="sig-name descname"><span class="pre">fourier_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">finite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/4de2e45fc1c02f5e84050067b8187cb5057c94ef/sympy/series/fourier.py#L615-L808"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.fourier_series" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.series.fourier.</span></span><span class="sig-name descname"><span class="pre">fourier_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">finite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/series/fourier.py#L615-L808"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.series.fourier.fourier_series" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the Fourier trigonometric series expansion.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1039,7 +1090,7 @@ the Fourier series of <code class="docutils literal notranslate"><span class="pr
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 05, 2022</div>
+              Last updated on Mar 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">
