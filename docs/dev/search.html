@@ -654,12 +654,12 @@
 <!-- Make sure jquery is loaded (we would put this as a separate .js, but it uses jinja templates in some of the variables) -->
 <script src="_static/jquery.js"></script>
 <script>
-  var versions_json_loc = "../../versions.json";
+  var versions_json_loc = "../versions.json";
 
   function add_version_menu(json_loc) {
       var menu = document.createElement("ul");
       var thisversion = "dev"
-      $.getJSON(json_loc, {"crossDomain": true}, function(versions) {
+      $.getJSON(json_loc, function(versions) {
           for (var key in versions) {
               if (key != "latest" && key != "dev") {
                   console.error("Invalid key in versions.json", key);
