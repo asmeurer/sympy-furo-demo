@@ -21,20 +21,19 @@
     --color-code-background: #eeffcc;
   --color-code-foreground: black;
   --color-brand-primary: #81B953;
-  --color-brand-content: #29A329;
+  --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: var(--color-brand-content);
+  --color-api-name: #29A329;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #CCCCCC;
@@ -55,17 +54,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -77,6 +75,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -92,17 +91,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -114,6 +112,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -730,7 +729,7 @@
 <span id="subsets"></span><span id="combinatorics-subsets"></span><h1>Subsets<a class="headerlink" href="#module-sympy.combinatorics.subsets" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.subsets.</span></span><span class="sig-name descname"><span class="pre">Subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L6-L595"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.subsets.</span></span><span class="sig-name descname"><span class="pre">Subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L6-L595"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset" title="Permalink to this definition">#</a></dt>
 <dd><p>Represents a basic subset object.</p>
 <p class="rubric">Explanation</p>
 <p>We generate subsets using essentially two techniques,
@@ -749,7 +748,7 @@ describes the superset.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.bitlist_from_subset">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bitlist_from_subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L500-L522"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.bitlist_from_subset" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bitlist_from_subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L500-L522"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.bitlist_from_subset" title="Permalink to this definition">#</a></dt>
 <dd><p>Gets the bitlist corresponding to a subset.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -780,7 +779,7 @@ describes the superset.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.iterate_binary">
-<span class="sig-name descname"><span class="pre">iterate_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L75-L100"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.iterate_binary" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">iterate_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L75-L100"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.iterate_binary" title="Permalink to this definition">#</a></dt>
 <dd><p>This is a helper function. It iterates over the
 binary subsets by <code class="docutils literal notranslate"><span class="pre">k</span></code> steps. This variable can be
 both positive or negative.</p>
@@ -801,7 +800,7 @@ both positive or negative.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.iterate_graycode">
-<span class="sig-name descname"><span class="pre">iterate_graycode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L231-L254"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.iterate_graycode" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">iterate_graycode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L231-L254"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.iterate_graycode" title="Permalink to this definition">#</a></dt>
 <dd><p>Helper function used for prev_gray and next_gray.
 It performs <code class="docutils literal notranslate"><span class="pre">k</span></code> step overs to get the respective Gray codes.</p>
 <p class="rubric">Examples</p>
@@ -820,7 +819,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.next_binary">
-<span class="sig-name descname"><span class="pre">next_binary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L102-L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.next_binary" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">next_binary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L102-L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.next_binary" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the next binary ordered subset.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -839,7 +838,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.next_gray">
-<span class="sig-name descname"><span class="pre">next_gray</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L256-L273"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.next_gray" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">next_gray</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L256-L273"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.next_gray" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the next Gray code ordered subset.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -855,7 +854,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.next_lexicographic">
-<span class="sig-name descname"><span class="pre">next_lexicographic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L146-L189"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.next_lexicographic" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">next_lexicographic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L146-L189"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.next_lexicographic" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the next lexicographically ordered subset.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -874,7 +873,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.prev_binary">
-<span class="sig-name descname"><span class="pre">prev_binary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L124-L144"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.prev_binary" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">prev_binary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L124-L144"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.prev_binary" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the previous binary ordered subset.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -893,7 +892,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.prev_gray">
-<span class="sig-name descname"><span class="pre">prev_gray</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L275-L292"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.prev_gray" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">prev_gray</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L275-L292"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.prev_gray" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the previous Gray code ordered subset.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -909,7 +908,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.prev_lexicographic">
-<span class="sig-name descname"><span class="pre">prev_lexicographic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L191-L229"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.prev_lexicographic" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">prev_lexicographic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L191-L229"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.prev_lexicographic" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the previous lexicographically ordered subset.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -1013,7 +1012,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.subset_from_bitlist">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subset_from_bitlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">super_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitlist</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L475-L498"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.subset_from_bitlist" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subset_from_bitlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">super_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitlist</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L475-L498"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.subset_from_bitlist" title="Permalink to this definition">#</a></dt>
 <dd><p>Gets the subset defined by the bitlist.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -1028,7 +1027,7 @@ It performs <code class="docutils literal notranslate"><span class="pre">k</span
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.subset_indices">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subset_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L566-L595"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.subset_indices" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subset_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L566-L595"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.subset_indices" title="Permalink to this definition">#</a></dt>
 <dd><p>Return indices of subset in superset in a list; the list is empty
 if all elements of <code class="docutils literal notranslate"><span class="pre">subset</span></code> are not in <code class="docutils literal notranslate"><span class="pre">superset</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -1077,7 +1076,7 @@ if all elements of <code class="docutils literal notranslate"><span class="pre">
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.unrank_binary">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unrank_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L524-L542"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.unrank_binary" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unrank_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L524-L542"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.unrank_binary" title="Permalink to this definition">#</a></dt>
 <dd><p>Gets the binary ordered subset of the specified rank.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -1092,7 +1091,7 @@ if all elements of <code class="docutils literal notranslate"><span class="pre">
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.Subset.unrank_gray">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unrank_gray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L544-L564"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.unrank_gray" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unrank_gray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">superset</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L544-L564"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.Subset.unrank_gray" title="Permalink to this definition">#</a></dt>
 <dd><p>Gets the Gray code ordered subset of the specified rank.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.combinatorics</span> <span class="kn">import</span> <span class="n">Subset</span>
@@ -1110,7 +1109,7 @@ if all elements of <code class="docutils literal notranslate"><span class="pre">
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.combinatorics.subsets.ksubsets">
-<span class="sig-prename descclassname"><span class="pre">subsets.</span></span><span class="sig-name descname"><span class="pre">ksubsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/combinatorics/subsets.py#L598-L619"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.ksubsets" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">subsets.</span></span><span class="sig-name descname"><span class="pre">ksubsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/combinatorics/subsets.py#L598-L619"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.subsets.ksubsets" title="Permalink to this definition">#</a></dt>
 <dd><p>Finds the subsets of size <code class="docutils literal notranslate"><span class="pre">k</span></code> in lexicographic order.</p>
 <p>This uses the itertools generator.</p>
 <p class="rubric">Examples</p>
@@ -1163,7 +1162,7 @@ if all elements of <code class="docutils literal notranslate"><span class="pre">
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 21, 2022</div>
+              Last updated on Mar 25, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

@@ -21,20 +21,19 @@
     --color-code-background: #eeffcc;
   --color-code-foreground: black;
   --color-brand-primary: #81B953;
-  --color-brand-content: #29A329;
+  --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: var(--color-brand-content);
+  --color-api-name: #29A329;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #CCCCCC;
@@ -55,17 +54,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -77,6 +75,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -92,17 +91,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -114,6 +112,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -732,7 +731,7 @@
 <h2>init_vprinting<a class="headerlink" href="#init-vprinting" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.printing.init_vprinting">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">init_vprinting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/vector/printing.py#L329-L365"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.init_vprinting" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">init_vprinting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/vector/printing.py#L331-L367"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.init_vprinting" title="Permalink to this definition">#</a></dt>
 <dd><p>Initializes time derivative printing for all SymPy objects, i.e. any
 functions of time will be displayed in a more compact notation. The main
 benefit of this is for printing of time derivatives; instead of
@@ -882,7 +881,7 @@ be used to fine-tune the output.</p>
 <h2>vprint<a class="headerlink" href="#vprint" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.printing.vprint">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">vprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/vector/printing.py#L172-L204"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.vprint" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">vprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/vector/printing.py#L173-L205"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.vprint" title="Permalink to this definition">#</a></dt>
 <dd><p>Function for printing of expressions generated in the
 sympy.physics vector package.</p>
 <p>Extends SymPy’s StrPrinter, takes the same setting accepted by SymPy’s
@@ -914,7 +913,7 @@ sympy.physics vector package.</p>
 <h2>vpprint<a class="headerlink" href="#vpprint" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.printing.vpprint">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">vpprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/vector/printing.py#L255-L286"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.vpprint" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">vpprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/vector/printing.py#L256-L287"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.vpprint" title="Permalink to this definition">#</a></dt>
 <dd><p>Function for pretty printing of expressions generated in the
 sympy.physics vector package.</p>
 <p>Mainly used for expressions not inside a vector; the output of running
@@ -938,11 +937,12 @@ SymPy’s <a class="reference internal" href="../../../printing.html#sympy.print
 <h2>vlatex<a class="headerlink" href="#vlatex" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.vector.printing.vlatex">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">vlatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/vector/printing.py#L289-L326"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.vlatex" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.vector.printing.</span></span><span class="sig-name descname"><span class="pre">vlatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/vector/printing.py#L290-L328"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.vector.printing.vlatex" title="Permalink to this definition">#</a></dt>
 <dd><p>Function for printing latex representation of sympy.physics.vector
 objects.</p>
 <p>For latex representation of Vectors, Dyadics, and dynamicsymbols. Takes the
-same options as SymPy’s <a class="reference internal" href="../../../printing.html#sympy.printing.latex.latex" title="sympy.printing.latex.latex"><code class="xref py py-func docutils literal notranslate"><span class="pre">latex()</span></code></a>; see that function for more information;</p>
+same options as SymPy’s <a class="reference internal" href="../../../printing.html#sympy.printing.latex.latex" title="sympy.printing.latex.latex"><code class="xref py py-func docutils literal notranslate"><span class="pre">latex()</span></code></a>; see that function for more
+information;</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>expr</strong> : valid SymPy object</p>
@@ -1012,7 +1012,7 @@ same options as SymPy’s <a class="reference internal" href="../../../printing.
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 21, 2022</div>
+              Last updated on Mar 25, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

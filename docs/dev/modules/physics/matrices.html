@@ -21,20 +21,19 @@
     --color-code-background: #eeffcc;
   --color-code-foreground: black;
   --color-brand-primary: #81B953;
-  --color-brand-content: #29A329;
+  --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: var(--color-brand-content);
+  --color-api-name: #29A329;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #CCCCCC;
@@ -55,17 +54,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -77,6 +75,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -92,17 +91,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -114,6 +112,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -731,7 +730,7 @@
 <p>Known matrices related to physics</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.matrices.mdft">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">mdft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/matrices.py#L159-L176"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.mdft" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">mdft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/matrices.py#L159-L176"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.mdft" title="Permalink to this definition">#</a></dt>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 1.9: </span>Use DFT from sympy.matrices.expressions.fourier instead.</p>
 <p>To get identical behavior to <code class="docutils literal notranslate"><span class="pre">mdft(n)</span></code>, use <code class="docutils literal notranslate"><span class="pre">DFT(n).as_explicit()</span></code>.</p>
@@ -739,7 +738,7 @@
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.matrices.mgamma">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">mgamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/matrices.py#L75-L147"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.mgamma" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">mgamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/matrices.py#L75-L147"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.mgamma" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns a Dirac gamma matrix <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> in the standard
 (Dirac) representation.</p>
 <p class="rubric">Explanation</p>
@@ -759,15 +758,15 @@
 </div>
 <p class="rubric">References</p>
 <dl class="citation">
-<dt class="label" id="r653"><span class="brackets"><a class="fn-backref" href="#id1">R653</a></span></dt>
+<dt class="label" id="r655"><span class="brackets"><a class="fn-backref" href="#id1">R655</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gamma_matrices">https://en.wikipedia.org/wiki/Gamma_matrices</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.matrices.msigma">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">msigma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/matrices.py#L8-L42"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.msigma" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a Pauli matrix <span class="math notranslate nohighlight">\(\sigma_i\)</span> with <code class="docutils literal notranslate"><span class="pre">i=1,2,3</span></code>.</p>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">msigma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/matrices.py#L8-L42"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.msigma" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns a Pauli matrix <span class="math notranslate nohighlight">\(\sigma_i\)</span> with <span class="math notranslate nohighlight">\(i=1,2,3\)</span>.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.physics.matrices</span> <span class="kn">import</span> <span class="n">msigma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">msigma</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -778,14 +777,14 @@
 </div>
 <p class="rubric">References</p>
 <dl class="citation">
-<dt class="label" id="r654"><span class="brackets"><a class="fn-backref" href="#id2">R654</a></span></dt>
+<dt class="label" id="r656"><span class="brackets"><a class="fn-backref" href="#id2">R656</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pauli_matrices">https://en.wikipedia.org/wiki/Pauli_matrices</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.physics.matrices.pat_matrix">
-<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">pat_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dz</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/matrices.py#L45-L72"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.pat_matrix" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.physics.matrices.</span></span><span class="sig-name descname"><span class="pre">pat_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dz</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/matrices.py#L45-L72"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.matrices.pat_matrix" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the Parallel Axis Theorem matrix to translate the inertia
 matrix a distance of <span class="math notranslate nohighlight">\((dx, dy, dz)\)</span> for a body of mass m.</p>
 <p class="rubric">Examples</p>
@@ -837,7 +836,7 @@ the <span class="math notranslate nohighlight">\(x\)</span>-axis we get:</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 21, 2022</div>
+              Last updated on Mar 25, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

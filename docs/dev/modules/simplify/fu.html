@@ -21,20 +21,19 @@
     --color-code-background: #eeffcc;
   --color-code-foreground: black;
   --color-brand-primary: #81B953;
-  --color-brand-content: #29A329;
+  --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: var(--color-brand-content);
+  --color-api-name: #29A329;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #CCCCCC;
@@ -55,17 +54,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -77,6 +75,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -92,17 +91,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -114,6 +112,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -897,13 +896,13 @@ better heuristics or brute force trial of all possibilities.</p>
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR0">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L31-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR0" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L31-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR0" title="Permalink to this definition">#</a></dt>
 <dd><p>Simplification of rational polynomials, trying to simplify
 the expression, e.g. combine things like 3*x + 2*x, etc….</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR1">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L40-L61"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR1" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L40-L61"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR1" title="Permalink to this definition">#</a></dt>
 <dd><p>Replace sec, csc with 1/cos, 1/sin</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR1</span><span class="p">,</span> <span class="n">sec</span><span class="p">,</span> <span class="n">csc</span>
@@ -915,7 +914,7 @@ the expression, e.g. combine things like 3*x + 2*x, etc….</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR2">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L64-L91"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR2" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L64-L91"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR2" title="Permalink to this definition">#</a></dt>
 <dd><p>Replace tan and cot with sin/cos and cos/sin</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR2</span>
@@ -932,7 +931,7 @@ the expression, e.g. combine things like 3*x + 2*x, etc….</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR2i">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR2i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">half</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L94-L207"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR2i" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR2i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">half</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L94-L207"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR2i" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Converts ratios involving sin and cos as follows::</dt><dd><p>sin(x)/cos(x) -&gt; tan(x)
 sin(x)/(cos(x) + 1) -&gt; tan(x/2) if half=True</p>
@@ -961,7 +960,7 @@ for both numerator and denominator)</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR3">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L210-L249"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR3" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L210-L249"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR3" title="Permalink to this definition">#</a></dt>
 <dd><p>Induced formula: example sin(-a) = -sin(a)</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR3</span>
@@ -979,7 +978,7 @@ for both numerator and denominator)</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR4">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L252-L276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR4" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L252-L276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR4" title="Permalink to this definition">#</a></dt>
 <dd><p>Identify values of special angles.</p>
 <p class="rubric">A=  0   Pi/6        Pi/4        Pi/3        Pi/2</p>
 <p>sin(a)  0   1/2         sqrt(2)/2   sqrt(3)/2   1
@@ -1001,7 +1000,7 @@ tan(a)  0   sqt(3)/3    1           sqrt(3)     –</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR5">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L343-L361"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR5" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L343-L361"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR5" title="Permalink to this definition">#</a></dt>
 <dd><p>Replacement of sin**2 with 1 - cos(x)**2.</p>
 <p>See _TR56 docstring for advanced use of <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">pow</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -1019,7 +1018,7 @@ tan(a)  0   sqt(3)/3    1           sqrt(3)     –</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR6">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L364-L382"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR6" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L364-L382"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR6" title="Permalink to this definition">#</a></dt>
 <dd><p>Replacement of cos**2 with 1 - sin(x)**2.</p>
 <p>See _TR56 docstring for advanced use of <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">pow</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -1037,7 +1036,7 @@ tan(a)  0   sqt(3)/3    1           sqrt(3)     –</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR7">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR7</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L385-L406"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR7" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR7</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L385-L406"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR7" title="Permalink to this definition">#</a></dt>
 <dd><p>Lowering the degree of cos(x)**2.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR7</span>
@@ -1052,7 +1051,7 @@ tan(a)  0   sqt(3)/3    1           sqrt(3)     –</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR8">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L409-L481"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR8" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L409-L481"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR8" title="Permalink to this definition">#</a></dt>
 <dd><p>Converting products of <code class="docutils literal notranslate"><span class="pre">cos</span></code> and/or <code class="docutils literal notranslate"><span class="pre">sin</span></code> to a sum or
 difference of <code class="docutils literal notranslate"><span class="pre">cos</span></code> and or <code class="docutils literal notranslate"><span class="pre">sin</span></code> terms.</p>
 <p class="rubric">Examples</p>
@@ -1069,7 +1068,7 @@ difference of <code class="docutils literal notranslate"><span class="pre">cos</
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR9">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR9</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L484-L575"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR9" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR9</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L484-L575"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR9" title="Permalink to this definition">#</a></dt>
 <dd><p>Sum of <code class="docutils literal notranslate"><span class="pre">cos</span></code> or <code class="docutils literal notranslate"><span class="pre">sin</span></code> terms as a product of <code class="docutils literal notranslate"><span class="pre">cos</span></code> or <code class="docutils literal notranslate"><span class="pre">sin</span></code>.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR9</span>
@@ -1083,7 +1082,7 @@ difference of <code class="docutils literal notranslate"><span class="pre">cos</
 <p>If no change is made by TR9, no re-arrangement of the
 expression will be made. For example, though factoring
 of common term is attempted, if the factored expression
-wasn’t changed, the original expression will be returned:</p>
+was not changed, the original expression will be returned:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TR9</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 <span class="go">cos(3) + cos(2)*cos(3)</span>
 </pre></div>
@@ -1091,7 +1090,7 @@ wasn’t changed, the original expression will be returned:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR10">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR10</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L578-L623"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR10" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR10</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L578-L623"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR10" title="Permalink to this definition">#</a></dt>
 <dd><p>Separate sums in <code class="docutils literal notranslate"><span class="pre">cos</span></code> and <code class="docutils literal notranslate"><span class="pre">sin</span></code>.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR10</span>
@@ -1108,7 +1107,7 @@ wasn’t changed, the original expression will be returned:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR10i">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR10i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L626-L755"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR10i" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR10i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L626-L755"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR10i" title="Permalink to this definition">#</a></dt>
 <dd><p>Sum of products to function of sum.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR10i</span>
@@ -1127,7 +1126,7 @@ wasn’t changed, the original expression will be returned:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR11">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR11</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L758-L835"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR11" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR11</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L758-L835"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR11" title="Permalink to this definition">#</a></dt>
 <dd><p>Function of double angle to product. The <code class="docutils literal notranslate"><span class="pre">base</span></code> argument can be used
 to indicate what is the un-doubled argument, e.g. if 3*pi/7 is the base
 then cosine and sine functions with argument 6*pi/7 will be replaced.</p>
@@ -1168,7 +1167,7 @@ the 3*pi/7 base:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR12">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR12</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L899-L931"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR12" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR12</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L899-L931"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR12" title="Permalink to this definition">#</a></dt>
 <dd><p>Separate sums in <code class="docutils literal notranslate"><span class="pre">tan</span></code>.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
@@ -1181,7 +1180,7 @@ the 3*pi/7 base:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR12i">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR12i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L934-L1054"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR12i" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR12i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L934-L1054"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR12i" title="Permalink to this definition">#</a></dt>
 <dd><p>Combine tan arguments as
 (tan(y) + tan(x))/(tan(x)*tan(y) - 1) -&gt; -tan(x + y).</p>
 <p class="rubric">Examples</p>
@@ -1203,7 +1202,7 @@ the 3*pi/7 base:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR13">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR13</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1057-L1101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR13" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR13</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1057-L1101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR13" title="Permalink to this definition">#</a></dt>
 <dd><p>Change products of <code class="docutils literal notranslate"><span class="pre">tan</span></code> or <code class="docutils literal notranslate"><span class="pre">cot</span></code>.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TR13</span>
@@ -1217,7 +1216,7 @@ the 3*pi/7 base:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TRmorrie">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TRmorrie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1104-L1220"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TRmorrie" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TRmorrie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1104-L1220"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TRmorrie" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns cos(x)*cos(2*x)*…*cos(2**(k-1)*x) -&gt; sin(2**k*x)/(2**k*sin(x))</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TRmorrie</span><span class="p">,</span> <span class="n">TR8</span><span class="p">,</span> <span class="n">TR3</span>
@@ -1269,14 +1268,14 @@ however:</p>
 </div>
 <p class="rubric">References</p>
 <dl class="citation">
-<dt class="label" id="r754"><span class="brackets"><a class="fn-backref" href="#id1">R754</a></span></dt>
+<dt class="label" id="r756"><span class="brackets"><a class="fn-backref" href="#id1">R756</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Morrie%27s_law">https://en.wikipedia.org/wiki/Morrie%27s_law</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR14">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR14</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1223-L1341"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR14" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR14</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1223-L1341"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR14" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert factored powers of sin and cos identities into simpler
 expressions.</p>
 <p class="rubric">Examples</p>
@@ -1297,7 +1296,7 @@ expressions.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR15">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR15</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1344-L1374"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR15" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR15</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1344-L1374"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR15" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert sin(x)**-2 to 1 + cot(x)**2.</p>
 <p>See _TR56 docstring for advanced use of <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">pow</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -1311,7 +1310,7 @@ expressions.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR16">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR16</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1377-L1407"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR16" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR16</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1377-L1407"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR16" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert cos(x)**-2 to 1 + tan(x)**2.</p>
 <p>See _TR56 docstring for advanced use of <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">pow</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -1325,7 +1324,7 @@ expressions.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR111">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR111</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1410-L1439"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR111" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR111</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1410-L1439"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR111" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert f(x)**-i to g(x)**i where either <code class="docutils literal notranslate"><span class="pre">i</span></code> is an integer
 or the base is positive and f, g are: tan, cot; sin, csc; or cos, sec.</p>
 <p class="rubric">Examples</p>
@@ -1339,7 +1338,7 @@ or the base is positive and f, g are: tan, cot; sin, csc; or cos, sec.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TR22">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR22</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1442-L1468"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR22" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TR22</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1442-L1468"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TR22" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert tan(x)**2 to sec(x)**2 - 1 and cot(x)**2 to csc(x)**2 - 1.</p>
 <p>See _TR56 docstring for advanced use of <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">pow</span></code>.</p>
 <p class="rubric">Examples</p>
@@ -1355,7 +1354,7 @@ or the base is positive and f, g are: tan, cot; sin, csc; or cos, sec.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.TRpower">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TRpower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1471-L1514"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TRpower" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">TRpower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1471-L1514"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.TRpower" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert sin(x)**n and cos(x)**n with positive n to sums.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.simplify.fu</span> <span class="kn">import</span> <span class="n">TRpower</span>
@@ -1369,14 +1368,14 @@ or the base is positive and f, g are: tan, cot; sin, csc; or cos, sec.</p>
 </div>
 <p class="rubric">References</p>
 <dl class="citation">
-<dt class="label" id="r755"><span class="brackets"><a class="fn-backref" href="#id2">R755</a></span></dt>
+<dt class="label" id="r757"><span class="brackets"><a class="fn-backref" href="#id2">R757</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Power-reduction_formulae">https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Power-reduction_formulae</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.simplify.fu.fu">
-<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">fu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/simplify/fu.py#L1569-L1657"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.fu" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.simplify.fu.</span></span><span class="sig-name descname"><span class="pre">fu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/simplify/fu.py#L1569-L1657"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.simplify.fu.fu" title="Permalink to this definition">#</a></dt>
 <dd><p>Attempt to simplify expression by using transformation rules given
 in the algorithm by Fu et al.</p>
 <p><a class="reference internal" href="#sympy.simplify.fu.fu" title="sympy.simplify.fu.fu"><code class="xref py py-func docutils literal notranslate"><span class="pre">fu()</span></code></a> will try to minimize the objective function <code class="docutils literal notranslate"><span class="pre">measure</span></code>.
@@ -1441,7 +1440,7 @@ the number of total operations.</p>
 </div>
 <p class="rubric">References</p>
 <dl class="citation">
-<dt class="label" id="r756"><span class="brackets"><a class="fn-backref" href="#id3">R756</a></span></dt>
+<dt class="label" id="r758"><span class="brackets"><a class="fn-backref" href="#id3">R758</a></span></dt>
 <dd><p><a class="reference external" href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.657.2478&amp;rep=rep1&amp;type=pdf">https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.657.2478&amp;rep=rep1&amp;type=pdf</a></p>
 </dd>
 </dl>
@@ -1506,7 +1505,7 @@ Mathematical and computer modelling 44.11 (2006): 1169-1177.
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 21, 2022</div>
+              Last updated on Mar 25, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

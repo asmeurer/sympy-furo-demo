@@ -21,20 +21,19 @@
     --color-code-background: #eeffcc;
   --color-code-foreground: black;
   --color-brand-primary: #81B953;
-  --color-brand-content: #29A329;
+  --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: var(--color-brand-content);
+  --color-api-name: #29A329;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #CCCCCC;
@@ -55,17 +54,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -77,6 +75,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -92,17 +91,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -114,6 +112,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -735,7 +734,7 @@
 <h3>pde_separate<a class="headerlink" href="#pde-separate" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.pde_separate">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_separate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mul'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L819-L906"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_separate" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_separate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mul'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L819-L906"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_separate" title="Permalink to this definition">#</a></dt>
 <dd><p>Separate variables in partial differential equation either by additive
 or multiplicative separation approach. It tries to rewrite an equation so
 that one of the specified variables occurs on a different side of the
@@ -778,7 +777,7 @@ default.</p></li>
 <h3>pde_separate_add<a class="headerlink" href="#pde-separate-add" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.pde_separate_add">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_separate_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L909-L931"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_separate_add" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_separate_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L909-L931"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_separate_add" title="Permalink to this definition">#</a></dt>
 <dd><p>Helper function for searching additive separable solutions.</p>
 <p>Consider an equation of two independent variables x, y and a dependent
 variable w, we look for the product of two functions depending on different
@@ -801,7 +800,7 @@ arguments:</p>
 <h3>pde_separate_mul<a class="headerlink" href="#pde-separate-mul" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.pde_separate_mul">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_separate_mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L934-L956"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_separate_mul" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_separate_mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L934-L956"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_separate_mul" title="Permalink to this definition">#</a></dt>
 <dd><p>Helper function for searching multiplicative separable solutions.</p>
 <p>Consider an equation of two independent variables x, y and a dependent
 variable w, we look for the product of two functions depending on different
@@ -824,7 +823,7 @@ arguments:</p>
 <h3>pdsolve<a class="headerlink" href="#pdsolve" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.pdsolve">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pdsolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L63-L195"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pdsolve" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pdsolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L63-L195"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pdsolve" title="Permalink to this definition">#</a></dt>
 <dd><p>Solves any (supported) kind of partial differential equation.</p>
 <p><strong>Usage</strong></p>
 <blockquote>
@@ -840,7 +839,7 @@ equal to 0.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">f(x,y)</span></code> is a function of two variables whose derivatives in that</dt><dd><p>variable make up the partial differential equation. In many
 cases it is not necessary to provide this; it will be autodetected
-(and an error raised if it couldn’t be detected).</p>
+(and an error raised if it could not be detected).</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">hint</span></code> is the solving method that you want pdsolve to use.  Use</dt><dd><p>classify_pde(eq, f(x,y)) to get all of the possible hints for
 a PDE.  The default hint, ‘default’, will use whatever hint
@@ -928,7 +927,7 @@ specific hint</p></li>
 <h3>classify_pde<a class="headerlink" href="#classify-pde" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.classify_pde">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">classify_pde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L230-L386"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.classify_pde" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">classify_pde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L230-L386"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.classify_pde" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns a tuple of possible pdsolve() classifications for a PDE.</p>
 <p>The tuple is ordered so that first item is the classification that
 pdsolve() uses to solve the PDE by default.  In general,
@@ -964,7 +963,7 @@ supported hints that can be returned from classify_pde.</p>
 <h3>checkpdesol<a class="headerlink" href="#checkpdesol" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.checkpdesol">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">checkpdesol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pde</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solve_for_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L389-L479"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.checkpdesol" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">checkpdesol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pde</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solve_for_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L389-L479"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.checkpdesol" title="Permalink to this definition">#</a></dt>
 <dd><p>Checks if the given solution satisfies the partial differential
 equation.</p>
 <p>pde is the partial differential equation which can be given in the
@@ -979,8 +978,8 @@ solution satisfies the PDE:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Directly substitute the solution in the PDE and check. If the
-solution hasn’t been solved for f, then it will solve for f
-provided solve_for_func hasn’t been set to False.</p></li>
+solution has not been solved for f, then it will solve for f
+provided solve_for_func has not been set to False.</p></li>
 </ol>
 </div></blockquote>
 <p>If the solution satisfies the PDE, then a tuple (True, 0) is returned.
@@ -1010,7 +1009,7 @@ returns False, it may be due to the inability of doit() to simplify it to zero.<
 <h3>pde_1st_linear_constant_coeff_homogeneous<a class="headerlink" href="#pde-1st-linear-constant-coeff-homogeneous" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.pde_1st_linear_constant_coeff_homogeneous">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_1st_linear_constant_coeff_homogeneous</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L483-L554"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_1st_linear_constant_coeff_homogeneous" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_1st_linear_constant_coeff_homogeneous</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L483-L554"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_1st_linear_constant_coeff_homogeneous" title="Permalink to this definition">#</a></dt>
 <dd><p>Solves a first order linear homogeneous
 partial differential equation with constant coefficients.</p>
 <p>The general form of this partial differential equation is</p>
@@ -1068,7 +1067,7 @@ Math 124A - Fall 2010, pp.7</p></li>
 <h3>pde_1st_linear_constant_coeff<a class="headerlink" href="#pde-1st-linear-constant-coeff" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.pde_1st_linear_constant_coeff">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_1st_linear_constant_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L557-L671"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_1st_linear_constant_coeff" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_1st_linear_constant_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L557-L671"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_1st_linear_constant_coeff" title="Permalink to this definition">#</a></dt>
 <dd><p>Solves a first order linear partial differential equation
 with constant coefficients.</p>
 <p>The general form of this partial differential equation is</p>
@@ -1158,7 +1157,7 @@ Math 124A - Fall 2010, pp.7</p></li>
 <h3>pde_1st_linear_variable_coeff<a class="headerlink" href="#pde-1st-linear-variable-coeff" title="Permalink to this headline">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.solvers.pde.pde_1st_linear_variable_coeff">
-<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_1st_linear_variable_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/solvers/pde.py#L674-L800"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_1st_linear_variable_coeff" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.solvers.pde.</span></span><span class="sig-name descname"><span class="pre">pde_1st_linear_variable_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solvefun</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/solvers/pde.py#L674-L800"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.solvers.pde.pde_1st_linear_variable_coeff" title="Permalink to this definition">#</a></dt>
 <dd><p>Solves a first order linear partial differential equation
 with variable coefficients. The general form of this partial
 differential equation is</p>
@@ -1288,7 +1287,7 @@ variable coefficients.</p></li>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 21, 2022</div>
+              Last updated on Mar 25, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

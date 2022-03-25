@@ -21,20 +21,19 @@
     --color-code-background: #eeffcc;
   --color-code-foreground: black;
   --color-brand-primary: #81B953;
-  --color-brand-content: #29A329;
+  --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: var(--color-brand-content);
+  --color-api-name: #29A329;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #CCCCCC;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #CCCCCC;
@@ -55,17 +54,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -77,6 +75,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -92,17 +91,16 @@
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
   --color-sidebar-link-text: #FFFFFF;
-  --color-sidebar-brand-text: #DDDDDD;
+  --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
   --color-sidebar-item-background--hover: #8AB950;
   --color-sidebar-item-expander-background--hover: #8AB950;
+  --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
   --color-api-pre-name: var(--color-brand-primary);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
-  --color-link-hover: var(--color-link);
-  --color-link-underline--hover: #29A329;
   --color-admonition-title-background--seealso: #555555;
   --color-admonition-title--seealso: black;
   --color-admonition-title-background--note: #555555;
@@ -114,6 +112,7 @@
   --color-code-background: hsl(80deg 100% 95%);
   --code-font-size: var(--font-size--small);
   --font-stack--monospace: DejaVu Sans Mono,"SFMono-Regular",Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;;
+  --color-link: var(--color-brand-content);
   --color-api-overall: #FFFFFF90;
   --color-api-paren: #FFFFFF90;
   --color-api-highlight-on-target: #3F3F3F;
@@ -737,7 +736,7 @@ no time dimension (but a velocity dimension instead) - in the basis - so the
 question of adding time to length has no meaning.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.units.dimensions.Dimension">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.units.dimensions.</span></span><span class="sig-name descname"><span class="pre">Dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/units/dimensions.py#L95-L272"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.Dimension" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.units.dimensions.</span></span><span class="sig-name descname"><span class="pre">Dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/units/dimensions.py#L95-L272"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.Dimension" title="Permalink to this definition">#</a></dt>
 <dd><p>This class represent the dimension of a physical quantities.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Dimension</span></code> constructor takes as parameters a name and an optional
 symbol.</p>
@@ -778,7 +777,7 @@ SI units convention can be used:</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.units.dimensions.Dimension.has_integer_powers">
-<span class="sig-name descname"><span class="pre">has_integer_powers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim_sys</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/units/dimensions.py#L263-L272"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.Dimension.has_integer_powers" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">has_integer_powers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim_sys</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/units/dimensions.py#L263-L272"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.Dimension.has_integer_powers" title="Permalink to this definition">#</a></dt>
 <dd><p>Check if the dimension object has only integer powers.</p>
 <p>All the dimension powers should be integers, but rational powers may
 appear in intermediate steps. This method may be used to check that the
@@ -787,7 +786,7 @@ final result is well-defined.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="sympy.physics.units.dimensions.DimensionSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.units.dimensions.</span></span><span class="sig-name descname"><span class="pre">DimensionSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derived_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensional_dependencies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/units/dimensions.py#L280-L587"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sympy.physics.units.dimensions.</span></span><span class="sig-name descname"><span class="pre">DimensionSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derived_dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensional_dependencies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/units/dimensions.py#L280-L587"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem" title="Permalink to this definition">#</a></dt>
 <dd><p>DimensionSystem represents a coherent set of dimensions.</p>
 <p>The constructor takes three parameters:</p>
 <ul class="simple">
@@ -818,14 +817,14 @@ base dimension basis.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.units.dimensions.DimensionSystem.dim_can_vector">
-<span class="sig-name descname"><span class="pre">dim_can_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/units/dimensions.py#L525-L537"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.dim_can_vector" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">dim_can_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/units/dimensions.py#L525-L537"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.dim_can_vector" title="Permalink to this definition">#</a></dt>
 <dd><p>Useless method, kept for compatibility with previous versions.</p>
 <p>DO NOT USE.</p>
 <p>Dimensional representation in terms of the canonical base dimensions.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.units.dimensions.DimensionSystem.dim_vector">
-<span class="sig-name descname"><span class="pre">dim_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/units/dimensions.py#L539-L548"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.dim_vector" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">dim_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/units/dimensions.py#L539-L548"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.dim_vector" title="Permalink to this definition">#</a></dt>
 <dd><p>Useless method, kept for compatibility with previous versions.</p>
 <p>DO NOT USE.</p>
 <p>Vector representation in terms of the base dimensions.</p>
@@ -853,7 +852,7 @@ to get them in this basis. Nonetheless if this matrix is not square
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.units.dimensions.DimensionSystem.is_dimensionless">
-<span class="sig-name descname"><span class="pre">is_dimensionless</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/units/dimensions.py#L460-L468"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.is_dimensionless" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">is_dimensionless</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/units/dimensions.py#L460-L468"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.is_dimensionless" title="Permalink to this definition">#</a></dt>
 <dd><p>Check if the dimension object really has a dimension.</p>
 <p>A dimension should have at least one component with non-zero power.</p>
 </dd></dl>
@@ -866,7 +865,7 @@ to get them in this basis. Nonetheless if this matrix is not square
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sympy.physics.units.dimensions.DimensionSystem.print_dim_base">
-<span class="sig-name descname"><span class="pre">print_dim_base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/2bdd94d5c0d6fc170c0209b9c3d29a746b5c5202/sympy/physics/units/dimensions.py#L550-L559"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.print_dim_base" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">print_dim_base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/527aba6a004b36a6d265132b28271a3b1ad66ae2/sympy/physics/units/dimensions.py#L550-L559"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.physics.units.dimensions.DimensionSystem.print_dim_base" title="Permalink to this definition">#</a></dt>
 <dd><p>Give the string expression of a dimension in term of the basis symbols.</p>
 </dd></dl>
 </dd></dl>
@@ -907,7 +906,7 @@ to get them in this basis. Nonetheless if this matrix is not square
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 21, 2022</div>
+              Last updated on Mar 25, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">
