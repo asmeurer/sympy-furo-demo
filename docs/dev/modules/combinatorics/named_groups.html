@@ -23,6 +23,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -30,8 +31,8 @@
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: #29A329;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-admonition-title-background--seealso: #CCCCCC;
@@ -53,6 +54,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -61,7 +63,7 @@
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
   --color-admonition-title-background--seealso: #555555;
@@ -89,6 +91,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -97,7 +100,7 @@
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
   --color-admonition-title-background--seealso: #555555;
@@ -727,7 +730,7 @@
 <span id="named-groups"></span><span id="combinatorics-named-groups"></span><h1>Named Groups<a class="headerlink" href="#module-sympy.combinatorics.named_groups" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.named_groups.SymmetricGroup">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">SymmetricGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/combinatorics/named_groups.py#L241-L305"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.SymmetricGroup" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">SymmetricGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/combinatorics/named_groups.py#L241-L305"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.SymmetricGroup" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the symmetric group on <code class="docutils literal notranslate"><span class="pre">n</span></code> elements as a permutation group.</p>
 <p class="rubric">Explanation</p>
 <p>The generators taken are the <code class="docutils literal notranslate"><span class="pre">n</span></code>-cycle
@@ -762,7 +765,7 @@ are set.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.named_groups.CyclicGroup">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">CyclicGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/combinatorics/named_groups.py#L130-L171"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.CyclicGroup" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">CyclicGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/combinatorics/named_groups.py#L130-L171"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.CyclicGroup" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the cyclic group of order <code class="docutils literal notranslate"><span class="pre">n</span></code> as a permutation group.</p>
 <p class="rubric">Explanation</p>
 <p>The generator taken is the <code class="docutils literal notranslate"><span class="pre">n</span></code>-cycle <code class="docutils literal notranslate"><span class="pre">(0</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">...</span> <span class="pre">n-1)</span></code>
@@ -787,7 +790,7 @@ properties are set.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.named_groups.DihedralGroup">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">DihedralGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/combinatorics/named_groups.py#L174-L238"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.DihedralGroup" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">DihedralGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/combinatorics/named_groups.py#L174-L238"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.DihedralGroup" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the dihedral group <span class="math notranslate nohighlight">\(D_n\)</span> as a permutation group.</p>
 <p class="rubric">Explanation</p>
 <p>The dihedral group <span class="math notranslate nohighlight">\(D_n\)</span> is the group of symmetries of the regular
@@ -823,7 +826,7 @@ are set.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.named_groups.AlternatingGroup">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">AlternatingGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/combinatorics/named_groups.py#L56-L127"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.AlternatingGroup" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">AlternatingGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/combinatorics/named_groups.py#L56-L127"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.AlternatingGroup" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates the alternating group on <code class="docutils literal notranslate"><span class="pre">n</span></code> elements as a permutation group.</p>
 <p class="rubric">Explanation</p>
 <p>For <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">2</span></code>, the generators taken are <code class="docutils literal notranslate"><span class="pre">(0</span> <span class="pre">1</span> <span class="pre">2),</span> <span class="pre">(0</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">...</span> <span class="pre">n-1)</span></code> for
@@ -856,7 +859,7 @@ The cases <code class="docutils literal notranslate"><span class="pre">n</span> 
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.combinatorics.named_groups.AbelianGroup">
-<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">AbelianGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">cyclic_orders</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/combinatorics/named_groups.py#L8-L53"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.AbelianGroup" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.combinatorics.named_groups.</span></span><span class="sig-name descname"><span class="pre">AbelianGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">cyclic_orders</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/combinatorics/named_groups.py#L8-L53"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.combinatorics.named_groups.AbelianGroup" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the direct product of cyclic groups with the given orders.</p>
 <p class="rubric">Explanation</p>
 <p>According to the structure theorem for finite abelian groups ([1]),
@@ -920,7 +923,7 @@ finitely many cyclic groups.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 30, 2022</div>
+              Last updated on Apr 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

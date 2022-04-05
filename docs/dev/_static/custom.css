@@ -1,13 +1,3 @@
-/* Reduce the vertical space between lines in code blocks. Required to */
-/* make Unicode pretty printing appear correctly. */
-pre {
-    line-height: 120% !important;
-}
-
-article pre {
-    line-height: 120% !important;
-}
-
 /* Completely disable blockquotes. The Furo defaults make block quotes very*/
 /* apparent. However, the parameter blocks from numpydoc render as block
  * quotes, which looks bad. Furthermore, it is very easy for things to
@@ -71,12 +61,6 @@ blockquote {
     color: white !important;
 }
 
-/* Make the "class", "property" and so on before function names in the API*/
-/* docs bold. */
-em.property:first-child {
-    font-weight: bold;
-}
-
 .admonition.warning>.admonition-title {
     color: white;
 }
@@ -117,33 +101,6 @@ a:hover {
 /* a:visited:hover { */
 /*     color: #307748; */
 /*     text-decoration: underline; */
-/* } */
-
-/* /\* Change the background color of the code blocks (light mode). This should be*\/ */
-/* /\* --color-code-background but setting it in conf.py doesn't work.*\/ */
-/* .highlight { */
-/*     background-color: hsl(80deg 100% 95%); */
-/* } */
-
-/* /\* Improve the color contrast of various syntax highlighted elements in dark*\/ */
-/* /\* mode  *\/ */
-
-/* /\* Module names and function and class definitions *\/ */
-/* body:not([data-theme="light"]) .highlight .nn, body:not([data-theme="light"]) .highlight .nf, body:not([data-theme="light"]) .highlight .nc, body:not([data-theme="light"]) .highlight .fm { */
-/*     text-decoration: none; */
-/*     color: #71ADFF; */
-/* } */
-/* /\* Numbers *\/ */
-/* body:not([data-theme="light"]) .highlight .mi, body:not([data-theme="light"]) .highlight .mf { */
-/*     color: #51b2fd; */
-/* } */
-/* /\* Builtins and self/cls*\/ */
-/* body:not([data-theme="light"]) .highlight .nb, body:not([data-theme="light"]) .highlight .bp { */
-/*     color: #2fbccd; */
-/* } */
-/* /\* Tracebacks *\/ */
-/* body:not([data-theme="light"]) .highlight .gt, body:not([data-theme="light"]) .highlight .gr { */
-/*     color: #ff8888; */
 /* } */
 
 /* Disable the fancy scrolling behavior when jumping to headers (this is too

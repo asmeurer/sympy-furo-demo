@@ -23,6 +23,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -30,8 +31,8 @@
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: #29A329;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-admonition-title-background--seealso: #CCCCCC;
@@ -53,6 +54,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -61,7 +63,7 @@
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
   --color-admonition-title-background--seealso: #555555;
@@ -89,6 +91,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -97,7 +100,7 @@
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
   --color-admonition-title-background--seealso: #555555;
@@ -727,7 +730,7 @@
 <span id="memoization"></span><h1>Memoization<a class="headerlink" href="#module-sympy.utilities.memoization" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.utilities.memoization.assoc_recurrence_memo">
-<span class="sig-prename descclassname"><span class="pre">sympy.utilities.memoization.</span></span><span class="sig-name descname"><span class="pre">assoc_recurrence_memo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_seq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/utilities/memoization.py#L25-L59"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.memoization.assoc_recurrence_memo" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.utilities.memoization.</span></span><span class="sig-name descname"><span class="pre">assoc_recurrence_memo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_seq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/utilities/memoization.py#L25-L59"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.memoization.assoc_recurrence_memo" title="Permalink to this definition">#</a></dt>
 <dd><p>Memo decorator for associated sequences defined by recurrence starting from base</p>
 <p>base_seq(n) – callable to get base sequence elements</p>
 <p>XXX works only for Pn0 = base_seq(0) cases
@@ -735,7 +738,7 @@ XXX works only for m &lt;= n cases</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.utilities.memoization.recurrence_memo">
-<span class="sig-prename descclassname"><span class="pre">sympy.utilities.memoization.</span></span><span class="sig-name descname"><span class="pre">recurrence_memo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/utilities/memoization.py#L4-L22"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.memoization.recurrence_memo" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.utilities.memoization.</span></span><span class="sig-name descname"><span class="pre">recurrence_memo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/utilities/memoization.py#L4-L22"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.utilities.memoization.recurrence_memo" title="Permalink to this definition">#</a></dt>
 <dd><p>Memo decorator for sequences defined by recurrence</p>
 <p>See usage examples e.g. in the specfun/combinatorial module</p>
 </dd></dl>
@@ -776,7 +779,7 @@ XXX works only for m &lt;= n cases</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 30, 2022</div>
+              Last updated on Apr 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">

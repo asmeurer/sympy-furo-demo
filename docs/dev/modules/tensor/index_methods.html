@@ -23,6 +23,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #307748;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -30,8 +31,8 @@
   --color-sidebar-item-expander-background--hover: #8AB950;
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #000000bd;
-  --color-api-name: #29A329;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-name: var(--color-brand-content);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #53555B;
   --color-admonition-title-background--seealso: #CCCCCC;
@@ -53,6 +54,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -61,7 +63,7 @@
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
   --color-admonition-title-background--seealso: #555555;
@@ -89,6 +91,7 @@
   --color-brand-primary: #81B953;
   --color-brand-content: #29A329;
   --color-sidebar-background: #3B5526;
+  --color-sidebar-background-border: var(--color-background-primary);
   --color-sidebar-link-text: #FFFFFF;
   --color-sidebar-brand-text: var(--color-sidebar-link-text--top-level);
   --color-sidebar-link-text--top-level: #FFFFFF;
@@ -97,7 +100,7 @@
   --color-link-underline--hover: var(--color-link);
   --color-api-keyword: #FFFFFFbd;
   --color-api-name: #33CB33;
-  --color-api-pre-name: var(--color-brand-primary);
+  --color-api-pre-name: var(--color-brand-content);
   --api-font-size: var(--font-size--normal);
   --color-foreground-secondary: #9DA1AC;
   --color-admonition-title-background--seealso: #555555;
@@ -736,7 +739,7 @@ objects instead.  When things stabilize this could be a useful
 refactoring.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.tensor.index_methods.get_contraction_structure">
-<span class="sig-prename descclassname"><span class="pre">sympy.tensor.index_methods.</span></span><span class="sig-name descname"><span class="pre">get_contraction_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/tensor/index_methods.py#L298-L469"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.tensor.index_methods.get_contraction_structure" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.tensor.index_methods.</span></span><span class="sig-name descname"><span class="pre">get_contraction_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/tensor/index_methods.py#L298-L469"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.tensor.index_methods.get_contraction_structure" title="Permalink to this definition">#</a></dt>
 <dd><p>Determine dummy indices of <code class="docutils literal notranslate"><span class="pre">expr</span></code> and describe its structure</p>
 <p>By <em>dummy</em> we mean indices that are summation indices.</p>
 <p>The structure of the expression is determined and described as follows:</p>
@@ -835,7 +838,7 @@ over:</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="sympy.tensor.index_methods.get_indices">
-<span class="sig-prename descclassname"><span class="pre">sympy.tensor.index_methods.</span></span><span class="sig-name descname"><span class="pre">get_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/be278b9040d9a9b1c8d0e96ab9f3cdc416e5ce69/sympy/tensor/index_methods.py#L202-L295"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.tensor.index_methods.get_indices" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sympy.tensor.index_methods.</span></span><span class="sig-name descname"><span class="pre">get_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sympy/sympy/blob/ed4c87daaffc30f79a3e2f1f52ee8c9e32f1f385/sympy/tensor/index_methods.py#L202-L295"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sympy.tensor.index_methods.get_indices" title="Permalink to this definition">#</a></dt>
 <dd><p>Determine the outer indices of expression <code class="docutils literal notranslate"><span class="pre">expr</span></code></p>
 <p>By <em>outer</em> we mean indices that are not summation indices.  Returns a set
 and a dict.  The set contains outer indices and the dict contains
@@ -924,7 +927,7 @@ for all contractions that should be held separate.</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Mar 30, 2022</div>
+              Last updated on Apr 05, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">
